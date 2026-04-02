@@ -4,14 +4,35 @@
 > It documents the project structure, available subagents, skills (slash commands), hooks,
 > rules, and workflows so that every conversation starts with full context.
 
+## Memory System
+
+**IMPORTANT: At the start of every conversation, read `memory/recent-memory.md` inline for rolling context. Reference `memory/long-term-memory.md` by path when you need user preferences, permanent decisions, or patterns.**
+
+The memory layer has three tiers:
+
+| File | Purpose | Loaded |
+|------|---------|--------|
+| `memory/recent-memory.md` | Rolling 48-hour context: current focus, recent decisions, open threads | **Always read at startup** |
+| `memory/long-term-memory.md` | Distilled facts, preferences, and permanent decisions | Read by path when needed |
+| `memory/project-memory.md` | Active project state, architecture snapshot, phase status | Read by path when needed |
+
+**Updating memory:**
+- Update `recent-memory.md` at the end of any conversation where decisions were made or significant progress occurred
+- Run `/consolidate-memory` to promote important items from recent → long-term and refresh all files
+- A nightly scheduled job runs `/consolidate-memory` automatically at 11 PM ET
+
+---
+
 ## Project Status
 
-**Phase 0 (Foundation) — complete.** Tech stack undecided. No application code yet.
-Next step: Phase 1 (Product Definition) — write PRFAQ and PRD.
+**Phase 2 (Technical Design) — in progress.** Stack decided: Next.js + Supabase + Vercel.
+Database schema designed. Next: scaffold Next.js project or write user stories.
 
 ### Key Files
 - [Execution Plan](docs/product/EXECUTION-PLAN.md) — phased roadmap from idea to launch
 - [ADR-001](docs/adr/ADR-001-architecture-decisions-needed.md) — open architecture decisions
+- [ADR-002](docs/adr/ADR-002-tech-stack.md) — tech stack decision
+- [ADR-004](docs/adr/ADR-004-database-schema.md) — database schema design
 - [Testing Strategy](docs/testing-strategy.md) — test pyramid, coverage targets, policies
 - [Deployment Flow](docs/deployment-flow.md) — environments, pipeline, release process
 - [Contributing](CONTRIBUTING.md) — commit conventions, branch naming, PR/review standards
@@ -40,7 +61,8 @@ whiskly/
 │   │   ├── break-into-epics.md
 │   │   ├── scaffold-app.md
 │   │   ├── pre-merge-review.md
-│   │   └── write-release-notes.md
+│   │   ├── write-release-notes.md
+│   │   └── consolidate-memory.md
 │   └── rules/                   # Contextual rules (auto-loaded by glob)
 │       ├── code-quality.md      # Applied to src/**/*
 │       ├── security.md          # Applied to all files
@@ -76,6 +98,10 @@ whiskly/
 │   ├── unit/                    # Unit tests
 │   ├── integration/             # Integration tests
 │   └── e2e/                     # End-to-end tests
+├── memory/                      # Persistent memory layer
+│   ├── long-term-memory.md      # Distilled facts, preferences, patterns
+│   ├── recent-memory.md         # Rolling 48hr context (loaded at startup)
+│   └── project-memory.md        # Active project state and architecture
 ├── infra/                       # Infrastructure-as-code
 └── .github/                     # CI/CD workflows, PR/issue templates
     ├── ISSUE_TEMPLATE/
@@ -139,6 +165,8 @@ engineering-planner to break down the existing PRD into stories
 
 Seven custom slash commands are available in `.claude/commands/`. Type `/<command>` to invoke.
 
+### Project-specific commands (`.claude/commands/`)
+
 | Command | Description | Outputs To |
 |---------|-------------|------------|
 | `/write-prfaq <feature>` | Write a complete PR/FAQ document | `docs/prfaq/` |
@@ -148,6 +176,14 @@ Seven custom slash commands are available in `.claude/commands/`. Type `/<comman
 | `/scaffold-app <feature>` | Generate application code with tests | `src/`, `tests/` |
 | `/pre-merge-review [branch/PR]` | Comprehensive code review | Console output |
 | `/write-release-notes <version>` | Generate release notes from git history | `docs/releases/` |
+
+### Cross-project commands (inherited from `../../.claude/commands/`)
+
+| Command | Description | Outputs To |
+|---------|-------------|------------|
+| `/consolidate-memory` | Consolidate recent activity into memory layer | `memory/` |
+| `/research-scout` | Search web for new info that challenges or extends project knowledge | `memory/` |
+| `/promote-learnings` | Weekly review: promote confirmed findings from staging to permanent memory | `memory/` |
 
 ### Skill Chaining
 
@@ -282,4 +318,7 @@ Three rule files in `.claude/rules/` are auto-loaded based on glob patterns.
 
 # Release
 /write-release-notes v1.0.0  # Generate release notes
+
+# Memory
+/consolidate-memory          # Nightly consolidation (also runs automatically at 11 PM PT)
 ```

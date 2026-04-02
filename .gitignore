@@ -38,3 +38,24 @@ logs/
 *.tfstate
 *.tfstate.backup
 .terraform/
+
+# Next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Package managers
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Vercel
+.vercel
+
+# PEM files
+*.pem

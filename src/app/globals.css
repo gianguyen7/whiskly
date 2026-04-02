@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Matcha green palette */
+  --color-matcha-50: #f0f7f1;
+  --color-matcha-100: #d9eedd;
+  --color-matcha-200: #b3ddb9;
+  --color-matcha-300: #84c78f;
+  --color-matcha-400: #5aad68;
+  --color-matcha-500: #4a7c59;
+  --color-matcha-600: #3d6a4a;
+  --color-matcha-700: #33573d;
+  --color-matcha-800: #2a4632;
+  --color-matcha-900: #1f3525;
+
+  /* Warm neutral palette */
+  --color-warm-50: #fafaf8;
+  --color-warm-100: #f5f3ef;
+  --color-warm-200: #e8e4dd;
+  --color-warm-300: #d4cec4;
+  --color-warm-400: #b5ad9f;
+  --color-warm-500: #968d7e;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Safe area padding for PWA on notched devices */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
