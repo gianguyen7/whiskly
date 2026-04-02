@@ -13,7 +13,7 @@ fi
 echo "Running pre-commit validation checks..."
 
 # Check for .env files staged
-STAGED_ENV=$(git diff --cached --name-only 2>/dev/null | grep -E '\.env($|\.)')
+STAGED_ENV=$(git diff --cached --name-only 2>/dev/null | grep -E '\.env($|\.)' | grep -v '\.env\.example$')
 if [ -n "$STAGED_ENV" ]; then
   echo "BLOCKED: Environment files are staged for commit:" >&2
   echo "$STAGED_ENV" >&2
