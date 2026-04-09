@@ -40,8 +40,8 @@ export function StarRating({
         >
           <svg
             viewBox="0 0 24 24"
-            fill={star <= value ? "#4a7c59" : "none"}
-            stroke={star <= value ? "#4a7c59" : "#d1d5db"}
+            fill={star <= value ? "#7fb22e" : "none"}
+            stroke={star <= value ? "#7fb22e" : "#d1d5db"}
             strokeWidth={2}
             className="w-full h-full"
           >

@@ -1,12 +1,11 @@
 "use client";
 
 import { useActionState } from "react";
-import Link from "next/link";
-import { login, type AuthResult } from "../actions";
+import { updatePassword, type AuthResult } from "../actions";
 
-export default function LoginPage() {
+export default function ResetPasswordPage() {
   const [state, formAction, isPending] = useActionState<AuthResult, FormData>(
-    async (_prev, formData) => login(formData),
+    async (_prev, formData) => updatePassword(formData),
     {}
   );
 
@@ -15,8 +14,12 @@ export default function LoginPage() {
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center space-y-2">
           <img src="/logo.svg" alt="" className="w-10 h-10 mx-auto" />
-          <h1 className="text-2xl font-bold text-matcha-700">whiskly</h1>
-          <p className="text-sm text-gray-500">Welcome back</p>
+          <h1 className="text-xl font-bold text-matcha-700">
+            Set new password
+          </h1>
+          <p className="text-sm text-gray-500">
+            Enter your new password below.
+          </p>
         </div>
 
         {state.error && (
@@ -31,59 +34,32 @@ export default function LoginPage() {
         <form action={formAction} className="space-y-4">
           <div>
             <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-gray-700 mb-1.5"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              placeholder="you@example.com"
-              className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
-            />
-          </div>
-          <div>
-            <label
               htmlFor="password"
               className="block text-sm font-semibold text-gray-700 mb-1.5"
             >
-              Password
+              New Password
             </label>
             <input
               id="password"
               name="password"
               type="password"
               required
-              placeholder="Your password"
+              minLength={8}
+              placeholder="Enter new password"
               className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
-            <div className="text-right mt-1.5">
-              <Link
-                href="/forgot-password"
-                className="text-sm text-matcha-600 font-medium"
-              >
-                Forgot password?
-              </Link>
-            </div>
+            <p className="text-xs text-gray-400 mt-1">
+              Must be at least 8 characters
+            </p>
           </div>
           <button
             type="submit"
             disabled={isPending}
             className="w-full py-3 rounded-xl bg-matcha-600 text-white font-medium hover:bg-matcha-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {isPending ? "Signing in..." : "Sign In"}
+            {isPending ? "Updating..." : "Update Password"}
           </button>
         </form>
-
-        <p className="text-center text-sm text-gray-500">
-          Don&apos;t have an account?{" "}
-          <Link href="/signup" className="text-matcha-600 font-semibold">
-            Sign up
-          </Link>
-        </p>
       </div>
     </main>
   );

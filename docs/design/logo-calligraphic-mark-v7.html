@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiskly — Calligraphic Mark v7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Quicksand',sans-serif;background:#f5f5f4;color:#1a1a1a;-webkit-font-smoothing:antialiased}
+  .page{max-width:1300px;margin:0 auto;padding:48px 24px}
+  .page-head{text-align:center;margin-bottom:48px}
+  .page-head h1{font-size:24px;font-weight:700;color:#0d9488;margin-bottom:6px}
+  .page-head p{color:#71717a;font-size:13px;max-width:580px;margin:0 auto;line-height:1.7}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+
+  .card{border-radius:20px;overflow:hidden;border:1px solid #e4e4e7;background:white}
+  .card-top{padding:40px 28px 28px;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:260px;justify-content:center}
+  .card-top.cream{background:#faf9f7}
+  .card-top.dark{background:#18181b}
+  .card-bot{padding:14px 20px;border-top:1px solid #e4e4e7;background:#fafaf9}
+  .card-bot h4{font-size:13px;font-weight:700;margin-bottom:3px}
+  .card-bot p{font-size:12px;color:#71717a;line-height:1.5}
+
+  .sizes{display:flex;align-items:flex-end;gap:14px}
+  .sz-label{font-size:9px;color:#a1a1aa;text-align:center;margin-top:4px;font-weight:600}
+  .dark .sz-label{color:#52525b}
+
+  .app-row{display:flex;gap:16px;align-items:flex-end;justify-content:center;flex-wrap:wrap;padding:16px 0 40px}
+  .app-icon{border-radius:22%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.12)}
+  .app-label{font-size:9px;color:#71717a;margin-top:5px;font-weight:600;text-align:center}
+
+  hr{border:none;border-top:1px solid #e4e4e7;margin:40px 0}
+  .section h2{font-size:17px;font-weight:700;margin-bottom:4px}
+  .section>p{font-size:12px;color:#a1a1aa;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="page-head">
+  <h1>Calligraphic Mark — Brush-Stroke Swirls</h1>
+  <p>The V1 staggered ripple redrawn as if painted with a brush. Strokes taper from thick to thin, have pressure variation, and feel hand-made. The icon itself becomes the calligraphy.</p>
+</div>
+
+<div class="grid">
+
+  <!-- ====== C1: Brush taper — thick start, thin end ====== -->
+  <div class="card">
+    <div class="card-top cream">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <!-- Outer: thick→thin brush stroke (filled shape tracing the stroke outline) -->
+          <path d="M14 4 C12 3, 0 12, -2 28 C-4 40, 4 54, 16 58 C28 62, 44 56, 50 44 C54 36, 54 24, 50 16
+                   L47 18 C50 24, 50 34, 47 42 C42 52, 28 58, 18 55 C8 52, 0 40, 2 28 C4 14, 14 6, 16 6 Z" fill="#0d9488"/>
+          <!-- Middle: medium pressure brush -->
+          <path d="M40 28 C42 20, 38 12, 30 10 C22 8, 12 14, 8 24 C5 32, 8 44, 16 48 C24 52, 34 50, 40 44
+                   L38 42 C34 47, 26 48, 18 45 C12 42, 8 32, 10 25 C13 16, 22 11, 29 13 C35 14, 38 20, 38 27 Z" fill="#0d9488" opacity=".5"/>
+          <!-- Inner: light pressure, thin -->
+          <path d="M34 28 C34 34, 28 40, 22 38 C18 37, 15 32, 16 26 C17 22, 20 18, 24 18
+                   L24 20 C21 20, 19 23, 18 27 C17 31, 19 35, 22 36 C26 37, 31 33, 32 28 Z" fill="#0d9488" opacity=".28"/>
+          <circle cx="26" cy="28" r="3" fill="#0d9488"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#134e4a" letter-spacing="-0.3">whiskly</text>
+      </svg>
+      <div class="sizes">
+        <div><svg width="16" height="16" viewBox="0 0 56 62"><path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="#0d9488"/><path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="#0d9488" opacity=".45"/><circle cx="26" cy="28" r="4" fill="#0d9488"/></svg><div class="sz-label">16</div></div>
+        <div><svg width="32" height="32" viewBox="0 0 56 62"><path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="#0d9488"/><path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="#0d9488" opacity=".5"/><path d="M34 28C34 34 28 40 22 38C18 37 15 32 16 26C17 22 20 18 24 18L24 20C21 20 19 23 18 27C17 31 19 35 22 36C26 37 31 33 32 28Z" fill="#0d9488" opacity=".28"/><circle cx="26" cy="28" r="3.5" fill="#0d9488"/></svg><div class="sz-label">32</div></div>
+        <div><svg width="64" height="64" viewBox="0 0 56 62"><path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="#0d9488"/><path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="#0d9488" opacity=".5"/><path d="M34 28C34 34 28 40 22 38C18 37 15 32 16 26C17 22 20 18 24 18L24 20C21 20 19 23 18 27C17 31 19 35 22 36C26 37 31 33 32 28Z" fill="#0d9488" opacity=".28"/><circle cx="26" cy="28" r="3" fill="#0d9488"/></svg><div class="sz-label">64</div></div>
+      </div>
+    </div>
+    <div class="card-bot">
+      <h4>C1. Filled Brush Taper</h4>
+      <p>Each arc is a filled shape with thick→thin taper, like an ink brush pressing down and lifting off. Bold presence. The three arcs have decreasing weight — heavy, medium, whisper.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top dark">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="#5eead4"/>
+          <path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="#5eead4" opacity=".5"/>
+          <path d="M34 28C34 34 28 40 22 38C18 37 15 32 16 26C17 22 20 18 24 18L24 20C21 20 19 23 18 27C17 31 19 35 22 36C26 37 31 33 32 28Z" fill="#5eead4" opacity=".28"/>
+          <circle cx="26" cy="28" r="3" fill="#5eead4"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#ccfbf1" letter-spacing="-0.3">whiskly</text>
+      </svg>
+    </div>
+    <div class="card-bot"><h4>C1. Dark</h4><p>Filled brush on dark. Solid and punchy.</p></div>
+  </div>
+
+  <!-- ====== C2: Variable-width strokes — simulating brush pressure ====== -->
+  <div class="card">
+    <div class="card-top cream">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <!-- Outer arc: starts thin, gets thick in middle, thins out -->
+          <!-- Approximated with a filled tapered shape -->
+          <path d="M42 7 C43 6, 44 7, 44 8
+                   C52 18, 55 34, 46 48 C36 60, 14 58, 3 45
+                   C2 44, 2 42, 4 42
+                   C14 52, 32 54, 42 44 C50 34, 50 20, 42 10
+                   Z" fill="#0d9488"/>
+          <!-- Middle: different pressure pattern — thin start, thick end -->
+          <path d="M38 45 C37 46, 36 46, 35 45
+                   C28 52, 12 49, 8 38 C4 28, 10 14, 22 10 C30 8, 38 12, 42 20
+                   C43 21, 44 22, 43 23
+                   C40 16, 32 12, 24 14 C14 17, 8 28, 12 38 C16 46, 28 48, 36 44
+                   Z" fill="#0d9488" opacity=".5"/>
+          <!-- Inner: very thin, like end of a brush stroke -->
+          <path d="M22 17 C21 16, 21 15, 22 15
+                   C16 20, 13 28, 17 36 C21 42, 30 42, 35 36 C38 32, 37 26, 34 24
+                   C34 23, 33 23, 33 24
+                   C36 27, 36 32, 33 35 C30 39, 22 40, 19 35 C15 30, 17 22, 22 18
+                   Z" fill="#0d9488" opacity=".3"/>
+          <circle cx="26" cy="28" r="3" fill="#0d9488"/>
+        </g>
+        <text x="68" y="44" font-family="Caveat, cursive" font-size="32" font-weight="700" fill="#134e4a">whiskly</text>
+      </svg>
+      <div class="sizes">
+        <div><svg width="16" height="16" viewBox="0 0 56 62"><path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="#0d9488"/><path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="#0d9488" opacity=".45"/><circle cx="26" cy="28" r="4.5" fill="#0d9488"/></svg><div class="sz-label">16</div></div>
+        <div><svg width="32" height="32" viewBox="0 0 56 62"><path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="#0d9488"/><path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="#0d9488" opacity=".5"/><path d="M22 17C21 16 21 15 22 15C16 20 13 28 17 36C21 42 30 42 35 36C38 32 37 26 34 24C34 23 33 23 33 24C36 27 36 32 33 35C30 39 22 40 19 35C15 30 17 22 22 18Z" fill="#0d9488" opacity=".3"/><circle cx="26" cy="28" r="3.5" fill="#0d9488"/></svg><div class="sz-label">32</div></div>
+        <div><svg width="64" height="64" viewBox="0 0 56 62"><path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="#0d9488"/><path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="#0d9488" opacity=".5"/><path d="M22 17C21 16 21 15 22 15C16 20 13 28 17 36C21 42 30 42 35 36C38 32 37 26 34 24C34 23 33 23 33 24C36 27 36 32 33 35C30 39 22 40 19 35C15 30 17 22 22 18Z" fill="#0d9488" opacity=".3"/><circle cx="26" cy="28" r="3" fill="#0d9488"/></svg><div class="sz-label">64</div></div>
+      </div>
+    </div>
+    <div class="card-bot">
+      <h4>C2. Pressure Variation</h4>
+      <p>Each arc has different pressure — the outer swells in the middle (firm press), the middle tapers at both ends (quick flick), the inner is whisper-thin. Paired with Caveat bold calligraphy text — mark and wordmark share the same hand-drawn energy.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top dark">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="#5eead4"/>
+          <path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="#5eead4" opacity=".5"/>
+          <path d="M22 17C21 16 21 15 22 15C16 20 13 28 17 36C21 42 30 42 35 36C38 32 37 26 34 24C34 23 33 23 33 24C36 27 36 32 33 35C30 39 22 40 19 35C15 30 17 22 22 18Z" fill="#5eead4" opacity=".3"/>
+          <circle cx="26" cy="28" r="3" fill="#5eead4"/>
+        </g>
+        <text x="68" y="44" font-family="Caveat, cursive" font-size="32" font-weight="700" fill="#ccfbf1">whiskly</text>
+      </svg>
+    </div>
+    <div class="card-bot"><h4>C2. Dark</h4><p>Pressure variation on dark. Calligraphy pairing.</p></div>
+  </div>
+
+  <!-- ====== C3: Dry brush — textured, rough edges ====== -->
+  <div class="card">
+    <div class="card-top cream">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <!-- Outer: main stroke + parallel thin "dry" lines for texture -->
+          <path d="M42 8 C52 18, 54 34, 44 48 C34 58, 14 56, 4 44 C-4 32, 0 14, 14 6" stroke="#0d9488" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <!-- Dry brush texture lines running alongside -->
+          <path d="M40 10 C48 18, 50 32, 42 44 C34 54, 16 52, 8 42" stroke="#0d9488" stroke-width="0.8" stroke-linecap="round" fill="none" opacity=".3"/>
+          <path d="M44 9 C54 20, 56 36, 46 50 C36 60, 12 58, 2 46" stroke="#0d9488" stroke-width="0.6" stroke-linecap="round" fill="none" opacity=".2"/>
+
+          <!-- Middle -->
+          <path d="M38 44 C30 52, 14 48, 10 38 C6 28, 12 14, 24 12 C34 10, 42 18, 42 28" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".55"/>
+          <path d="M36 42 C30 48, 16 46, 12 38 C8 30, 14 18, 24 15" stroke="#0d9488" stroke-width="0.6" stroke-linecap="round" fill="none" opacity=".18"/>
+
+          <!-- Inner: single confident stroke -->
+          <path d="M22 18 C16 22, 14 32, 20 38 C26 42, 34 36, 34 28" stroke="#0d9488" stroke-width="2" stroke-linecap="round" fill="none" opacity=".3"/>
+
+          <circle cx="26" cy="30" r="3" fill="#0d9488"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#134e4a" letter-spacing="-0.3">whiskly</text>
+      </svg>
+      <div class="sizes">
+        <div><svg width="16" height="16" viewBox="0 0 56 62"><path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="#0d9488" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="#0d9488" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="26" cy="30" r="4.5" fill="#0d9488"/></svg><div class="sz-label">16</div></div>
+        <div><svg width="32" height="32" viewBox="0 0 56 62"><path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="#0d9488" stroke-width="3.8" stroke-linecap="round" fill="none"/><path d="M40 10C48 18 50 32 42 44C34 54 16 52 8 42" stroke="#0d9488" stroke-width="1" stroke-linecap="round" fill="none" opacity=".25"/><path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="#0d9488" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".55"/><path d="M22 18C16 22 14 32 20 38C26 42 34 36 34 28" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".3"/><circle cx="26" cy="30" r="3.5" fill="#0d9488"/></svg><div class="sz-label">32</div></div>
+        <div><svg width="64" height="64" viewBox="0 0 56 62"><path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="#0d9488" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M40 10C48 18 50 32 42 44C34 54 16 52 8 42" stroke="#0d9488" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".3"/><path d="M44 9C54 20 56 36 46 50C36 60 12 58 2 46" stroke="#0d9488" stroke-width=".6" stroke-linecap="round" fill="none" opacity=".2"/><path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".55"/><path d="M36 42C30 48 16 46 12 38C8 30 14 18 24 15" stroke="#0d9488" stroke-width=".6" stroke-linecap="round" fill="none" opacity=".18"/><path d="M22 18C16 22 14 32 20 38C26 42 34 36 34 28" stroke="#0d9488" stroke-width="2" stroke-linecap="round" fill="none" opacity=".3"/><circle cx="26" cy="30" r="3" fill="#0d9488"/></svg><div class="sz-label">64</div></div>
+      </div>
+    </div>
+    <div class="card-bot">
+      <h4>C3. Dry Brush</h4>
+      <p>Main strokes plus faint parallel "splinter" lines alongside — simulating a dry brush dragged across paper. The texture adds rawness while the overall shape stays clean. Quicksand keeps the wordmark grounded.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top dark">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="#5eead4" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M40 10C48 18 50 32 42 44C34 54 16 52 8 42" stroke="#5eead4" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".25"/>
+          <path d="M44 9C54 20 56 36 46 50C36 60 12 58 2 46" stroke="#5eead4" stroke-width=".6" stroke-linecap="round" fill="none" opacity=".15"/>
+          <path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".5"/>
+          <path d="M36 42C30 48 16 46 12 38C8 30 14 18 24 15" stroke="#5eead4" stroke-width=".6" stroke-linecap="round" fill="none" opacity=".15"/>
+          <path d="M22 18C16 22 14 32 20 38C26 42 34 36 34 28" stroke="#5eead4" stroke-width="2" stroke-linecap="round" fill="none" opacity=".28"/>
+          <circle cx="26" cy="30" r="3" fill="#5eead4"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#ccfbf1" letter-spacing="-0.3">whiskly</text>
+      </svg>
+    </div>
+    <div class="card-bot"><h4>C3. Dark</h4><p>Dry brush texture on dark.</p></div>
+  </div>
+
+  <!-- ====== C4: Enso-style — single bold stroke with expressive taper ====== -->
+  <div class="card">
+    <div class="card-top cream">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <!-- Outer: enso-like, starts thick and fades to nothing -->
+          <path d="M40 6 C38 4, 36 5, 36 7
+                   C44 14, 50 26, 48 40 C44 54, 30 60, 16 56 C4 52, -4 38, 2 24 C6 14, 16 6, 24 6
+                   C25 6, 26 5, 25 4
+                   Z" fill="#0d9488"/>
+          <!-- Middle: lighter enso -->
+          <path d="M36 44 C34 46, 32 46, 32 44
+                   C26 50, 14 48, 10 40 C6 32, 10 18, 22 14 C30 10, 40 16, 42 24
+                   C42 25, 42 26, 41 25
+                   C38 18, 30 14, 24 16 C14 20, 10 32, 14 40 C18 46, 28 47, 34 43
+                   Z" fill="#0d9488" opacity=".45"/>
+          <!-- Inner: ghost trace -->
+          <path d="M24 18 C20 20, 16 28, 18 34 C20 40, 28 42, 34 36 C36 34, 36 28, 34 26" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".22"/>
+          <!-- Ink splash dot -->
+          <circle cx="26" cy="30" r="4" fill="#0d9488"/>
+          <circle cx="26" cy="30" r="2" fill="#faf9f7"/>
+          <circle cx="26" cy="30" r="1" fill="#0d9488"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#134e4a" letter-spacing="-0.3">whiskly</text>
+      </svg>
+      <div class="sizes">
+        <div><svg width="16" height="16" viewBox="0 0 56 62"><path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="#0d9488"/><path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="#0d9488" opacity=".4"/><circle cx="26" cy="30" r="5" fill="#0d9488"/></svg><div class="sz-label">16</div></div>
+        <div><svg width="32" height="32" viewBox="0 0 56 62"><path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="#0d9488"/><path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="#0d9488" opacity=".45"/><path d="M24 18C20 20 16 28 18 34C20 40 28 42 34 36C36 34 36 28 34 26" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".22"/><circle cx="26" cy="30" r="4" fill="#0d9488"/><circle cx="26" cy="30" r="2" fill="#faf9f7"/><circle cx="26" cy="30" r="1" fill="#0d9488"/></svg><div class="sz-label">32</div></div>
+        <div><svg width="64" height="64" viewBox="0 0 56 62"><path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="#0d9488"/><path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="#0d9488" opacity=".45"/><path d="M24 18C20 20 16 28 18 34C20 40 28 42 34 36C36 34 36 28 34 26" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".22"/><circle cx="26" cy="30" r="4" fill="#0d9488"/><circle cx="26" cy="30" r="2" fill="#faf9f7"/><circle cx="26" cy="30" r="1" fill="#0d9488"/></svg><div class="sz-label">64</div></div>
+      </div>
+    </div>
+    <div class="card-bot">
+      <h4>C4. Enso Ink</h4>
+      <p>Zen enso energy — two bold painted strokes that start with a confident press and fade to nothing. The center has a ring-dot (ensō point of completion). Most calligraphic and expressive of the set.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top dark">
+      <svg width="240" height="68" viewBox="0 0 240 68" fill="none">
+        <g transform="translate(6,4)">
+          <path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="#5eead4"/>
+          <path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="#5eead4" opacity=".45"/>
+          <path d="M24 18C20 20 16 28 18 34C20 40 28 42 34 36C36 34 36 28 34 26" stroke="#5eead4" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".22"/>
+          <circle cx="26" cy="30" r="4" fill="#5eead4"/><circle cx="26" cy="30" r="2" fill="#18181b"/><circle cx="26" cy="30" r="1" fill="#5eead4"/>
+        </g>
+        <text x="68" y="44" font-family="Quicksand, sans-serif" font-size="26" font-weight="600" fill="#ccfbf1" letter-spacing="-0.3">whiskly</text>
+      </svg>
+    </div>
+    <div class="card-bot"><h4>C4. Dark</h4><p>Enso ink on dark. The ring-dot center inverts cleanly.</p></div>
+  </div>
+
+</div>
+
+<hr>
+<div class="section">
+  <h2>App Icons — All Calligraphic Marks</h2>
+</div>
+
+<div class="app-row">
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#0d9488">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="white"/><path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="white" opacity=".5"/><path d="M34 28C34 34 28 40 22 38C18 37 15 32 16 26C17 22 20 18 24 18L24 20C21 20 19 23 18 27C17 31 19 35 22 36C26 37 31 33 32 28Z" fill="white" opacity=".28"/><circle cx="26" cy="28" r="3.5" fill="white"/></svg>
+    </div>
+    <div class="app-label">C1. Taper</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#0d9488">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="white"/><path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="white" opacity=".5"/><path d="M22 17C21 16 21 15 22 15C16 20 13 28 17 36C21 42 30 42 35 36C38 32 37 26 34 24C34 23 33 23 33 24C36 27 36 32 33 35C30 39 22 40 19 35C15 30 17 22 22 18Z" fill="white" opacity=".3"/><circle cx="26" cy="28" r="3.5" fill="white"/></svg>
+    </div>
+    <div class="app-label">C2. Pressure</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#0d9488">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="white" stroke-width="3.8" stroke-linecap="round" fill="none"/><path d="M40 10C48 18 50 32 42 44C34 54 16 52 8 42" stroke="white" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".3"/><path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".5"/><path d="M22 18C16 22 14 32 20 38C26 42 34 36 34 28" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".28"/><circle cx="26" cy="30" r="3.5" fill="white"/></svg>
+    </div>
+    <div class="app-label">C3. Dry brush</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#0d9488">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="white"/><path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="white" opacity=".45"/><circle cx="26" cy="30" r="4" fill="white"/><circle cx="26" cy="30" r="2" fill="#0d9488"/><circle cx="26" cy="30" r="1" fill="white"/></svg>
+    </div>
+    <div class="app-label">C4. Enso</div>
+  </div>
+</div>
+
+<div class="app-row" style="padding-top:0">
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M14 4C12 3 0 12-2 28C-4 40 4 54 16 58C28 62 44 56 50 44C54 36 54 24 50 16L47 18C50 24 50 34 47 42C42 52 28 58 18 55C8 52 0 40 2 28C4 14 14 6 16 6Z" fill="#5eead4"/><path d="M40 28C42 20 38 12 30 10C22 8 12 14 8 24C5 32 8 44 16 48C24 52 34 50 40 44L38 42C34 47 26 48 18 45C12 42 8 32 10 25C13 16 22 11 29 13C35 14 38 20 38 27Z" fill="#5eead4" opacity=".5"/><circle cx="26" cy="28" r="3.5" fill="#5eead4"/></svg>
+    </div>
+    <div class="app-label">C1 dark</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M42 7C43 6 44 7 44 8C52 18 55 34 46 48C36 60 14 58 3 45C2 44 2 42 4 42C14 52 32 54 42 44C50 34 50 20 42 10Z" fill="#5eead4"/><path d="M38 45C37 46 36 46 35 45C28 52 12 49 8 38C4 28 10 14 22 10C30 8 38 12 42 20C43 21 44 22 43 23C40 16 32 12 24 14C14 17 8 28 12 38C16 46 28 48 36 44Z" fill="#5eead4" opacity=".5"/><circle cx="26" cy="28" r="3.5" fill="#5eead4"/></svg>
+    </div>
+    <div class="app-label">C2 dark</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M42 8C52 18 54 34 44 48C34 58 14 56 4 44C-4 32 0 14 14 6" stroke="#5eead4" stroke-width="3.8" stroke-linecap="round" fill="none"/><path d="M40 10C48 18 50 32 42 44C34 54 16 52 8 42" stroke="#5eead4" stroke-width=".8" stroke-linecap="round" fill="none" opacity=".25"/><path d="M38 44C30 52 14 48 10 38C6 28 12 14 24 12C34 10 42 18 42 28" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="26" cy="30" r="3.5" fill="#5eead4"/></svg>
+    </div>
+    <div class="app-label">C3 dark</div>
+  </div>
+  <div>
+    <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+      <svg width="40" height="42" viewBox="0 0 56 62" fill="none"><path d="M40 6C38 4 36 5 36 7C44 14 50 26 48 40C44 54 30 60 16 56C4 52-4 38 2 24C6 14 16 6 24 6C25 6 26 5 25 4Z" fill="#5eead4"/><path d="M36 44C34 46 32 46 32 44C26 50 14 48 10 40C6 32 10 18 22 14C30 10 40 16 42 24C42 25 42 26 41 25C38 18 30 14 24 16C14 20 10 32 14 40C18 46 28 47 34 43Z" fill="#5eead4" opacity=".45"/><circle cx="26" cy="30" r="4" fill="#5eead4"/><circle cx="26" cy="30" r="2" fill="#18181b"/><circle cx="26" cy="30" r="1" fill="#5eead4"/></svg>
+    </div>
+    <div class="app-label">C4 dark</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -56,8 +56,8 @@ export function RadarChart({ tasteProfile, size = 300 }: RadarChartProps) {
         <Radar
           name="Taste Profile"
           dataKey="value"
-          stroke="#4a7c59"
-          fill="#4a7c59"
+          stroke="#7fb22e"
+          fill="#7fb22e"
           fillOpacity={0.3}
         />
       </RechartsRadarChart>

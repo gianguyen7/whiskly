@@ -11,17 +11,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Matcha green palette */
-  --color-matcha-50: #f0f7f1;
-  --color-matcha-100: #d9eedd;
-  --color-matcha-200: #b3ddb9;
-  --color-matcha-300: #84c78f;
-  --color-matcha-400: #5aad68;
-  --color-matcha-500: #4a7c59;
-  --color-matcha-600: #3d6a4a;
-  --color-matcha-700: #33573d;
-  --color-matcha-800: #2a4632;
-  --color-matcha-900: #1f3525;
+  /* Matcha green palette (brand color: #7fb22e) */
+  --color-matcha-50: #f6fae8;
+  --color-matcha-100: #eaf4c8;
+  --color-matcha-200: #d4e896;
+  --color-matcha-300: #b5d45c;
+  --color-matcha-400: #9ac63c;
+  --color-matcha-500: #7fb22e;
+  --color-matcha-600: #6a9526;
+  --color-matcha-700: #53741f;
+  --color-matcha-800: #3f5a1a;
+  --color-matcha-900: #2d4014;
 
   /* Warm neutral palette */
   --color-warm-50: #fafaf8;

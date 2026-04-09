@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiskly — Logo Mashups v4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:#f5f5f4;color:#1a1a1a;-webkit-font-smoothing:antialiased}
+  .page{max-width:1300px;margin:0 auto;padding:48px 24px}
+  .page-head{text-align:center;margin-bottom:56px}
+  .page-head h1{font-size:28px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+  .page-head p{color:#71717a;font-size:14px;max-width:580px;margin:0 auto;line-height:1.7}
+
+  .section{margin-bottom:64px}
+  .section-head{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #e4e4e7}
+  .section-head h2{font-size:20px;font-weight:800;margin-bottom:4px}
+  .section-head p{font-size:13px;color:#71717a;line-height:1.6;max-width:700px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  @media(max-width:900px){.grid,.grid-3{grid-template-columns:1fr}}
+
+  .card{border-radius:20px;overflow:hidden;border:1px solid #e4e4e7;background:white}
+  .card-top{padding:36px 28px 28px;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:220px;justify-content:center;position:relative}
+  .card-bot{padding:14px 20px;border-top:1px solid #e4e4e7;font-size:12px;color:#71717a;font-weight:500;text-align:center;background:#fafaf9}
+
+  .card-top.cream{background:#faf8f5}
+  .card-top.dark{background:#18181b}
+  .card-top.blush{background:#fdf2f8}
+  .card-top.ink{background:#0c0a09}
+  .card-top.cool-light{background:#f0f9ff}
+  .card-top.sage{background:#f0fdf4}
+  .card-top.warm{background:#fffbeb}
+  .card-top.neutral{background:#fafafa}
+
+  .sizes{display:flex;align-items:flex-end;gap:14px;margin-top:4px}
+  .sz-label{font-size:9px;color:#a1a1aa;text-align:center;margin-top:4px;font-weight:500}
+  .dark .sz-label{color:#52525b}
+
+  .row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+
+  .app-icon{border-radius:22%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.12)}
+  .app-row{display:flex;gap:24px;align-items:flex-end;justify-content:center;flex-wrap:wrap;padding:32px}
+  .app-label{font-size:11px;color:#71717a;margin-top:8px;font-weight:500;text-align:center}
+
+  .tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:99px;margin-right:4px}
+  .tag.rose{background:#ffe4e6;color:#be123c}
+  .tag.teal{background:#ccfbf1;color:#0f766e}
+  .tag.ink{background:#f1f5f9;color:#475569}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="page-head">
+  <h1>Logo Mashups — v4</h1>
+  <p>Combining the asymmetric organic lines from Taste Print (#8) with the swirl motion of #1, plus the continuous-line concept (#4) shaped into a matcha bowl.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: SWIRL x TASTE PRINT MASHUP -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-head">
+    <h2>Mashup A — Swirl meets Taste Print</h2>
+    <p>The concentric whisking motion from #1, but drawn with the organic, slightly asymmetric open curves of #8. Instead of perfect dashed circles, the lines are hand-drawn and slightly imperfect — like the uneven spirals a chasen actually leaves in the foam. Both color palettes shown.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- A1: Rose / Light -->
+    <div class="card">
+      <div class="card-top cream">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(6,4)">
+            <!-- Outer asymmetric swirl -->
+            <path d="M46 16 C50 28, 42 44, 28 46 C14 48, 2 38, 2 26 C2 14, 12 4, 24 2 C34 0, 44 6, 46 16" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Middle asymmetric swirl -->
+            <path d="M38 18 C42 26, 36 38, 26 40 C16 42, 10 34, 10 26 C10 18, 16 12, 24 10 C30 8, 36 12, 38 18" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".65"/>
+            <!-- Inner curve -->
+            <path d="M32 20 C34 26, 30 32, 24 34 C20 35, 16 30, 18 26 C20 22, 26 20, 30 20" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".4"/>
+            <!-- Center dot -->
+            <circle cx="25" cy="26" r="3" fill="#e11d48"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a" letter-spacing="-1">whiskly</text>
+        </svg>
+        <div class="sizes">
+          <div><svg width="16" height="16" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#e11d48" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M36 18C40 24 34 36 24 38C16 40 10 32 12 24C14 16 22 12 30 12" stroke="#e11d48" stroke-width="4" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="24" cy="24" r="4" fill="#e11d48"/></svg><div class="sz-label">16</div></div>
+          <div><svg width="32" height="32" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#e11d48" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#e11d48" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".6"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="#e11d48" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".35"/><circle cx="25" cy="26" r="3" fill="#e11d48"/></svg><div class="sz-label">32</div></div>
+          <div><svg width="64" height="64" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".65"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".4"/><circle cx="25" cy="26" r="3" fill="#e11d48"/></svg><div class="sz-label">64</div></div>
+        </div>
+      </div>
+      <div class="card-bot"><span class="tag rose">Rose</span> Light — Tight spirals, organic gaps</div>
+    </div>
+
+    <!-- A1: Rose / Dark -->
+    <div class="card">
+      <div class="card-top dark">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(6,4)">
+            <path d="M46 16 C50 28, 42 44, 28 46 C14 48, 2 38, 2 26 C2 14, 12 4, 24 2 C34 0, 44 6, 46 16" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M38 18 C42 26, 36 38, 26 40 C16 42, 10 34, 10 26 C10 18, 16 12, 24 10 C30 8, 36 12, 38 18" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".6"/>
+            <path d="M32 20 C34 26, 30 32, 24 34 C20 35, 16 30, 18 26 C20 22, 26 20, 30 20" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".35"/>
+            <circle cx="25" cy="26" r="3" fill="#fb7185"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="white" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag rose">Rose</span> Dark</div>
+    </div>
+
+    <!-- A2: Teal / Light -->
+    <div class="card">
+      <div class="card-top cream">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(6,4)">
+            <path d="M46 16 C50 28, 42 44, 28 46 C14 48, 2 38, 2 26 C2 14, 12 4, 24 2 C34 0, 44 6, 46 16" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M38 18 C42 26, 36 38, 26 40 C16 42, 10 34, 10 26 C10 18, 16 12, 24 10 C30 8, 36 12, 38 18" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".65"/>
+            <path d="M32 20 C34 26, 30 32, 24 34 C20 35, 16 30, 18 26 C20 22, 26 20, 30 20" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".4"/>
+            <circle cx="25" cy="26" r="3" fill="#0d9488"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a" letter-spacing="-1">whiskly</text>
+        </svg>
+        <div class="sizes">
+          <div><svg width="16" height="16" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#0d9488" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M36 18C40 24 34 36 24 38C16 40 10 32 12 24C14 16 22 12 30 12" stroke="#0d9488" stroke-width="4" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="24" cy="24" r="4" fill="#0d9488"/></svg><div class="sz-label">16</div></div>
+          <div><svg width="32" height="32" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#0d9488" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#0d9488" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".6"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="#0d9488" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".35"/><circle cx="25" cy="26" r="3" fill="#0d9488"/></svg><div class="sz-label">32</div></div>
+          <div><svg width="64" height="64" viewBox="0 0 52 52"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".65"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".4"/><circle cx="25" cy="26" r="3" fill="#0d9488"/></svg><div class="sz-label">64</div></div>
+        </div>
+      </div>
+      <div class="card-bot"><span class="tag teal">Teal</span> Light — Same mark, calmer energy</div>
+    </div>
+
+    <!-- A2: Teal / Dark -->
+    <div class="card">
+      <div class="card-top dark">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(6,4)">
+            <path d="M46 16 C50 28, 42 44, 28 46 C14 48, 2 38, 2 26 C2 14, 12 4, 24 2 C34 0, 44 6, 46 16" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M38 18 C42 26, 36 38, 26 40 C16 42, 10 34, 10 26 C10 18, 16 12, 24 10 C30 8, 36 12, 38 18" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".6"/>
+            <path d="M32 20 C34 26, 30 32, 24 34 C20 35, 16 30, 18 26 C20 22, 26 20, 30 20" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".35"/>
+            <circle cx="25" cy="26" r="3" fill="#5eead4"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="white" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag teal">Teal</span> Dark</div>
+    </div>
+
+    <!-- A3: Wider / More open - Rose -->
+    <div class="card">
+      <div class="card-top blush">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(4,2)">
+            <!-- Wider, more open curves with bigger gaps -->
+            <path d="M48 12 C54 30, 40 50, 22 52 C6 54, -4 40, 2 24 C6 12, 18 2, 32 2" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M40 16 C46 28, 36 44, 22 44 C12 44, 6 36, 8 26 C10 16, 20 10, 30 10" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".55"/>
+            <path d="M34 22 C36 28, 32 36, 24 36 C18 36, 14 30, 16 26 C18 22, 24 18, 28 20" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".3"/>
+            <circle cx="26" cy="28" r="3.5" fill="#e11d48"/>
+            <!-- Small accent dot - like a foam bubble -->
+            <circle cx="48" cy="6" r="2" fill="#fb7185" opacity=".5"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag rose">Rose</span> Open variant — wider gaps, breezier feel</div>
+    </div>
+
+    <!-- A3: Wider / More open - Teal -->
+    <div class="card">
+      <div class="card-top sage">
+        <svg width="240" height="64" viewBox="0 0 240 64" fill="none">
+          <g transform="translate(4,2)">
+            <path d="M48 12 C54 30, 40 50, 22 52 C6 54, -4 40, 2 24 C6 12, 18 2, 32 2" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M40 16 C46 28, 36 44, 22 44 C12 44, 6 36, 8 26 C10 16, 20 10, 30 10" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".55"/>
+            <path d="M34 22 C36 28, 32 36, 24 36 C18 36, 14 30, 16 26 C18 22, 24 18, 28 20" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".3"/>
+            <circle cx="26" cy="28" r="3.5" fill="#0d9488"/>
+            <circle cx="48" cy="6" r="2" fill="#2dd4bf" opacity=".5"/>
+          </g>
+          <text x="66" y="40" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag teal">Teal</span> Open variant</div>
+    </div>
+
+  </div><!-- grid -->
+
+  <!-- App icon row -->
+  <div class="app-row">
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#e11d48">
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".55"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".3"/><circle cx="25" cy="26" r="3.5" fill="white"/></svg>
+      </div>
+      <div class="app-label">Rose tight</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#0d9488">
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".55"/><path d="M32 20C34 26 30 32 24 34C20 35 16 30 18 26C20 22 26 20 30 20" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".3"/><circle cx="25" cy="26" r="3.5" fill="white"/></svg>
+      </div>
+      <div class="app-label">Teal tight</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#fb7185" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#fb7185" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".55"/><circle cx="25" cy="26" r="3.5" fill="#fb7185"/></svg>
+      </div>
+      <div class="app-label">Rose on black</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".55"/><circle cx="25" cy="26" r="3.5" fill="#5eead4"/></svg>
+      </div>
+      <div class="app-label">Teal on black</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:white;border:1px solid #e4e4e7">
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none"><path d="M44 14C48 26 40 42 26 44C12 46 2 36 2 24C2 12 12 2 24 2C34 0 42 6 44 14" stroke="#18181b" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M38 18C42 26 36 38 26 40C16 42 10 34 10 26C10 18 16 12 24 10C30 8 36 12 38 18" stroke="#18181b" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="25" cy="26" r="3.5" fill="#18181b"/></svg>
+      </div>
+      <div class="app-label">Mono</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: ONE LINE BOWL -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-head">
+    <h2>Mashup B — One Line shaped as a Matcha Bowl</h2>
+    <p>The continuous single-stroke concept from #4, but the line draws the silhouette of a chawan (matcha bowl) — a single unbroken stroke that curves into a bowl shape, with a small spiral inside representing the whisking.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- B1: Bowl line - light -->
+    <div class="card">
+      <div class="card-top neutral">
+        <svg width="260" height="64" viewBox="0 0 260 64" fill="none">
+          <g transform="translate(2,4)">
+            <!-- Single line: starts at left rim, curves down as bowl, comes back up to right rim, then spirals inward -->
+            <path d="M2 16 C2 16, 4 12, 10 12 C16 12, 16 16, 16 20 Q16 48, 28 48 Q40 48, 40 20 C40 16, 40 12, 46 12 C52 12, 54 16, 54 16" stroke="#18181b" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+            <!-- Spiral inside the bowl -->
+            <path d="M22 28 C22 22, 34 22, 34 28 C34 34, 24 34, 26 30 C27 28, 30 28, 30 30" stroke="#18181b" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".5"/>
+          </g>
+          <text x="68" y="42" font-family="Sora, sans-serif" font-size="28" font-weight="600" fill="#18181b" letter-spacing="-0.8">whiskly</text>
+        </svg>
+        <div class="sizes">
+          <div><svg width="16" height="16" viewBox="0 0 56 52"><path d="M2 16C2 16 4 12 10 12C16 12 16 16 16 20Q16 48 28 48Q40 48 40 20C40 16 40 12 46 12C52 12 54 16 54 16" stroke="#18181b" stroke-width="4.5" stroke-linecap="round" fill="none"/></svg><div class="sz-label">16</div></div>
+          <div><svg width="32" height="32" viewBox="0 0 56 52"><path d="M2 16C2 16 4 12 10 12C16 12 16 16 16 20Q16 48 28 48Q40 48 40 20C40 16 40 12 46 12C52 12 54 16 54 16" stroke="#18181b" stroke-width="3.2" stroke-linecap="round" fill="none"/><path d="M22 28C22 22 34 22 34 28C34 34 24 34 26 30C27 28 30 28 30 30" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".5"/></svg><div class="sz-label">32</div></div>
+          <div><svg width="64" height="64" viewBox="0 0 56 52"><path d="M2 16C2 16 4 12 10 12C16 12 16 16 16 20Q16 48 28 48Q40 48 40 20C40 16 40 12 46 12C52 12 54 16 54 16" stroke="#18181b" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 28C22 22 34 22 34 28C34 34 24 34 26 30C27 28 30 28 30 30" stroke="#18181b" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".5"/></svg><div class="sz-label">64</div></div>
+        </div>
+      </div>
+      <div class="card-bot"><span class="tag ink">Ink</span> Minimal bowl with inner spiral</div>
+    </div>
+
+    <!-- B1: Bowl line - dark -->
+    <div class="card">
+      <div class="card-top dark">
+        <svg width="260" height="64" viewBox="0 0 260 64" fill="none">
+          <g transform="translate(2,4)">
+            <path d="M2 16 C2 16, 4 12, 10 12 C16 12, 16 16, 16 20 Q16 48, 28 48 Q40 48, 40 20 C40 16, 40 12, 46 12 C52 12, 54 16, 54 16" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+            <path d="M22 28 C22 22, 34 22, 34 28 C34 34, 24 34, 26 30 C27 28, 30 28, 30 30" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".45"/>
+          </g>
+          <text x="68" y="42" font-family="Sora, sans-serif" font-size="28" font-weight="600" fill="white" letter-spacing="-0.8">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag ink">Ink</span> Dark</div>
+    </div>
+
+    <!-- B2: Rounder bowl, steam line - light -->
+    <div class="card">
+      <div class="card-top warm">
+        <svg width="260" height="68" viewBox="0 0 260 68" fill="none">
+          <g transform="translate(2,2)">
+            <!-- Wide round bowl -->
+            <path d="M4 20 Q4 56, 28 56 Q52 56, 52 20" stroke="#92400e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+            <!-- Rim flares -->
+            <path d="M0 20 C0 18, 2 16, 6 18" stroke="#92400e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M56 20 C56 18, 54 16, 50 18" stroke="#92400e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Whisk swirl inside -->
+            <path d="M20 30 C18 24, 28 20, 34 26 C38 30, 30 38, 24 36 C20 34, 22 28, 28 28" stroke="#92400e" stroke-width="2" stroke-linecap="round" fill="none" opacity=".45"/>
+            <!-- Steam wisp -->
+            <path d="M24 14 C22 8, 28 4, 26 0" stroke="#92400e" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".25"/>
+            <path d="M32 12 C34 6, 30 2, 32 -2" stroke="#92400e" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".2"/>
+          </g>
+          <text x="68" y="44" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#292524" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag" style="background:#fef3c7;color:#92400e">Amber</span> Round bowl with steam wisps</div>
+    </div>
+
+    <!-- B2: Rounder bowl - dark -->
+    <div class="card">
+      <div class="card-top ink">
+        <svg width="260" height="68" viewBox="0 0 260 68" fill="none">
+          <g transform="translate(2,2)">
+            <path d="M4 20 Q4 56, 28 56 Q52 56, 52 20" stroke="#d6d3d1" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+            <path d="M0 20 C0 18, 2 16, 6 18" stroke="#d6d3d1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M56 20 C56 18, 54 16, 50 18" stroke="#d6d3d1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M20 30 C18 24, 28 20, 34 26 C38 30, 30 38, 24 36 C20 34, 22 28, 28 28" stroke="#d6d3d1" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/>
+            <path d="M24 14 C22 8, 28 4, 26 0" stroke="#d6d3d1" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".2"/>
+            <path d="M32 12 C34 6, 30 2, 32 -2" stroke="#d6d3d1" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".15"/>
+          </g>
+          <text x="68" y="44" font-family="Sora, sans-serif" font-size="28" font-weight="700" fill="#d6d3d1" letter-spacing="-1">whiskly</text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag" style="background:#fef3c7;color:#92400e">Amber</span> Dark</div>
+    </div>
+
+  </div><!-- grid -->
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: WORDMARK AS BOWL -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-head">
+    <h2>Mashup C — "whiskly" written in a bowl shape</h2>
+    <p>The word itself curves along a bowl path — the baseline of the letters follows the inside of a chawan. The text IS the bowl. Multiple treatments: subtle arc, deep bowl, and a version with a spiral above.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- C1: Subtle arc -->
+    <div class="card">
+      <div class="card-top neutral">
+        <svg width="280" height="80" viewBox="0 0 280 80" fill="none">
+          <defs>
+            <path id="arc1" d="M30 20 Q140 80, 250 20"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="32" font-weight="800" fill="#18181b" letter-spacing="-1">
+            <textPath href="#arc1" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag ink">Ink</span> Subtle arc — gentle smile curve</div>
+    </div>
+
+    <!-- C1: Subtle arc dark -->
+    <div class="card">
+      <div class="card-top dark">
+        <svg width="280" height="80" viewBox="0 0 280 80" fill="none">
+          <defs>
+            <path id="arc1d" d="M30 20 Q140 80, 250 20"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="32" font-weight="800" fill="white" letter-spacing="-1">
+            <textPath href="#arc1d" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag ink">Ink</span> Dark</div>
+    </div>
+
+    <!-- C2: Deep bowl with rim lines -->
+    <div class="card">
+      <div class="card-top cream">
+        <svg width="280" height="90" viewBox="0 0 280 90" fill="none">
+          <!-- Bowl rim lines -->
+          <path d="M30 24 C30 20, 34 18, 40 20" stroke="#e11d48" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/>
+          <path d="M250 24 C250 20, 246 18, 240 20" stroke="#e11d48" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/>
+          <defs>
+            <path id="arc2" d="M40 22 Q140 90, 240 22"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="30" font-weight="700" fill="#e11d48" letter-spacing="-0.5">
+            <textPath href="#arc2" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+          <!-- Swirl above the bowl -->
+          <path d="M130 12 C126 6, 136 2, 140 8 C144 14, 134 16, 136 10" stroke="#e11d48" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".35"/>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag rose">Rose</span> Deep bowl with rim flares and steam swirl</div>
+    </div>
+
+    <!-- C2: Deep bowl dark -->
+    <div class="card">
+      <div class="card-top dark">
+        <svg width="280" height="90" viewBox="0 0 280 90" fill="none">
+          <path d="M30 24 C30 20, 34 18, 40 20" stroke="#fb7185" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/>
+          <path d="M250 24 C250 20, 246 18, 240 20" stroke="#fb7185" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/>
+          <defs>
+            <path id="arc2d" d="M40 22 Q140 90, 240 22"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="30" font-weight="700" fill="#fb7185" letter-spacing="-0.5">
+            <textPath href="#arc2d" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+          <path d="M130 12 C126 6, 136 2, 140 8 C144 14, 134 16, 136 10" stroke="#fb7185" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".3"/>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag rose">Rose</span> Dark</div>
+    </div>
+
+    <!-- C3: Bowl outline with text inside -->
+    <div class="card">
+      <div class="card-top sage">
+        <svg width="280" height="90" viewBox="0 0 280 90" fill="none">
+          <!-- Actual bowl outline -->
+          <path d="M50 28 Q50 78, 140 78 Q230 78, 230 28" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <!-- Text curved inside the bowl -->
+          <defs>
+            <path id="arc3" d="M65 40 Q140 82, 215 40"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="22" font-weight="700" fill="#0d9488" letter-spacing="1">
+            <textPath href="#arc3" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag teal">Teal</span> Text sits inside a bowl outline</div>
+    </div>
+
+    <!-- C4: Text IS the bowl - no outline -->
+    <div class="card">
+      <div class="card-top neutral">
+        <svg width="280" height="90" viewBox="0 0 280 90" fill="none">
+          <!-- Steeper U-curve — text forms the bowl shape itself -->
+          <defs>
+            <path id="arc4" d="M20 10 Q140 110, 260 10"/>
+          </defs>
+          <text font-family="Sora, sans-serif" font-size="28" font-weight="800" fill="#18181b" letter-spacing="6">
+            <textPath href="#arc4" startOffset="50%" text-anchor="middle">whiskly</textPath>
+          </text>
+          <!-- Tiny center dot at the bottom of the bowl -->
+          <circle cx="140" cy="56" r="2.5" fill="#e11d48" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="card-bot"><span class="tag ink">Ink</span> + <span class="tag rose">Rose dot</span> — Deep U, text alone forms the bowl. No outline needed.</div>
+    </div>
+
+  </div><!-- grid -->
+
+  <!-- App icons for bowl concepts -->
+  <div class="app-row">
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#18181b">
+        <svg width="44" height="44" viewBox="0 0 56 56" fill="none"><path d="M4 18C4 18 6 14 12 14C18 14 18 18 18 22Q18 48 28 48Q38 48 38 22C38 18 38 14 44 14C50 14 52 18 52 18" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M22 30C22 24 34 24 34 30C34 36 24 36 26 32" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".4"/></svg>
+      </div>
+      <div class="app-label">B1. Line bowl</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#92400e">
+        <svg width="44" height="44" viewBox="0 0 56 60" fill="none"><path d="M4 20Q4 56 28 56Q52 56 52 20" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M0 20C0 18 2 16 6 18" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M56 20C56 18 54 16 50 18" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M20 30C18 24 28 20 34 26C38 30 30 38 24 36C20 34 22 28 28 28" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity=".4"/></svg>
+      </div>
+      <div class="app-label">B2. Round bowl</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:#e11d48">
+        <svg width="44" height="44" viewBox="0 0 60 60" fill="none">
+          <defs><path id="appArc" d="M8 14 Q30 56, 52 14"/></defs>
+          <text font-family="Sora,sans-serif" font-size="16" font-weight="800" fill="white" letter-spacing="0.5"><textPath href="#appArc" startOffset="50%" text-anchor="middle">whiskly</textPath></text>
+          <path d="M26 8C24 4 30 2 30 6C30 10 26 10 28 8" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="app-label">C2. Text bowl</div>
+    </div>
+    <div>
+      <div class="app-icon" style="width:72px;height:72px;background:white;border:1px solid #e4e4e7">
+        <svg width="44" height="44" viewBox="0 0 60 60" fill="none">
+          <defs><path id="appArc2" d="M4 8 Q30 60, 56 8"/></defs>
+          <text font-family="Sora,sans-serif" font-size="16" font-weight="800" fill="#18181b" letter-spacing="2"><textPath href="#appArc2" startOffset="50%" text-anchor="middle">whiskly</textPath></text>
+          <circle cx="30" cy="36" r="2" fill="#e11d48" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="app-label">C4. Deep U</div>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- page -->
+</body>
+</html>

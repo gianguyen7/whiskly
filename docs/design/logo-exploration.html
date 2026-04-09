@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiskly Logo Exploration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --matcha-50: #f0f5f1;
+      --matcha-100: #dce8de;
+      --matcha-200: #b9d1be;
+      --matcha-300: #8fb899;
+      --matcha-400: #6a9e76;
+      --matcha-500: #4a7c59;
+      --matcha-600: #3a6347;
+      --matcha-700: #2d4d37;
+      --matcha-800: #233a2a;
+      --matcha-900: #182a1e;
+      --bg: #fafaf8;
+      --fg: #1a1a1a;
+      --border: #e5e5e0;
+      --radius: 11px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 32px;
+    }
+
+    header {
+      margin-bottom: 64px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #666;
+      max-width: 640px;
+    }
+
+    .concept-card {
+      margin-bottom: 72px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .concept-header {
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .concept-header h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .concept-header .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--matcha-600);
+      background: var(--matcha-50);
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .concept-header p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .concept-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .variant-bg {
+      padding: 40px 32px;
+    }
+
+    .variant-bg.light {
+      background: var(--bg);
+    }
+
+    .variant-bg.dark {
+      background: var(--fg);
+    }
+
+    .variant-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      opacity: 0.5;
+    }
+
+    .variant-bg.light .variant-label { color: var(--fg); }
+    .variant-bg.dark .variant-label { color: #fff; }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 28px;
+    }
+
+    .logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .logo-item span {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.4;
+    }
+
+    .variant-bg.light .logo-item span { color: var(--fg); }
+    .variant-bg.dark .logo-item span { color: #fff; }
+
+    .size-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(128,128,128,0.15);
+    }
+
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .size-item span {
+      font-size: 9px;
+      opacity: 0.4;
+    }
+
+    .variant-bg.light .size-item span { color: var(--fg); }
+    .variant-bg.dark .size-item span { color: #fff; }
+
+    .meta {
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>whiskly logo exploration</h1>
+      <p>Six logo concepts for Whiskly, a personal matcha tracker app. Each concept is shown as a full logo (icon + wordmark), icon only, and wordmark only, on both light and dark backgrounds with size scalability previews.</p>
+    </header>
+
+    <!-- ========== CONCEPT 1: Chasen ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 1</span>
+        <h2>Chasen (Bamboo Whisk)</h2>
+        <p>Abstracted bamboo whisk tines rendered as four organic curved lines. The mark captures the graceful splay of the chasen while remaining clean and minimal at small sizes.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="180" height="44" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Icon -->
+                <g transform="translate(2, 2)">
+                  <path d="M16 38C16 38 10 28 10 18C10 10 13 4 16 2" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M20 38C20 38 17 28 17 18C17 10 18.5 4 20 2" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M24 38C24 38 24 28 24 18C24 10 23.5 4 24 2" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M28 38C28 38 31 28 31 18C31 10 29.5 4 28 2" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <!-- Wordmark -->
+                <text x="54" y="31" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#4a7c59" stroke-width="3.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#4a7c59" stroke-width="3.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#4a7c59" stroke-width="3.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#4a7c59" stroke-width="3.5" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="180" height="44" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(2, 2)">
+                  <path d="M16 38C16 38 10 28 10 18C10 10 13 4 16 2" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M20 38C20 38 17 28 17 18C17 10 18.5 4 20 2" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M24 38C24 38 24 28 24 18C24 10 23.5 4 24 2" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M28 38C28 38 31 28 31 18C31 10 29.5 4 28 2" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <text x="54" y="31" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#8fb899" stroke-width="3.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#8fb899" stroke-width="3.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#8fb899" stroke-width="3.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#8fb899" stroke-width="3.5" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M14 37C14 37 8 27 8 17C8 9 11 3 14 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M18 37C18 37 15 27 15 17C15 9 16.5 3 18 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M22 37C22 37 22 27 22 17C22 9 21.5 3 22 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/><path d="M26 37C26 37 29 27 29 17C29 9 27.5 3 26 1" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONCEPT 2: Bowl + Whisk ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 2</span>
+        <h2>Matcha Bowl + Whisk</h2>
+        <p>A minimal chawan (tea bowl) profile with a single curved whisk element rising from it. The bowl is reduced to an open semicircle, with delicate tines suggesting preparation. Warm and inviting.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(4, 4)">
+                  <!-- Bowl -->
+                  <path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                  <!-- Whisk tines from bowl -->
+                  <path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+                <path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#4a7c59" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
+                <g transform="translate(4, 4)">
+                  <path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                  <path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+                <path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="3" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="3" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="3" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M6 22C6 22 6 36 20 36C34 36 34 22 34 22" stroke="#8fb899" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15 22C15 22 13 14 15 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M20 22C20 22 20 14 20 5" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/><path d="M25 22C25 22 27 14 25 6" stroke="#8fb899" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONCEPT 3: Leaf Mark ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 3</span>
+        <h2>Leaf Mark</h2>
+        <p>A single tea leaf rendered with clean geometry, with the leaf's central vein subtly forming a "W" shape. Organic yet precise, referencing both the source ingredient and the brand initial.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="190" height="48" viewBox="0 0 190 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(4, 3)">
+                  <!-- Leaf outline -->
+                  <path d="M20 2C8 10 4 22 8 34C10 38 15 40 20 40C25 40 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/>
+                  <!-- W vein -->
+                  <path d="M12 18L16 26L20 19L24 26L28 18" stroke="#fafaf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <!-- Center vein -->
+                  <path d="M20 26L20 36" stroke="#fafaf8" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="44" viewBox="0 0 40 44" fill="none">
+                <path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/>
+                <path d="M12 19L16 27L20 20L24 27L28 19" stroke="#fafaf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M20 27L20 37" stroke="#fafaf8" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#fafaf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#fafaf8" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#fafaf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#fafaf8" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#fafaf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#fafaf8" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#4a7c59"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#fafaf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#fafaf8" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="190" height="48" viewBox="0 0 190 48" fill="none">
+                <g transform="translate(4, 3)">
+                  <path d="M20 2C8 10 4 22 8 34C10 38 15 40 20 40C25 40 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/>
+                  <path d="M12 18L16 26L20 19L24 26L28 18" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <path d="M20 26L20 36" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="44" viewBox="0 0 40 44" fill="none">
+                <path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/>
+                <path d="M12 19L16 27L20 20L24 27L28 19" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M20 27L20 37" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 44" fill="none"><path d="M20 2C8 10 4 22 8 34C10 38 15 42 20 42C25 42 30 38 32 34C36 22 32 10 20 2Z" fill="#8fb899"/><path d="M12 19L16 27L20 20L24 27L28 19" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 27L20 37" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONCEPT 4: Letterform W ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 4</span>
+        <h2>Letterform "W"</h2>
+        <p>A custom "W" with organic, softly curved strokes that evoke the flowing motion of chasen tines. The bottom points are rounded like the base of a tea bowl, and a small leaf accent sits at the top right. Modern monogram energy.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(4, 6)">
+                  <!-- Custom W with organic curves -->
+                  <path d="M4 4C4 4 8 30 12 32C14 33 16 28 18 20C20 28 22 33 24 32C28 30 32 4 32 4" stroke="#4a7c59" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <!-- Small leaf accent -->
+                  <path d="M31 6C33 3 37 2 37 2C37 2 36 6 33 8" stroke="#4a7c59" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#4a7c59" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#4a7c59" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#4a7c59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#4a7c59" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#4a7c59" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#4a7c59" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#4a7c59" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#4a7c59" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#4a7c59" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
+                <g transform="translate(4, 6)">
+                  <path d="M4 4C4 4 8 30 12 32C14 33 16 28 18 20C20 28 22 33 24 32C28 30 32 4 32 4" stroke="#8fb899" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <path d="M31 6C33 3 37 2 37 2C37 2 36 6 33 8" stroke="#8fb899" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#8fb899" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#8fb899" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#8fb899" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#8fb899" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#8fb899" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#8fb899" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#8fb899" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 44 44" fill="none"><path d="M6 8C6 8 10 34 14 36C16 37 18 32 20 24C22 32 24 37 26 36C30 34 34 8 34 8" stroke="#8fb899" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M33 10C35 7 39 6 39 6C39 6 38 10 35 12" stroke="#8fb899" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONCEPT 5: Enso Circle ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 5</span>
+        <h2>Enso Circle</h2>
+        <p>Inspired by the Zen enso, an imperfect circle captures the circular whisking motion of matcha preparation. The stroke tapers and lifts, leaving a deliberate gap — a moment of incompleteness that invites mindfulness. A small dot of matcha sits within.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(4, 4)">
+                  <!-- Enso circle with gap -->
+                  <path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <!-- Matcha dot -->
+                  <circle cx="20" cy="21" r="3.5" fill="#4a7c59"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <circle cx="20" cy="21" r="3.5" fill="#4a7c59"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="4.5" fill="#4a7c59"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#4a7c59"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#4a7c59"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#4a7c59"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
+                <g transform="translate(4, 4)">
+                  <path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <circle cx="20" cy="21" r="3.5" fill="#8fb899"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <circle cx="20" cy="21" r="3.5" fill="#8fb899"/>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="4.5" fill="#8fb899"/></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#8fb899"/></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#8fb899"/></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><path d="M32 8C26 3 18 2 12 6C6 10 3 18 4 26C5 34 12 38 20 38C28 38 34 32 36 24C37 18 36 12 32 8" stroke="#8fb899" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="20" cy="21" r="3.5" fill="#8fb899"/></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONCEPT 6: Abstract Taste ========== -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <span class="tag">Concept 6</span>
+        <h2>Abstract Taste</h2>
+        <p>A five-petaled organic shape representing the five taste dimensions of matcha (umami, sweetness, bitterness, astringency, body). Each petal varies slightly in length, creating an asymmetric but balanced form like a personalized taste profile. Doubles as an abstract flower viewed from above.</p>
+      </div>
+      <div class="concept-body">
+        <!-- Light -->
+        <div class="variant-bg light">
+          <div class="variant-label">Light background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(22, 24)">
+                  <!-- 5 petals at different lengths, rotated around center -->
+                  <ellipse cx="0" cy="-14" rx="4.5" ry="10" fill="#4a7c59" transform="rotate(0)"/>
+                  <ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(72)"/>
+                  <ellipse cx="0" cy="-15" rx="4.5" ry="11" fill="#4a7c59" transform="rotate(144)"/>
+                  <ellipse cx="0" cy="-11" rx="4" ry="8" fill="#4a7c59" transform="rotate(216)"/>
+                  <ellipse cx="0" cy="-13" rx="4.5" ry="10" fill="#4a7c59" transform="rotate(288)"/>
+                  <!-- Center dot -->
+                  <circle cx="0" cy="0" r="3" fill="#fafaf8"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <g transform="translate(20, 20)">
+                  <ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(0)"/>
+                  <ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#4a7c59" transform="rotate(72)"/>
+                  <ellipse cx="0" cy="-13" rx="4" ry="10" fill="#4a7c59" transform="rotate(144)"/>
+                  <ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#4a7c59" transform="rotate(216)"/>
+                  <ellipse cx="0" cy="-11" rx="4" ry="9" fill="#4a7c59" transform="rotate(288)"/>
+                  <circle cx="0" cy="0" r="2.5" fill="#fafaf8"/>
+                </g>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#4a7c59" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#4a7c59" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#4a7c59" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#4a7c59" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#fafaf8"/></g></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#4a7c59" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#4a7c59" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#4a7c59" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#4a7c59" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#fafaf8"/></g></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#4a7c59" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#4a7c59" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#4a7c59" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#4a7c59" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#fafaf8"/></g></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#4a7c59" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#4a7c59" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#4a7c59" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#4a7c59" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#4a7c59" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#fafaf8"/></g></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="variant-bg dark">
+          <div class="variant-label">Dark background</div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Full logo</span>
+              <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
+                <g transform="translate(22, 24)">
+                  <ellipse cx="0" cy="-14" rx="4.5" ry="10" fill="#8fb899" transform="rotate(0)"/>
+                  <ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(72)"/>
+                  <ellipse cx="0" cy="-15" rx="4.5" ry="11" fill="#8fb899" transform="rotate(144)"/>
+                  <ellipse cx="0" cy="-11" rx="4" ry="8" fill="#8fb899" transform="rotate(216)"/>
+                  <ellipse cx="0" cy="-13" rx="4.5" ry="10" fill="#8fb899" transform="rotate(288)"/>
+                  <circle cx="0" cy="0" r="3" fill="#1a1a1a"/>
+                </g>
+                <text x="52" y="33" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logo-row">
+            <div class="logo-item">
+              <span>Icon only</span>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <g transform="translate(20, 20)">
+                  <ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(0)"/>
+                  <ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#8fb899" transform="rotate(72)"/>
+                  <ellipse cx="0" cy="-13" rx="4" ry="10" fill="#8fb899" transform="rotate(144)"/>
+                  <ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#8fb899" transform="rotate(216)"/>
+                  <ellipse cx="0" cy="-11" rx="4" ry="9" fill="#8fb899" transform="rotate(288)"/>
+                  <circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/>
+                </g>
+              </svg>
+            </div>
+            <div class="logo-item">
+              <span>Wordmark</span>
+              <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+                <text x="0" y="24" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#fafaf8" letter-spacing="-0.5">whiskly</text>
+              </svg>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="size-item">
+              <svg width="16" height="16" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#8fb899" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#8fb899" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#8fb899" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#8fb899" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/></g></svg>
+              <span>16px</span>
+            </div>
+            <div class="size-item">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#8fb899" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#8fb899" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#8fb899" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#8fb899" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/></g></svg>
+              <span>32px</span>
+            </div>
+            <div class="size-item">
+              <svg width="64" height="64" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#8fb899" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#8fb899" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#8fb899" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#8fb899" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/></g></svg>
+              <span>64px</span>
+            </div>
+            <div class="size-item">
+              <svg width="128" height="128" viewBox="0 0 40 40" fill="none"><g transform="translate(20, 20)"><ellipse cx="0" cy="-12" rx="4" ry="9" fill="#8fb899" transform="rotate(0)"/><ellipse cx="0" cy="-10" rx="3.5" ry="8" fill="#8fb899" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="4" ry="10" fill="#8fb899" transform="rotate(144)"/><ellipse cx="0" cy="-9.5" rx="3.5" ry="7" fill="#8fb899" transform="rotate(216)"/><ellipse cx="0" cy="-11" rx="4" ry="9" fill="#8fb899" transform="rotate(288)"/><circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/></g></svg>
+              <span>128px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="meta">Whiskly Logo Exploration &mdash; 6 concepts, each shown as full logo, icon, and wordmark on light and dark backgrounds with scalability previews at 16px, 32px, 64px, and 128px.</p>
+  </div>
+</body>
+</html>

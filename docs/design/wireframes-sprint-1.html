@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiskly — Sprint 1 Wireframes</title>
+<style>
+  /* Reset & Base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #fafaf8;
+    --fg: #1a1a1a;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --matcha-50: #f0f5f1;
+    --matcha-100: #d4e6d9;
+    --matcha-200: #b0d1b9;
+    --matcha-300: #85b893;
+    --matcha-400: #5f9a6e;
+    --matcha-500: #4a7c59;
+    --matcha-600: #3d6a4b;
+    --matcha-700: #2f5239;
+    --matcha-800: #233d2b;
+    --matcha-900: #182a1e;
+    --red-50: #fef2f2;
+    --red-200: #fecaca;
+    --red-500: #ef4444;
+    --red-700: #b91c1c;
+    --radius: 11px;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  body {
+    font-family: var(--font);
+    background: #e8e8e8;
+    color: var(--fg);
+    padding: 32px 16px;
+    line-height: 1.5;
+  }
+
+  /* Page Header */
+  .page-header {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .page-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--matcha-700);
+  }
+  .page-header p {
+    color: var(--gray-500);
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  /* Screen navigation tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1400px;
+    margin: 0 auto 32px;
+  }
+  .tab {
+    padding: 8px 18px;
+    border-radius: 99px;
+    border: 1px solid var(--gray-300);
+    background: white;
+    color: var(--gray-600);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tab:hover { border-color: var(--matcha-400); color: var(--matcha-700); }
+  .tab.active { background: var(--matcha-600); color: white; border-color: var(--matcha-600); }
+
+  /* State toggle pills */
+  .state-toggles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .state-pill {
+    padding: 5px 12px;
+    border-radius: 99px;
+    border: 1px solid var(--gray-200);
+    background: white;
+    color: var(--gray-500);
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .state-pill:hover { border-color: var(--matcha-300); }
+  .state-pill.active { background: var(--matcha-50); border-color: var(--matcha-400); color: var(--matcha-700); }
+
+  /* Phone frame */
+  .phone-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .phone {
+    width: 375px;
+    height: 812px;
+    background: var(--bg);
+    border-radius: 40px;
+    border: 8px solid #1a1a1a;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.05);
+  }
+
+  /* Status bar */
+  .status-bar {
+    height: 54px;
+    padding: 14px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg);
+    background: var(--bg);
+    position: relative;
+    z-index: 10;
+  }
+  .status-bar .notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 0 0 18px 18px;
+  }
+  .status-icons { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+
+  /* Screen content area */
+  .screen-content {
+    height: calc(812px - 54px);
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+  }
+  .screen-content::-webkit-scrollbar { display: none; }
+
+  /* Bottom nav */
+  .bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: white;
+    border-top: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 8px;
+    z-index: 20;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    color: var(--gray-400);
+  }
+  .nav-item.active { color: var(--matcha-600); }
+  .nav-icon { width: 22px; height: 22px; border-radius: 4px; background: currentColor; opacity: 0.3; }
+  .nav-item.active .nav-icon { opacity: 0.6; }
+
+  /* Shared form styles */
+  .form-container {
+    padding: 24px;
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+  }
+  .form-container.with-nav { min-height: calc(100% - 72px); }
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--matcha-100);
+    border-radius: 12px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-icon svg { width: 24px; height: 24px; }
+  .brand-name {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--matcha-700);
+    margin-bottom: 4px;
+  }
+  .form-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: 28px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 6px;
+  }
+  .form-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+    font-size: 14px;
+    color: var(--fg);
+    background: white;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .form-input::placeholder { color: var(--gray-400); }
+  .form-input:focus { border-color: var(--matcha-500); box-shadow: 0 0 0 3px rgba(74,124,89,0.1); }
+  .form-input.error { border-color: var(--red-500); }
+  .form-input-wrapper { position: relative; }
+  .form-input-wrapper .toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    cursor: pointer;
+    font-size: 14px;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .form-hint {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 4px;
+  }
+  .form-error {
+    font-size: 11px;
+    color: var(--red-500);
+    margin-top: 4px;
+    display: none;
+  }
+  .form-group.has-error .form-error { display: block; }
+  .form-group.has-error .form-input { border-color: var(--red-500); }
+  .btn-primary {
+    width: 100%;
+    height: 46px;
+    background: var(--matcha-600);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--matcha-700); }
+  .btn-primary.loading { opacity: 0.6; cursor: not-allowed; }
+  .btn-ghost {
+    width: 100%;
+    height: 46px;
+    background: transparent;
+    color: var(--matcha-700);
+    border: 1px solid var(--matcha-300);
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-ghost:hover { background: var(--matcha-50); }
+  .btn-ghost.disabled { opacity: 0.4; cursor: not-allowed; }
+  .form-footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 20px;
+  }
+  .form-footer a { color: var(--matcha-600); font-weight: 600; text-decoration: none; }
+  .error-banner {
+    background: var(--red-50);
+    border: 1px solid var(--red-200);
+    color: var(--red-700);
+    font-size: 13px;
+    padding: 12px;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    display: none;
+  }
+
+  /* Catalog-specific */
+  .catalog-header { padding: 16px 16px 0; }
+  .catalog-title { font-size: 24px; font-weight: 700; color: var(--matcha-700); }
+  .sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    padding: 12px 16px 8px;
+  }
+  .sticky-bar.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .search-box {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    font-size: 15px;
+  }
+  .search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 40px 0 40px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    font-size: 14px;
+    background: white;
+    outline: none;
+  }
+  .search-input::placeholder { color: var(--gray-400); }
+  .search-input:focus { border-color: var(--matcha-500); box-shadow: 0 0 0 3px rgba(74,124,89,0.1); }
+  .search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--gray-200);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    color: var(--gray-500);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .search-clear.visible { display: flex; }
+  .filter-chips {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .filter-chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: none;
+    background: var(--gray-100);
+    color: var(--gray-600);
+  }
+  .chip.active { background: var(--matcha-600); color: white; }
+
+  /* Matcha cards */
+  .card-list { padding: 12px 16px 88px; display: flex; flex-direction: column; gap: 12px; }
+  .matcha-card {
+    background: white;
+    border: 1px solid var(--matcha-200);
+    border-radius: var(--radius);
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .matcha-card:hover { border-color: var(--matcha-400); box-shadow: 0 2px 12px rgba(74,124,89,0.08); }
+  .card-name { font-size: 15px; font-weight: 600; color: var(--gray-900); }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .card-brand { font-size: 13px; color: var(--gray-500); }
+  .card-badge {
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 99px;
+    background: var(--matcha-100);
+    color: var(--matcha-800);
+    font-weight: 500;
+  }
+  .card-region { font-size: 12px; color: var(--gray-400); margin-top: 3px; }
+  .card-desc { font-size: 13px; color: var(--gray-500); margin-top: 8px; line-height: 1.5; }
+  .result-count { font-size: 13px; color: var(--gray-400); padding: 4px 16px 0; }
+  .load-more {
+    text-align: center;
+    padding: 8px 16px 0;
+  }
+  .load-more-count { font-size: 13px; color: var(--gray-400); margin-bottom: 10px; }
+
+  /* Empty state */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 32px;
+    text-align: center;
+  }
+  .empty-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    color: var(--matcha-300);
+  }
+  .empty-title { font-size: 16px; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
+  .empty-body { font-size: 13px; color: var(--gray-400); line-height: 1.5; }
+
+  /* Detail page */
+  .detail-back {
+    padding: 16px;
+    font-size: 14px;
+    color: var(--matcha-600);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .detail-hero { padding: 0 16px 16px; }
+  .detail-name { font-size: 24px; font-weight: 700; color: var(--gray-900); }
+  .detail-brand { font-size: 15px; color: var(--gray-500); margin-top: 2px; }
+  .detail-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .detail-region { font-size: 13px; color: var(--gray-400); }
+  .divider {
+    height: 1px;
+    background: var(--gray-100);
+    margin: 0 16px;
+  }
+  .detail-section {
+    padding: 20px 16px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 16px;
+  }
+  .taste-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .taste-label {
+    font-size: 13px;
+    color: var(--gray-600);
+    width: 90px;
+    flex-shrink: 0;
+  }
+  .taste-track {
+    flex: 1;
+    height: 8px;
+    background: var(--matcha-100);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .taste-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.6s ease;
+  }
+  .taste-fill.low { background: var(--matcha-300); }
+  .taste-fill.mid { background: var(--matcha-400); }
+  .taste-fill.high { background: var(--matcha-600); }
+  .taste-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    width: 28px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .detail-desc {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .detail-ctas {
+    padding: 8px 16px 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sprint2-note {
+    font-size: 11px;
+    color: var(--gray-400);
+    text-align: center;
+    margin-top: -4px;
+  }
+
+  /* Confirmation state */
+  .confirmation { text-align: center; }
+  .confirmation .mail-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    color: var(--matcha-500);
+  }
+  .confirmation h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--matcha-700);
+    margin-bottom: 10px;
+  }
+  .confirmation p {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .resend-link {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 16px;
+  }
+  .resend-link a { color: var(--matcha-600); font-weight: 600; text-decoration: none; }
+
+  /* Skeleton loading */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .skeleton {
+    background: var(--gray-200);
+    border-radius: 6px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .skeleton-card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 16px;
+  }
+  .sk-line { height: 14px; margin-bottom: 8px; }
+  .sk-line.w60 { width: 60%; }
+  .sk-line.w40 { width: 40%; }
+  .sk-line.w80 { width: 80%; }
+  .sk-line.w100 { width: 100%; }
+  .sk-badge { width: 72px; height: 22px; border-radius: 99px; }
+
+  /* Visibility */
+  .screen { display: none; }
+  .screen.active { display: block; }
+  .state-view { display: none; }
+  .state-view.active { display: block; }
+
+  /* Annotation label */
+  .screen-label {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+  .screen-label strong { color: var(--gray-700); }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Whiskly — Sprint 1 Wireframes</h1>
+  <p>Mobile-first interactive mockups (375 &times; 812px) &middot; Tap a screen to preview &middot; Toggle states below</p>
+</div>
+
+<!-- Screen tabs -->
+<div class="tabs" id="tabs">
+  <button class="tab active" data-screen="signup">Sign Up</button>
+  <button class="tab" data-screen="login">Login</button>
+  <button class="tab" data-screen="forgot">Forgot Password</button>
+  <button class="tab" data-screen="catalog">Catalog Browse</button>
+  <button class="tab" data-screen="search">Catalog Search</button>
+  <button class="tab" data-screen="detail">Matcha Detail</button>
+</div>
+
+<!-- State toggles (dynamic per screen) -->
+<div class="state-toggles" id="state-toggles"></div>
+
+<!-- Phone Frame -->
+<div class="phone-wrapper">
+  <div class="phone">
+
+    <!-- ===== SIGN UP ===== -->
+    <div class="screen active" id="screen-signup">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <!-- Default state -->
+        <div class="state-view active" data-state="default">
+          <div class="form-container">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name">whiskly</div>
+            <div class="form-subtitle">Start your matcha journey</div>
+
+            <div class="form-group">
+              <label class="form-label">Display Name</label>
+              <input type="text" class="form-input" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <div class="form-input-wrapper">
+                <input type="password" class="form-input" placeholder="Create a password">
+                <button class="toggle">&#128065;</button>
+              </div>
+              <div class="form-hint">Must be at least 8 characters</div>
+            </div>
+            <button class="btn-primary">Create Account</button>
+            <div class="form-footer">Already have an account? <a href="#">Sign in</a></div>
+          </div>
+        </div>
+
+        <!-- Error state -->
+        <div class="state-view" data-state="error">
+          <div class="form-container">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name">whiskly</div>
+            <div class="form-subtitle">Start your matcha journey</div>
+
+            <div class="error-banner" style="display:block">Something went wrong. Please try again.</div>
+
+            <div class="form-group has-error">
+              <label class="form-label">Display Name</label>
+              <input type="text" class="form-input error" value="">
+              <div class="form-error" style="display:block">Please enter your name</div>
+            </div>
+            <div class="form-group has-error">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input error" value="alex@">
+              <div class="form-error" style="display:block">Please enter a valid email address</div>
+            </div>
+            <div class="form-group has-error">
+              <label class="form-label">Password</label>
+              <div class="form-input-wrapper">
+                <input type="password" class="form-input error" value="abc">
+                <button class="toggle">&#128065;</button>
+              </div>
+              <div class="form-error" style="display:block">Password must be at least 8 characters</div>
+            </div>
+            <button class="btn-primary">Create Account</button>
+            <div class="form-footer">Already have an account? <a href="#">Sign in</a></div>
+          </div>
+        </div>
+
+        <!-- Loading state -->
+        <div class="state-view" data-state="loading">
+          <div class="form-container">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name">whiskly</div>
+            <div class="form-subtitle">Start your matcha journey</div>
+
+            <div class="form-group">
+              <label class="form-label">Display Name</label>
+              <input type="text" class="form-input" value="Alex" disabled style="opacity:0.6">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" value="alex@example.com" disabled style="opacity:0.6">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <div class="form-input-wrapper">
+                <input type="password" class="form-input" value="password123" disabled style="opacity:0.6">
+                <button class="toggle">&#128065;</button>
+              </div>
+            </div>
+            <button class="btn-primary loading">Creating account...</button>
+            <div class="form-footer">Already have an account? <a href="#">Sign in</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LOGIN ===== -->
+    <div class="screen" id="screen-login">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <div class="state-view active" data-state="default">
+          <div class="form-container">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name">whiskly</div>
+            <div class="form-subtitle">Welcome back</div>
+
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <div class="form-input-wrapper">
+                <input type="password" class="form-input" placeholder="Your password">
+                <button class="toggle">&#128065;</button>
+              </div>
+              <div style="text-align:right;margin-top:6px">
+                <a href="#" style="font-size:13px;color:var(--matcha-600);text-decoration:none;font-weight:500">Forgot password?</a>
+              </div>
+            </div>
+            <button class="btn-primary">Sign In</button>
+            <div class="form-footer">Don't have an account? <a href="#">Sign up</a></div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="error">
+          <div class="form-container">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name">whiskly</div>
+            <div class="form-subtitle">Welcome back</div>
+
+            <div class="error-banner" style="display:block">Invalid email or password. Please try again.</div>
+
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" value="alex@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <div class="form-input-wrapper">
+                <input type="password" class="form-input" value="wrongpass">
+                <button class="toggle">&#128065;</button>
+              </div>
+              <div style="text-align:right;margin-top:6px">
+                <a href="#" style="font-size:13px;color:var(--matcha-600);text-decoration:none;font-weight:500">Forgot password?</a>
+              </div>
+            </div>
+            <button class="btn-primary">Sign In</button>
+            <div class="form-footer">Don't have an account? <a href="#">Sign up</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FORGOT PASSWORD ===== -->
+    <div class="screen" id="screen-forgot">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <div class="state-view active" data-state="default">
+          <div class="form-container">
+            <div class="detail-back" style="padding:0 0 16px">&#8249; Back</div>
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--matcha-600)">
+                <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+              </svg>
+            </div>
+            <div class="brand-name" style="font-size:20px">Reset your password</div>
+            <div class="form-subtitle" style="max-width:280px;margin:0 auto 24px">Enter the email address you used to create your account and we'll send you a link to reset your password.</div>
+
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="you@example.com">
+            </div>
+            <button class="btn-primary">Send Reset Link</button>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="confirmation">
+          <div class="form-container">
+            <div class="detail-back" style="padding:0 0 16px">&#8249; Back</div>
+            <div class="confirmation">
+              <div class="mail-icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--matcha-500);width:48px;height:48px">
+                  <rect x="4" y="10" width="40" height="28" rx="4"/>
+                  <path d="M4 14l20 14 20-14"/>
+                </svg>
+              </div>
+              <h2>Check your email</h2>
+              <p>If an account exists for alex@example.com, we've sent a password reset link. Check your inbox and spam folder.</p>
+              <button class="btn-primary" style="max-width:280px;margin:0 auto">Back to Sign In</button>
+              <div class="resend-link">Didn't receive it? <a href="#">Resend</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CATALOG BROWSE ===== -->
+    <div class="screen" id="screen-catalog">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <div class="state-view active" data-state="default">
+          <div class="catalog-header">
+            <h1 class="catalog-title">Catalog</h1>
+          </div>
+          <div class="sticky-bar">
+            <div class="search-box">
+              <span class="search-icon">&#128269;</span>
+              <input type="text" class="search-input" placeholder="Search matcha...">
+            </div>
+            <div class="filter-chips">
+              <button class="chip active">All</button>
+              <button class="chip">Ceremonial</button>
+              <button class="chip">Premium</button>
+              <button class="chip">Culinary</button>
+              <button class="chip">Latte</button>
+              <button class="chip">Other</button>
+            </div>
+          </div>
+          <div class="card-list">
+            <div class="matcha-card">
+              <div class="card-name">Ippodo Ummon-no-mukashi</div>
+              <div class="card-meta">
+                <span class="card-brand">Ippodo</span>
+                <span class="card-badge">Ceremonial</span>
+              </div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">Rich umami with a smooth, creamy finish that lingers beautifully...</div>
+            </div>
+            <div class="matcha-card">
+              <div class="card-name">Kettl Shinme</div>
+              <div class="card-meta">
+                <span class="card-brand">Kettl</span>
+                <span class="card-badge">Ceremonial</span>
+              </div>
+              <div class="card-region">Shizuoka</div>
+              <div class="card-desc">Vibrant grassiness balanced by natural sweetness and a clean finish...</div>
+            </div>
+            <div class="matcha-card">
+              <div class="card-name">Sazen Tenshi</div>
+              <div class="card-meta">
+                <span class="card-brand">Sazen</span>
+                <span class="card-badge">Premium</span>
+              </div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">Approachable everyday matcha with mild umami and subtle sweetness...</div>
+            </div>
+            <div class="matcha-card">
+              <div class="card-name">Marukyu Koyamaen Aoarashi</div>
+              <div class="card-meta">
+                <span class="card-brand">Marukyu Koyamaen</span>
+                <span class="card-badge">Ceremonial</span>
+              </div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">Complex layers of umami and a velvety mouthfeel. Exceptional for koicha...</div>
+            </div>
+            <div class="load-more">
+              <div class="load-more-count">Showing 4 of 47</div>
+              <button class="btn-ghost" style="max-width:200px;margin:0 auto;height:40px;font-size:14px">Load More</button>
+            </div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><div class="nav-icon"></div><span>Catalog</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Log</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Profile</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Discover</span></div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="loading">
+          <div class="catalog-header">
+            <h1 class="catalog-title">Catalog</h1>
+          </div>
+          <div class="sticky-bar">
+            <div class="search-box">
+              <span class="search-icon">&#128269;</span>
+              <input type="text" class="search-input" placeholder="Search matcha..." disabled>
+            </div>
+            <div class="filter-chips">
+              <button class="chip active">All</button>
+              <button class="chip">Ceremonial</button>
+              <button class="chip">Premium</button>
+              <button class="chip">Culinary</button>
+              <button class="chip">Latte</button>
+            </div>
+          </div>
+          <div class="card-list">
+            <div class="skeleton-card"><div class="skeleton sk-line w60"></div><div style="display:flex;justify-content:space-between;margin-top:8px"><div class="skeleton sk-line w40" style="margin:0"></div><div class="skeleton sk-badge"></div></div><div class="skeleton sk-line w40" style="margin-top:8px"></div><div class="skeleton sk-line w100" style="margin-top:12px"></div><div class="skeleton sk-line w80" style="margin-top:4px"></div></div>
+            <div class="skeleton-card"><div class="skeleton sk-line w60"></div><div style="display:flex;justify-content:space-between;margin-top:8px"><div class="skeleton sk-line w40" style="margin:0"></div><div class="skeleton sk-badge"></div></div><div class="skeleton sk-line w40" style="margin-top:8px"></div><div class="skeleton sk-line w100" style="margin-top:12px"></div><div class="skeleton sk-line w80" style="margin-top:4px"></div></div>
+            <div class="skeleton-card"><div class="skeleton sk-line w60"></div><div style="display:flex;justify-content:space-between;margin-top:8px"><div class="skeleton sk-line w40" style="margin:0"></div><div class="skeleton sk-badge"></div></div><div class="skeleton sk-line w40" style="margin-top:8px"></div><div class="skeleton sk-line w100" style="margin-top:12px"></div><div class="skeleton sk-line w80" style="margin-top:4px"></div></div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><div class="nav-icon"></div><span>Catalog</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Log</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Profile</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Discover</span></div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="empty">
+          <div class="catalog-header">
+            <h1 class="catalog-title">Catalog</h1>
+          </div>
+          <div class="sticky-bar">
+            <div class="search-box">
+              <span class="search-icon">&#128269;</span>
+              <input type="text" class="search-input" placeholder="Search matcha...">
+            </div>
+            <div class="filter-chips">
+              <button class="chip active">All</button>
+              <button class="chip">Ceremonial</button>
+              <button class="chip">Premium</button>
+            </div>
+          </div>
+          <div class="empty-state">
+            <svg class="empty-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4C16 12 8 18 8 28a16 16 0 0032 0c0-10-8-16-16-24z"/>
+            </svg>
+            <div class="empty-title">No matcha yet</div>
+            <div class="empty-body">The catalog is being prepared. Check back soon.</div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><div class="nav-icon"></div><span>Catalog</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Log</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Profile</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Discover</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CATALOG SEARCH ===== -->
+    <div class="screen" id="screen-search">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <div class="state-view active" data-state="default">
+          <div class="catalog-header">
+            <h1 class="catalog-title">Catalog</h1>
+          </div>
+          <div class="sticky-bar">
+            <div class="search-box">
+              <span class="search-icon">&#128269;</span>
+              <input type="text" class="search-input" value="ippodo" style="border-color:var(--matcha-500);box-shadow:0 0 0 3px rgba(74,124,89,0.1)">
+              <button class="search-clear visible">&times;</button>
+            </div>
+            <div class="filter-chips">
+              <button class="chip active">All</button>
+              <button class="chip">Ceremonial</button>
+              <button class="chip">Premium</button>
+              <button class="chip">Culinary</button>
+              <button class="chip">Latte</button>
+            </div>
+          </div>
+          <div class="result-count">3 results</div>
+          <div class="card-list" style="padding-top:8px">
+            <div class="matcha-card">
+              <div class="card-name">Ippodo Ummon-no-mukashi</div>
+              <div class="card-meta"><span class="card-brand">Ippodo</span><span class="card-badge">Ceremonial</span></div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">Rich umami with a smooth, creamy finish that lingers beautifully...</div>
+            </div>
+            <div class="matcha-card">
+              <div class="card-name">Ippodo Sayaka</div>
+              <div class="card-meta"><span class="card-brand">Ippodo</span><span class="card-badge">Premium</span></div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">Bright and refreshing with a clean, grassy character...</div>
+            </div>
+            <div class="matcha-card">
+              <div class="card-name">Ippodo Horai</div>
+              <div class="card-meta"><span class="card-brand">Ippodo</span><span class="card-badge">Ceremonial</span></div>
+              <div class="card-region">Uji, Kyoto</div>
+              <div class="card-desc">The pinnacle of Ippodo's matcha lineup. Extraordinary depth...</div>
+            </div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><div class="nav-icon"></div><span>Catalog</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Log</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Profile</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Discover</span></div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="no-results">
+          <div class="catalog-header">
+            <h1 class="catalog-title">Catalog</h1>
+          </div>
+          <div class="sticky-bar">
+            <div class="search-box">
+              <span class="search-icon">&#128269;</span>
+              <input type="text" class="search-input" value="jade leaf" style="border-color:var(--matcha-500);box-shadow:0 0 0 3px rgba(74,124,89,0.1)">
+              <button class="search-clear visible">&times;</button>
+            </div>
+            <div class="filter-chips">
+              <button class="chip active">All</button>
+              <button class="chip">Ceremonial</button>
+              <button class="chip">Premium</button>
+            </div>
+          </div>
+          <div class="empty-state">
+            <svg class="empty-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="20" cy="20" r="14"/>
+              <path d="M30 30l12 12"/>
+            </svg>
+            <div class="empty-title">No results for "jade leaf"</div>
+            <div class="empty-body">Try a different search term or check the spelling.</div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><div class="nav-icon"></div><span>Catalog</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Log</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Profile</span></div>
+            <div class="nav-item"><div class="nav-icon"></div><span>Discover</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MATCHA DETAIL ===== -->
+    <div class="screen" id="screen-detail">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="notch"></div>
+        <div class="status-icons">
+          <span>&#9679;&#9679;&#9679;&#9679;</span>
+          <span>&#128267;</span>
+        </div>
+      </div>
+      <div class="screen-content">
+
+        <div class="state-view active" data-state="default">
+          <div class="detail-back">&#8249; Catalog</div>
+          <div class="detail-hero">
+            <div class="detail-name">Ippodo Ummon-no-mukashi</div>
+            <div class="detail-brand">Ippodo</div>
+            <div class="detail-meta-row">
+              <span class="detail-region">Uji, Kyoto</span>
+              <span class="card-badge">Ceremonial</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-section">
+            <div class="section-title">Taste Profile</div>
+            <div class="taste-bar-row">
+              <span class="taste-label">Umami</span>
+              <div class="taste-track"><div class="taste-fill high" style="width:84%"></div></div>
+              <span class="taste-value">4.2</span>
+            </div>
+            <div class="taste-bar-row">
+              <span class="taste-label">Sweetness</span>
+              <div class="taste-track"><div class="taste-fill mid" style="width:70%"></div></div>
+              <span class="taste-value">3.5</span>
+            </div>
+            <div class="taste-bar-row">
+              <span class="taste-label">Bitterness</span>
+              <div class="taste-track"><div class="taste-fill low" style="width:56%"></div></div>
+              <span class="taste-value">2.8</span>
+            </div>
+            <div class="taste-bar-row">
+              <span class="taste-label">Grassiness</span>
+              <div class="taste-track"><div class="taste-fill mid" style="width:62%"></div></div>
+              <span class="taste-value">3.1</span>
+            </div>
+            <div class="taste-bar-row">
+              <span class="taste-label">Creaminess</span>
+              <div class="taste-track"><div class="taste-fill high" style="width:80%"></div></div>
+              <span class="taste-value">4.0</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-section">
+            <div class="section-title">About</div>
+            <div class="detail-desc">Rich umami with a smooth, creamy finish that lingers beautifully. One of Ippodo's finest ceremonial grade matchas, sourced from Uji. Ideal for traditional preparation (usucha or koicha). The deep green color and fine particle size produce an exceptionally smooth bowl.</div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-ctas">
+            <button class="btn-primary">Log This Matcha</button>
+            <button class="btn-ghost disabled">Compare to My Profile</button>
+            <div class="sprint2-note">Coming in a future update</div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="loading">
+          <div class="detail-back">&#8249; Catalog</div>
+          <div class="detail-hero">
+            <div class="skeleton sk-line w60" style="height:22px;margin-bottom:10px"></div>
+            <div class="skeleton sk-line w40" style="height:14px;margin-bottom:8px"></div>
+            <div style="display:flex;gap:10px"><div class="skeleton sk-line" style="width:80px;height:14px;margin:0"></div><div class="skeleton sk-badge"></div></div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-section">
+            <div class="skeleton sk-line w40" style="height:16px;margin-bottom:16px"></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div class="skeleton" style="width:90px;height:12px;border-radius:4px"></div><div class="skeleton" style="flex:1;height:8px;border-radius:99px"></div><div class="skeleton" style="width:28px;height:12px;border-radius:4px"></div></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div class="skeleton" style="width:90px;height:12px;border-radius:4px"></div><div class="skeleton" style="flex:1;height:8px;border-radius:99px"></div><div class="skeleton" style="width:28px;height:12px;border-radius:4px"></div></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div class="skeleton" style="width:90px;height:12px;border-radius:4px"></div><div class="skeleton" style="flex:1;height:8px;border-radius:99px"></div><div class="skeleton" style="width:28px;height:12px;border-radius:4px"></div></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div class="skeleton" style="width:90px;height:12px;border-radius:4px"></div><div class="skeleton" style="flex:1;height:8px;border-radius:99px"></div><div class="skeleton" style="width:28px;height:12px;border-radius:4px"></div></div>
+            <div style="display:flex;align-items:center;gap:12px"><div class="skeleton" style="width:90px;height:12px;border-radius:4px"></div><div class="skeleton" style="flex:1;height:8px;border-radius:99px"></div><div class="skeleton" style="width:28px;height:12px;border-radius:4px"></div></div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-section">
+            <div class="skeleton sk-line w40" style="height:16px;margin-bottom:12px"></div>
+            <div class="skeleton sk-line w100"></div>
+            <div class="skeleton sk-line w100"></div>
+            <div class="skeleton sk-line w80"></div>
+          </div>
+          <div class="divider"></div>
+          <div class="detail-ctas">
+            <div class="skeleton" style="width:100%;height:46px;border-radius:var(--radius)"></div>
+            <div class="skeleton" style="width:100%;height:46px;border-radius:var(--radius)"></div>
+          </div>
+        </div>
+
+        <div class="state-view" data-state="not-found">
+          <div class="detail-back">&#8249; Catalog</div>
+          <div class="empty-state" style="min-height:500px">
+            <svg class="empty-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4C16 12 8 18 8 28a16 16 0 0032 0c0-10-8-16-16-24z"/>
+            </svg>
+            <div class="empty-title">Matcha not found</div>
+            <div class="empty-body" style="margin-bottom:20px">This matcha may have been removed or the link is incorrect.</div>
+            <button class="btn-ghost" style="width:auto;padding:0 24px;height:40px;font-size:14px">Back to Catalog</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="screen-label" id="screen-label"><strong>Sign Up</strong> &mdash; Default state</div>
+
+<script>
+  // Screen and state configuration
+  const screenStates = {
+    signup:  { label: 'Sign Up',         states: ['default', 'error', 'loading'] },
+    login:   { label: 'Login',           states: ['default', 'error'] },
+    forgot:  { label: 'Forgot Password', states: ['default', 'confirmation'] },
+    catalog: { label: 'Catalog Browse',  states: ['default', 'loading', 'empty'] },
+    search:  { label: 'Catalog Search',  states: ['default', 'no-results'] },
+    detail:  { label: 'Matcha Detail',   states: ['default', 'loading', 'not-found'] },
+  };
+
+  const stateLabels = {
+    'default': 'Default',
+    'error': 'Error',
+    'loading': 'Loading',
+    'confirmation': 'Confirmation',
+    'empty': 'Empty',
+    'no-results': 'No Results',
+    'not-found': 'Not Found',
+  };
+
+  let currentScreen = 'signup';
+  let currentState = 'default';
+
+  function showScreen(screenId, stateId) {
+    currentScreen = screenId;
+    currentState = stateId || 'default';
+
+    // Update tabs
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.screen === screenId));
+
+    // Update screens
+    document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === 'screen-' + screenId));
+
+    // Update state views
+    const screen = document.getElementById('screen-' + screenId);
+    screen.querySelectorAll('.state-view').forEach(v => v.classList.toggle('active', v.dataset.state === currentState));
+
+    // Update state toggles
+    const toggles = document.getElementById('state-toggles');
+    const states = screenStates[screenId].states;
+    toggles.innerHTML = states.map(s =>
+      `<button class="state-pill ${s === currentState ? 'active' : ''}" data-state="${s}">${stateLabels[s]}</button>`
+    ).join('');
+
+    // Update label
+    document.getElementById('screen-label').innerHTML =
+      `<strong>${screenStates[screenId].label}</strong> &mdash; ${stateLabels[currentState]} state`;
+
+    // Scroll content to top
+    const content = screen.querySelector('.screen-content');
+    if (content) content.scrollTop = 0;
+  }
+
+  // Tab clicks
+  document.getElementById('tabs').addEventListener('click', e => {
+    if (e.target.classList.contains('tab')) showScreen(e.target.dataset.screen);
+  });
+
+  // State pill clicks
+  document.getElementById('state-toggles').addEventListener('click', e => {
+    if (e.target.classList.contains('state-pill')) showScreen(currentScreen, e.target.dataset.state);
+  });
+
+  // Filter chip interactivity (visual only)
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('chip')) {
+      const chips = e.target.parentElement;
+      chips.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+    }
+  });
+
+  // Initialize
+  showScreen('signup');
+</script>
+
+</body>
+</html>

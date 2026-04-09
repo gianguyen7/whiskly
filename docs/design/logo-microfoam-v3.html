@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiskly Logo — Microfoam Only Exploration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-50: #eefbf0;
+      --green-100: #d0f4d6;
+      --green-200: #a3e8b2;
+      --green-300: #6dd688;
+      --green-400: #3fbf63;
+      --green-500: #2ea44f;
+      --green-600: #22883e;
+      --green-700: #1a6b31;
+      --green-800: #155226;
+      --green-900: #0f3a1b;
+      --bg: #fafaf8;
+      --bg-dark: #141414;
+      --fg: #1a1a1a;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --radius: 11px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 48px 32px; }
+    header { margin-bottom: 48px; }
+    header h1 { font-size: 28px; font-weight: 700; color: var(--green-700); margin-bottom: 8px; }
+    header p { color: var(--gray-500); font-size: 14px; max-width: 640px; line-height: 1.7; }
+
+    .concept { margin-bottom: 56px; border: 1px solid var(--gray-200); border-radius: 16px; overflow: hidden; }
+    .concept-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--gray-200); }
+    .concept-header h2 { font-size: 18px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+    .concept-header p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+
+    .concept-body { display: flex; }
+    .concept-side {
+      flex: 1;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .concept-side.light { background: var(--bg); }
+    .concept-side.dark { background: var(--bg-dark); }
+
+    .logo-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .logo-variant { text-align: center; }
+    .logo-variant .label {
+      font-size: 10px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.05em; margin-top: 8px;
+    }
+    .light .label { color: var(--gray-400); }
+    .dark .label { color: #555; }
+
+    .size-row { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .size-item { text-align: center; }
+    .size-item .label { margin-top: 6px; }
+
+    .divider-v { width: 1px; background: var(--gray-200); }
+
+    .app-icon {
+      border-radius: 22%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .concept-body { flex-direction: column; }
+      .divider-v { width: 100%; height: 1px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Microfoam Only — Logo Exploration v3</h1>
+    <p>
+      Pure microfoam. No chasen, no bowl — just the bubbles themselves. The foam on a freshly whisked matcha
+      is instantly recognizable to anyone who drinks it. These concepts explore different ways to capture that
+      satisfying, organic cluster of bubbles as a logo mark.
+    </p>
+  </header>
+
+  <!-- ==================== CONCEPT E ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>E. Organic Bubble Cluster</h2>
+      <p>A tight, organic arrangement of circles in varying sizes — like looking at real microfoam up close. The bubbles pack together naturally with small gaps between them. Feels alive, tactile, slightly imperfect. The overall silhouette reads as roughly circular without being a perfect circle.</p>
+    </div>
+    <div class="concept-body">
+      <div class="concept-side light">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="220" height="56" viewBox="0 0 220 56" fill="none">
+              <g transform="translate(4, 2)">
+                <!-- Large anchor bubbles -->
+                <circle cx="20" cy="22" r="10" fill="#22883e"/>
+                <circle cx="36" cy="18" r="8" fill="#2ea44f"/>
+                <circle cx="14" cy="38" r="7" fill="#2ea44f"/>
+                <circle cx="32" cy="34" r="9" fill="#22883e"/>
+                <!-- Medium bubbles -->
+                <circle cx="44" cy="30" r="6" fill="#3fbf63"/>
+                <circle cx="8" cy="28" r="5" fill="#3fbf63"/>
+                <circle cx="46" cy="14" r="4.5" fill="#3fbf63"/>
+                <circle cx="24" cy="44" r="5" fill="#3fbf63"/>
+                <!-- Small foam dots -->
+                <circle cx="28" cy="8" r="3" fill="#6dd688"/>
+                <circle cx="48" cy="40" r="3" fill="#6dd688"/>
+                <circle cx="2" cy="18" r="2.5" fill="#6dd688"/>
+                <circle cx="42" cy="44" r="2.5" fill="#6dd688"/>
+                <circle cx="10" cy="10" r="2" fill="#a3e8b2"/>
+                <circle cx="50" cy="24" r="2" fill="#a3e8b2"/>
+                <!-- Highlights -->
+                <circle cx="16" cy="18" r="2.5" fill="white" opacity="0.35"/>
+                <circle cx="33" cy="14" r="2" fill="white" opacity="0.3"/>
+                <circle cx="28" cy="30" r="2.2" fill="white" opacity="0.25"/>
+                <circle cx="12" cy="35" r="1.5" fill="white" opacity="0.3"/>
+              </g>
+              <text x="66" y="38" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <circle cx="20" cy="20" r="10" fill="#22883e"/>
+              <circle cx="36" cy="16" r="8" fill="#2ea44f"/>
+              <circle cx="14" cy="36" r="7" fill="#2ea44f"/>
+              <circle cx="32" cy="32" r="9" fill="#22883e"/>
+              <circle cx="44" cy="28" r="6" fill="#3fbf63"/>
+              <circle cx="8" cy="26" r="5" fill="#3fbf63"/>
+              <circle cx="46" cy="12" r="4.5" fill="#3fbf63"/>
+              <circle cx="24" cy="42" r="5" fill="#3fbf63"/>
+              <circle cx="28" cy="6" r="3" fill="#6dd688"/>
+              <circle cx="48" cy="38" r="3" fill="#6dd688"/>
+              <circle cx="2" cy="16" r="2.5" fill="#6dd688"/>
+              <circle cx="42" cy="42" r="2.5" fill="#6dd688"/>
+              <circle cx="10" cy="8" r="2" fill="#a3e8b2"/>
+              <circle cx="50" cy="22" r="2" fill="#a3e8b2"/>
+              <circle cx="16" cy="16" r="2.5" fill="white" opacity=".35"/>
+              <circle cx="33" cy="12" r="2" fill="white" opacity=".3"/>
+              <circle cx="28" cy="28" r="2.2" fill="white" opacity=".25"/>
+              <circle cx="12" cy="33" r="1.5" fill="white" opacity=".3"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+        <div class="size-row">
+          <div class="size-item">
+            <svg width="16" height="16" viewBox="0 0 52 52" fill="none"><circle cx="20" cy="20" r="11" fill="#22883e"/><circle cx="36" cy="16" r="9" fill="#2ea44f"/><circle cx="14" cy="36" r="8" fill="#2ea44f"/><circle cx="32" cy="32" r="10" fill="#22883e"/><circle cx="44" cy="28" r="6" fill="#3fbf63"/><circle cx="8" cy="26" r="5" fill="#3fbf63"/><circle cx="16" cy="16" r="3" fill="white" opacity=".35"/><circle cx="28" cy="28" r="2.5" fill="white" opacity=".3"/></svg>
+            <div class="label">16px</div>
+          </div>
+          <div class="size-item">
+            <svg width="32" height="32" viewBox="0 0 52 52" fill="none"><circle cx="20" cy="20" r="10" fill="#22883e"/><circle cx="36" cy="16" r="8" fill="#2ea44f"/><circle cx="14" cy="36" r="7" fill="#2ea44f"/><circle cx="32" cy="32" r="9" fill="#22883e"/><circle cx="44" cy="28" r="6" fill="#3fbf63"/><circle cx="8" cy="26" r="5" fill="#3fbf63"/><circle cx="46" cy="12" r="4.5" fill="#3fbf63"/><circle cx="24" cy="42" r="5" fill="#3fbf63"/><circle cx="28" cy="6" r="3" fill="#6dd688"/><circle cx="48" cy="38" r="3" fill="#6dd688"/><circle cx="16" cy="16" r="2.5" fill="white" opacity=".35"/><circle cx="33" cy="12" r="2" fill="white" opacity=".3"/><circle cx="28" cy="28" r="2.2" fill="white" opacity=".25"/></svg>
+            <div class="label">32px</div>
+          </div>
+          <div class="size-item">
+            <svg width="64" height="64" viewBox="0 0 52 52" fill="none"><circle cx="20" cy="20" r="10" fill="#22883e"/><circle cx="36" cy="16" r="8" fill="#2ea44f"/><circle cx="14" cy="36" r="7" fill="#2ea44f"/><circle cx="32" cy="32" r="9" fill="#22883e"/><circle cx="44" cy="28" r="6" fill="#3fbf63"/><circle cx="8" cy="26" r="5" fill="#3fbf63"/><circle cx="46" cy="12" r="4.5" fill="#3fbf63"/><circle cx="24" cy="42" r="5" fill="#3fbf63"/><circle cx="28" cy="6" r="3" fill="#6dd688"/><circle cx="48" cy="38" r="3" fill="#6dd688"/><circle cx="2" cy="16" r="2.5" fill="#6dd688"/><circle cx="42" cy="42" r="2.5" fill="#6dd688"/><circle cx="10" cy="8" r="2" fill="#a3e8b2"/><circle cx="50" cy="22" r="2" fill="#a3e8b2"/><circle cx="16" cy="16" r="2.5" fill="white" opacity=".35"/><circle cx="33" cy="12" r="2" fill="white" opacity=".3"/><circle cx="28" cy="28" r="2.2" fill="white" opacity=".25"/><circle cx="12" cy="33" r="1.5" fill="white" opacity=".3"/></svg>
+            <div class="label">64px</div>
+          </div>
+          <div class="size-item">
+            <svg width="128" height="128" viewBox="0 0 52 52" fill="none"><circle cx="20" cy="20" r="10" fill="#22883e"/><circle cx="36" cy="16" r="8" fill="#2ea44f"/><circle cx="14" cy="36" r="7" fill="#2ea44f"/><circle cx="32" cy="32" r="9" fill="#22883e"/><circle cx="44" cy="28" r="6" fill="#3fbf63"/><circle cx="8" cy="26" r="5" fill="#3fbf63"/><circle cx="46" cy="12" r="4.5" fill="#3fbf63"/><circle cx="24" cy="42" r="5" fill="#3fbf63"/><circle cx="28" cy="6" r="3" fill="#6dd688"/><circle cx="48" cy="38" r="3" fill="#6dd688"/><circle cx="2" cy="16" r="2.5" fill="#6dd688"/><circle cx="42" cy="42" r="2.5" fill="#6dd688"/><circle cx="10" cy="8" r="2" fill="#a3e8b2"/><circle cx="50" cy="22" r="2" fill="#a3e8b2"/><circle cx="16" cy="16" r="2.5" fill="white" opacity=".35"/><circle cx="33" cy="12" r="2" fill="white" opacity=".3"/><circle cx="28" cy="28" r="2.2" fill="white" opacity=".25"/><circle cx="12" cy="33" r="1.5" fill="white" opacity=".3"/></svg>
+            <div class="label">128px</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider-v"></div>
+      <div class="concept-side dark">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="220" height="56" viewBox="0 0 220 56" fill="none">
+              <g transform="translate(4, 2)">
+                <circle cx="20" cy="22" r="10" fill="#3fbf63"/>
+                <circle cx="36" cy="18" r="8" fill="#6dd688"/>
+                <circle cx="14" cy="38" r="7" fill="#6dd688"/>
+                <circle cx="32" cy="34" r="9" fill="#3fbf63"/>
+                <circle cx="44" cy="30" r="6" fill="#a3e8b2" opacity=".6"/>
+                <circle cx="8" cy="28" r="5" fill="#a3e8b2" opacity=".6"/>
+                <circle cx="46" cy="14" r="4.5" fill="#a3e8b2" opacity=".5"/>
+                <circle cx="24" cy="44" r="5" fill="#a3e8b2" opacity=".5"/>
+                <circle cx="28" cy="8" r="3" fill="#d0f4d6" opacity=".4"/>
+                <circle cx="48" cy="40" r="3" fill="#d0f4d6" opacity=".4"/>
+                <circle cx="2" cy="18" r="2.5" fill="#d0f4d6" opacity=".35"/>
+                <circle cx="16" cy="18" r="2.5" fill="white" opacity=".15"/>
+                <circle cx="33" cy="14" r="2" fill="white" opacity=".12"/>
+                <circle cx="28" cy="30" r="2.2" fill="white" opacity=".1"/>
+              </g>
+              <text x="66" y="38" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <circle cx="20" cy="20" r="10" fill="#3fbf63"/><circle cx="36" cy="16" r="8" fill="#6dd688"/><circle cx="14" cy="36" r="7" fill="#6dd688"/><circle cx="32" cy="32" r="9" fill="#3fbf63"/><circle cx="44" cy="28" r="6" fill="#a3e8b2" opacity=".6"/><circle cx="8" cy="26" r="5" fill="#a3e8b2" opacity=".6"/><circle cx="46" cy="12" r="4.5" fill="#a3e8b2" opacity=".5"/><circle cx="24" cy="42" r="5" fill="#a3e8b2" opacity=".5"/><circle cx="28" cy="6" r="3" fill="#d0f4d6" opacity=".4"/><circle cx="48" cy="38" r="3" fill="#d0f4d6" opacity=".4"/><circle cx="16" cy="16" r="2.5" fill="white" opacity=".15"/><circle cx="28" cy="28" r="2.2" fill="white" opacity=".12"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT F ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>F. Bowl Ring with Foam Fill</h2>
+      <p>A thin circle (the bowl rim) with an interior filled by a cluster of packed microfoam bubbles. The container gives it structure and makes it app-icon-ready, while the foam inside is the star. The bubbles are tightly packed with small light highlights — like a macro photo of matcha foam.</p>
+    </div>
+    <div class="concept-body">
+      <div class="concept-side light">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="220" height="56" viewBox="0 0 220 56" fill="none">
+              <g transform="translate(2, 2)">
+                <!-- Bowl rim -->
+                <circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="2" fill="#eefbf0"/>
+                <!-- Packed foam bubbles filling the bowl -->
+                <circle cx="16" cy="16" r="7" fill="#22883e"/>
+                <circle cx="30" cy="13" r="6" fill="#2ea44f"/>
+                <circle cx="38" cy="20" r="6.5" fill="#22883e"/>
+                <circle cx="12" cy="28" r="6" fill="#2ea44f"/>
+                <circle cx="24" cy="24" r="7.5" fill="#22883e"/>
+                <circle cx="34" cy="32" r="7" fill="#2ea44f"/>
+                <circle cx="20" cy="36" r="6" fill="#22883e"/>
+                <circle cx="40" cy="34" r="4" fill="#3fbf63"/>
+                <circle cx="8" cy="20" r="4" fill="#3fbf63"/>
+                <circle cx="42" cy="26" r="3.5" fill="#3fbf63"/>
+                <circle cx="26" cy="40" r="4.5" fill="#3fbf63"/>
+                <circle cx="14" cy="40" r="3" fill="#3fbf63"/>
+                <circle cx="38" cy="12" r="3.5" fill="#3fbf63"/>
+                <circle cx="10" cy="34" r="3" fill="#6dd688"/>
+                <circle cx="44" cy="18" r="2.5" fill="#6dd688"/>
+                <circle cx="30" cy="42" r="2.5" fill="#6dd688"/>
+                <!-- Highlights -->
+                <circle cx="13" cy="13" r="2" fill="white" opacity=".3"/>
+                <circle cx="22" cy="21" r="2.2" fill="white" opacity=".25"/>
+                <circle cx="36" cy="18" r="1.8" fill="white" opacity=".28"/>
+                <circle cx="31" cy="29" r="1.8" fill="white" opacity=".22"/>
+                <circle cx="18" cy="33" r="1.5" fill="white" opacity=".25"/>
+                <circle cx="28" cy="11" r="1.2" fill="white" opacity=".3"/>
+              </g>
+              <text x="62" y="38" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="2" fill="#eefbf0"/>
+              <circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="42" cy="26" r="3.5" fill="#3fbf63"/><circle cx="26" cy="40" r="4.5" fill="#3fbf63"/><circle cx="14" cy="40" r="3" fill="#3fbf63"/><circle cx="38" cy="12" r="3.5" fill="#3fbf63"/><circle cx="10" cy="34" r="3" fill="#6dd688"/><circle cx="44" cy="18" r="2.5" fill="#6dd688"/><circle cx="30" cy="42" r="2.5" fill="#6dd688"/>
+              <circle cx="13" cy="13" r="2" fill="white" opacity=".3"/><circle cx="22" cy="21" r="2.2" fill="white" opacity=".25"/><circle cx="36" cy="18" r="1.8" fill="white" opacity=".28"/><circle cx="31" cy="29" r="1.8" fill="white" opacity=".22"/><circle cx="18" cy="33" r="1.5" fill="white" opacity=".25"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+        <div class="size-row">
+          <div class="size-item">
+            <svg width="16" height="16" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="3" fill="#eefbf0"/><circle cx="16" cy="16" r="8" fill="#22883e"/><circle cx="34" cy="14" r="7" fill="#2ea44f"/><circle cx="36" cy="30" r="8" fill="#22883e"/><circle cx="14" cy="32" r="7" fill="#2ea44f"/><circle cx="26" cy="24" r="8" fill="#22883e"/><circle cx="24" cy="38" r="5" fill="#3fbf63"/></svg>
+            <div class="label">16px</div>
+          </div>
+          <div class="size-item">
+            <svg width="32" height="32" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="2.5" fill="#eefbf0"/><circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="13" cy="13" r="2" fill="white" opacity=".3"/><circle cx="22" cy="21" r="2" fill="white" opacity=".25"/></svg>
+            <div class="label">32px</div>
+          </div>
+          <div class="size-item">
+            <svg width="64" height="64" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="2" fill="#eefbf0"/><circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="42" cy="26" r="3.5" fill="#3fbf63"/><circle cx="26" cy="40" r="4.5" fill="#3fbf63"/><circle cx="14" cy="40" r="3" fill="#3fbf63"/><circle cx="38" cy="12" r="3.5" fill="#3fbf63"/><circle cx="10" cy="34" r="3" fill="#6dd688"/><circle cx="44" cy="18" r="2.5" fill="#6dd688"/><circle cx="13" cy="13" r="2" fill="white" opacity=".3"/><circle cx="22" cy="21" r="2.2" fill="white" opacity=".25"/><circle cx="36" cy="18" r="1.8" fill="white" opacity=".28"/><circle cx="31" cy="29" r="1.8" fill="white" opacity=".22"/></svg>
+            <div class="label">64px</div>
+          </div>
+          <div class="size-item">
+            <svg width="128" height="128" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#1a6b31" stroke-width="2" fill="#eefbf0"/><circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="42" cy="26" r="3.5" fill="#3fbf63"/><circle cx="26" cy="40" r="4.5" fill="#3fbf63"/><circle cx="14" cy="40" r="3" fill="#3fbf63"/><circle cx="38" cy="12" r="3.5" fill="#3fbf63"/><circle cx="10" cy="34" r="3" fill="#6dd688"/><circle cx="44" cy="18" r="2.5" fill="#6dd688"/><circle cx="30" cy="42" r="2.5" fill="#6dd688"/><circle cx="13" cy="13" r="2" fill="white" opacity=".3"/><circle cx="22" cy="21" r="2.2" fill="white" opacity=".25"/><circle cx="36" cy="18" r="1.8" fill="white" opacity=".28"/><circle cx="31" cy="29" r="1.8" fill="white" opacity=".22"/><circle cx="18" cy="33" r="1.5" fill="white" opacity=".25"/><circle cx="28" cy="11" r="1.2" fill="white" opacity=".3"/></svg>
+            <div class="label">128px</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider-v"></div>
+      <div class="concept-side dark">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="220" height="56" viewBox="0 0 220 56" fill="none">
+              <g transform="translate(2, 2)">
+                <circle cx="26" cy="26" r="25" stroke="#3fbf63" stroke-width="2" fill="#0f3a1b"/>
+                <circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="42" cy="26" r="3.5" fill="#3fbf63"/><circle cx="26" cy="40" r="4.5" fill="#3fbf63"/><circle cx="14" cy="40" r="3" fill="#3fbf63"/><circle cx="38" cy="12" r="3.5" fill="#3fbf63"/><circle cx="10" cy="34" r="3" fill="#6dd688"/><circle cx="44" cy="18" r="2.5" fill="#6dd688"/>
+                <circle cx="13" cy="13" r="2" fill="#a3e8b2" opacity=".2"/><circle cx="22" cy="21" r="2.2" fill="#a3e8b2" opacity=".18"/><circle cx="36" cy="18" r="1.8" fill="#a3e8b2" opacity=".2"/>
+              </g>
+              <text x="62" y="38" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <circle cx="26" cy="26" r="25" stroke="#3fbf63" stroke-width="2" fill="#0f3a1b"/>
+              <circle cx="16" cy="16" r="7" fill="#22883e"/><circle cx="30" cy="13" r="6" fill="#2ea44f"/><circle cx="38" cy="20" r="6.5" fill="#22883e"/><circle cx="12" cy="28" r="6" fill="#2ea44f"/><circle cx="24" cy="24" r="7.5" fill="#22883e"/><circle cx="34" cy="32" r="7" fill="#2ea44f"/><circle cx="20" cy="36" r="6" fill="#22883e"/><circle cx="40" cy="34" r="4" fill="#3fbf63"/><circle cx="8" cy="20" r="4" fill="#3fbf63"/><circle cx="42" cy="26" r="3.5" fill="#3fbf63"/><circle cx="26" cy="40" r="4.5" fill="#3fbf63"/>
+              <circle cx="13" cy="13" r="2" fill="#a3e8b2" opacity=".2"/><circle cx="22" cy="21" r="2.2" fill="#a3e8b2" opacity=".18"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT G ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>G. Three Bubbles — Ultra Minimal</h2>
+      <p>Maximum restraint: just 3 overlapping circles of different sizes. Suggests foam without spelling it out. The asymmetric arrangement keeps it from feeling like a generic diagram. Works at every size, extremely memorable, almost logo-as-punctuation. The "W" dot.</p>
+    </div>
+    <div class="concept-body">
+      <div class="concept-side light">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="200" height="52" viewBox="0 0 200 52" fill="none">
+              <g transform="translate(6, 4)">
+                <circle cx="18" cy="24" r="14" fill="#22883e"/>
+                <circle cx="34" cy="16" r="10" fill="#3fbf63"/>
+                <circle cx="38" cy="30" r="8" fill="#6dd688"/>
+                <!-- Subtle highlights -->
+                <circle cx="12" cy="18" r="3.5" fill="white" opacity=".2"/>
+                <circle cx="30" cy="11" r="2.5" fill="white" opacity=".18"/>
+                <circle cx="34" cy="26" r="2" fill="white" opacity=".15"/>
+              </g>
+              <text x="62" y="36" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="18" cy="24" r="14" fill="#22883e"/>
+              <circle cx="34" cy="16" r="10" fill="#3fbf63"/>
+              <circle cx="38" cy="30" r="8" fill="#6dd688"/>
+              <circle cx="12" cy="18" r="3.5" fill="white" opacity=".2"/>
+              <circle cx="30" cy="11" r="2.5" fill="white" opacity=".18"/>
+              <circle cx="34" cy="26" r="2" fill="white" opacity=".15"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#1a6b31" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+        <div class="size-row">
+          <div class="size-item">
+            <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="15" fill="#22883e"/><circle cx="34" cy="16" r="11" fill="#3fbf63"/><circle cx="38" cy="30" r="9" fill="#6dd688"/></svg>
+            <div class="label">16px</div>
+          </div>
+          <div class="size-item">
+            <svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="14" fill="#22883e"/><circle cx="34" cy="16" r="10" fill="#3fbf63"/><circle cx="38" cy="30" r="8" fill="#6dd688"/><circle cx="12" cy="18" r="3.5" fill="white" opacity=".2"/><circle cx="30" cy="11" r="2.5" fill="white" opacity=".18"/></svg>
+            <div class="label">32px</div>
+          </div>
+          <div class="size-item">
+            <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="14" fill="#22883e"/><circle cx="34" cy="16" r="10" fill="#3fbf63"/><circle cx="38" cy="30" r="8" fill="#6dd688"/><circle cx="12" cy="18" r="3.5" fill="white" opacity=".2"/><circle cx="30" cy="11" r="2.5" fill="white" opacity=".18"/><circle cx="34" cy="26" r="2" fill="white" opacity=".15"/></svg>
+            <div class="label">64px</div>
+          </div>
+          <div class="size-item">
+            <svg width="128" height="128" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="14" fill="#22883e"/><circle cx="34" cy="16" r="10" fill="#3fbf63"/><circle cx="38" cy="30" r="8" fill="#6dd688"/><circle cx="12" cy="18" r="3.5" fill="white" opacity=".2"/><circle cx="30" cy="11" r="2.5" fill="white" opacity=".18"/><circle cx="34" cy="26" r="2" fill="white" opacity=".15"/></svg>
+            <div class="label">128px</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider-v"></div>
+      <div class="concept-side dark">
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="200" height="52" viewBox="0 0 200 52" fill="none">
+              <g transform="translate(6, 4)">
+                <circle cx="18" cy="24" r="14" fill="#2ea44f"/>
+                <circle cx="34" cy="16" r="10" fill="#6dd688"/>
+                <circle cx="38" cy="30" r="8" fill="#a3e8b2"/>
+                <circle cx="12" cy="18" r="3.5" fill="white" opacity=".1"/>
+                <circle cx="30" cy="11" r="2.5" fill="white" opacity=".08"/>
+              </g>
+              <text x="62" y="36" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Full logo</div>
+          </div>
+        </div>
+        <div class="logo-row">
+          <div class="logo-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="18" cy="24" r="14" fill="#2ea44f"/><circle cx="34" cy="16" r="10" fill="#6dd688"/><circle cx="38" cy="30" r="8" fill="#a3e8b2"/><circle cx="12" cy="18" r="3.5" fill="white" opacity=".1"/>
+            </svg>
+            <div class="label">Icon</div>
+          </div>
+          <div class="logo-variant">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none">
+              <text x="4" y="27" font-family="Inter, sans-serif" font-size="26" font-weight="600" fill="#6dd688" letter-spacing="-0.5">whiskly</text>
+            </svg>
+            <div class="label">Wordmark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== APP ICON COMPARISON ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>App Icon Comparison — Home Screen Preview</h2>
+      <p>All three microfoam concepts as PWA app icons on vibrant green background.</p>
+    </div>
+    <div class="concept-body">
+      <div class="concept-side light" style="flex-direction:row;flex-wrap:wrap;gap:32px;padding:40px;justify-content:center">
+        <div style="text-align:center">
+          <div class="app-icon" style="width:72px;height:72px;background:#22883e">
+            <svg width="42" height="42" viewBox="0 0 52 52" fill="none"><circle cx="20" cy="20" r="9" fill="white" opacity=".25"/><circle cx="35" cy="16" r="7" fill="white" opacity=".2"/><circle cx="14" cy="34" r="6" fill="white" opacity=".2"/><circle cx="31" cy="31" r="8" fill="white" opacity=".25"/><circle cx="42" cy="27" r="5" fill="white" opacity=".15"/><circle cx="8" cy="24" r="4.5" fill="white" opacity=".15"/><circle cx="44" cy="12" r="4" fill="white" opacity=".12"/><circle cx="24" cy="40" r="4.5" fill="white" opacity=".12"/><circle cx="27" cy="6" r="3" fill="white" opacity=".1"/><circle cx="16" cy="16" r="2" fill="white" opacity=".3"/><circle cx="28" cy="27" r="2" fill="white" opacity=".25"/></svg>
+          </div>
+          <div style="font-size:11px;color:var(--gray-500);margin-top:8px;font-weight:500">E. Cluster</div>
+        </div>
+        <div style="text-align:center">
+          <div class="app-icon" style="width:72px;height:72px;background:#22883e">
+            <svg width="44" height="44" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="23" stroke="white" stroke-width="2" fill="white" fill-opacity=".06"/><circle cx="16" cy="16" r="6.5" fill="white" opacity=".22"/><circle cx="30" cy="13" r="5.5" fill="white" opacity=".18"/><circle cx="37" cy="20" r="6" fill="white" opacity=".22"/><circle cx="12" cy="28" r="5.5" fill="white" opacity=".18"/><circle cx="24" cy="24" r="7" fill="white" opacity=".22"/><circle cx="34" cy="31" r="6.5" fill="white" opacity=".18"/><circle cx="20" cy="35" r="5.5" fill="white" opacity=".22"/><circle cx="39" cy="33" r="3.5" fill="white" opacity=".14"/><circle cx="8" cy="20" r="3.5" fill="white" opacity=".14"/><circle cx="26" cy="39" r="4" fill="white" opacity=".14"/><circle cx="13" cy="13" r="1.8" fill="white" opacity=".35"/><circle cx="22" cy="21" r="1.8" fill="white" opacity=".3"/><circle cx="36" cy="18" r="1.5" fill="white" opacity=".28"/></svg>
+          </div>
+          <div style="font-size:11px;color:var(--gray-500);margin-top:8px;font-weight:500">F. Bowl Ring</div>
+        </div>
+        <div style="text-align:center">
+          <div class="app-icon" style="width:72px;height:72px;background:#22883e">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="18" cy="24" r="14" fill="white" opacity=".25"/><circle cx="34" cy="16" r="10" fill="white" opacity=".2"/><circle cx="38" cy="30" r="8" fill="white" opacity=".15"/><circle cx="12" cy="18" r="3.5" fill="white" opacity=".15"/><circle cx="30" cy="11" r="2.5" fill="white" opacity=".12"/></svg>
+          </div>
+          <div style="font-size:11px;color:var(--gray-500);margin-top:8px;font-weight:500">G. Three Bubbles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

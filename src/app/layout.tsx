@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   description:
     "Discover, log, and explore matcha with personalized taste profiles and recommendations.",
   manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -25,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#4a7c59",
+  themeColor: "#7fb22e",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
