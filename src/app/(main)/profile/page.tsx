@@ -34,7 +34,7 @@ export default async function ProfilePage() {
         <p>Log at least 3 matchas to see your taste profile.</p>
       </div>
 
-      <div className="pt-4 border-t border-gray-100">
+      <div className="pt-4 border-t border-warm-200">
         <LogoutButton />
       </div>
     </div>

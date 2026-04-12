@@ -46,7 +46,7 @@ export default function ResetPasswordPage() {
               required
               minLength={8}
               placeholder="Enter new password"
-              className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
+              className="w-full h-11 px-3.5 border border-warm-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
             <p className="text-xs text-gray-400 mt-1">
               Must be at least 8 characters

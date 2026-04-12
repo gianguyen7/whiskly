@@ -98,7 +98,7 @@ export default function ForgotPasswordPage() {
               type="email"
               required
               placeholder="you@example.com"
-              className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
+              className="w-full h-11 px-3.5 border border-warm-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
           </div>
           <button

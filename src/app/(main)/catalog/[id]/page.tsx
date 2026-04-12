@@ -76,7 +76,7 @@ export default async function MatchaDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <hr className="border-gray-100 mx-4 my-5" />
+      <hr className="border-warm-200 mx-4 my-5" />
 
       {/* Taste profile */}
       <div className="px-4">
@@ -104,7 +104,7 @@ export default async function MatchaDetailPage({ params }: Props) {
       {/* Description */}
       {matcha.description && (
         <>
-          <hr className="border-gray-100 mx-4 my-5" />
+          <hr className="border-warm-200 mx-4 my-5" />
           <div className="px-4">
             <h2 className="text-base font-semibold text-gray-900 mb-2">
               About
@@ -116,7 +116,7 @@ export default async function MatchaDetailPage({ params }: Props) {
         </>
       )}
 
-      <hr className="border-gray-100 mx-4 my-5" />
+      <hr className="border-warm-200 mx-4 my-5" />
 
       {/* CTAs */}
       <div className="px-4 space-y-3">

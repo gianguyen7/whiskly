@@ -2,7 +2,8 @@
 
 import { useState, useDeferredValue, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import type { Matcha, MatchaType } from "@/models/matcha";
+import { Search, X } from "lucide-react";
+import type { Matcha } from "@/models/matcha";
 import { MatchaCard } from "@/components/ui/matcha-card";
 
 const TYPES: { value: string; label: string }[] = [
@@ -56,35 +57,27 @@ export function CatalogClient({
       {/* Sticky search + filters */}
       <div className="sticky top-0 z-10 bg-background px-4 pt-3 pb-2 space-y-2.5">
         <div className="relative">
-          <svg
+          <Search
             className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
+            size={16}
+            strokeWidth={2}
+            aria-hidden="true"
+          />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search matcha..."
             aria-label="Search matcha catalog"
-            className="w-full h-11 pl-10 pr-10 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
+            className="w-full h-11 pl-10 pr-10 border border-warm-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
           />
           {search && (
             <button
               onClick={() => setSearch("")}
               aria-label="Clear search"
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center bg-gray-200 rounded-full text-gray-500 text-xs"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center bg-warm-200 rounded-full text-gray-600 hover:bg-warm-300 transition-colors"
             >
-              ×
+              <X size={12} strokeWidth={2.5} />
             </button>
           )}
         </div>
@@ -103,7 +96,7 @@ export function CatalogClient({
               className={`flex-shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full transition-colors ${
                 activeType === t.value
                   ? "bg-matcha-600 text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  : "bg-warm-100 text-gray-700 hover:bg-warm-200"
               }`}
             >
               {t.label}
@@ -146,18 +139,12 @@ export function CatalogClient({
         </>
       ) : (
         <div className="flex flex-col items-center justify-center py-20 px-8 text-center">
-          <svg
-            className="w-12 h-12 text-matcha-300 mb-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
+          <Search
+            className="text-matcha-300 mb-4"
+            size={48}
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
           {search ? (
             <>
               <p className="font-medium text-gray-700">

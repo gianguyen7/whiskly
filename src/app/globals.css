@@ -5,6 +5,24 @@
   --foreground: #1a1a1a;
 }
 
+/*
+ * Dark mode token prep — not activated.
+ *
+ * Components still hardcode bg-white, border-warm-*, etc., so flipping
+ * prefers-color-scheme on now would break the UI. This rule is commented
+ * out as a template for the future dark-mode pass. When we're ready,
+ * uncomment and migrate component backgrounds to use `bg-background` /
+ * `text-foreground` / semantic tokens. See DESIGN-SYSTEM.md §13.
+ */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14170f;
+    --foreground: #f5f3ef;
+  }
+}
+*/
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -42,7 +42,7 @@ export default function LoginPage() {
               type="email"
               required
               placeholder="you@example.com"
-              className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
+              className="w-full h-11 px-3.5 border border-warm-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -58,7 +58,7 @@ export default function LoginPage() {
               type="password"
               required
               placeholder="Your password"
-              className="w-full h-11 px-3.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
+              className="w-full h-11 px-3.5 border border-warm-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-matcha-500 focus:border-transparent"
             />
             <div className="text-right mt-1.5">
               <Link
