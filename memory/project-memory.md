@@ -5,7 +5,7 @@
 
 ---
 
-## Last Updated: 2026-04-01
+## Last Updated: 2026-04-11
 
 ## Project: Whiskly
 
@@ -16,9 +16,9 @@
 | Phase | Status | Key Artifact |
 |-------|--------|-------------|
 | Phase 0: Foundation | Complete | Repo structure, templates, CONTRIBUTING.md |
-| Phase 1: Product Definition | ~80% complete | PRFAQ + PRD done, user stories + roadmap remaining |
-| Phase 2: Technical Design | ~40% complete | ADR-002 (stack), ADR-003 (seeding), ADR-004 (schema) done |
-| Phase 3: MVP Build | Not started | — |
+| Phase 1: Product Definition | Complete | PRFAQ, PRD, 8 user stories, roadmap, design system |
+| Phase 2: Technical Design | Complete | Supabase live, schema + seed deployed, CI green, Vercel linked |
+| Phase 3: MVP Build | Not started | Sprint 1 ready to start with US-201 |
 | Phase 4: Polish & Harden | Not started | — |
 | Phase 5: Launch | Not started | — |
 
@@ -32,12 +32,14 @@ Next.js on Vercel (SSR + API routes)
 Supabase (Postgres + Auth + RLS)
 ```
 
-- **Frontend:** Next.js 14+ App Router, TypeScript, Tailwind CSS
-- **Backend:** Next.js API routes (no separate server)
-- **Database:** Supabase Postgres with 4 tables: matchas, profiles, matcha_logs, articles
-- **Auth:** Supabase Auth (email/password)
-- **Hosting:** Vercel (free tier)
+- **Frontend:** Next.js 16.2.2 App Router, React 19, TypeScript, Tailwind v4
+- **Backend:** Next.js Server Components + Server Actions (no separate server)
+- **Database:** Supabase Postgres with 4 tables: matchas (24 seeded), profiles, matcha_logs, articles
+- **Auth:** Supabase Auth (email/password) via `@supabase/ssr`
+- **Hosting:** Vercel — https://whiskly-puce.vercel.app (project `whiskly`, auto-deploy on push to main)
 - **Content:** MDX in repo, metadata indexed in articles table
+- **Icon library:** `lucide-react` v1.8.0
+- **Supabase project ref:** `fdayixiwxwligrxutmro`
 
 ## Database Tables
 

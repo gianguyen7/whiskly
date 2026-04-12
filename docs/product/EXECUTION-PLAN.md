@@ -63,13 +63,13 @@ phase's exit criteria are met.
 ### Deliverables
 - [x] ADR-002: Tech stack — Next.js + TypeScript + Supabase + Vercel + Tailwind
 - [x] ADR-003: Catalog seeding pipeline — Yunomi, Kettl, Sazen, Ippodo, Reddit
-- [ ] Supabase project created, initial database schema designed
-- [ ] Next.js project scaffolded with TypeScript, Tailwind, PWA config
-- [ ] Vercel linked to GitHub repo
-- [ ] Dev environment setup (README instructions, scripts/setup.sh)
-- [ ] Database schema design (matcha catalog, user logs, taste profiles)
-- [ ] CI/CD pipeline configured for Next.js (lint, test, build)
-- [ ] Local development workflow verified end-to-end
+- [x] Supabase project created, schema deployed, 24 matchas seeded (`fdayixiwxwligrxutmro`)
+- [x] Next.js project scaffolded with TypeScript, Tailwind, PWA config
+- [x] Vercel linked to GitHub repo — live at https://whiskly-puce.vercel.app
+- [x] Dev environment setup (`scripts/setup.sh` + README)
+- [x] Database schema design (matcha catalog, user logs, taste profiles) — ADR-004
+- [x] CI/CD pipeline configured for Next.js (lint + typecheck + build on PR)
+- [x] Local development workflow verified end-to-end
 
 ### Exit Criteria
 - [ ] `scripts/setup.sh` gets a new developer from clone to running app in < 10 min

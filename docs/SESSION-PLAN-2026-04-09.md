@@ -26,9 +26,9 @@ The app has scaffolded routes and components but everything hits stub services r
 3. ~~Create Supabase project + run `001_initial_schema.sql` migration~~ ✅ done (2026-04-11) — project `fdayixiwxwligrxutmro`, schema + RLS + triggers + RPC all live
 4. ~~Verify local dev with `supabase start`~~ — skipped; no Docker on this machine. Hosted project is the dev environment. Revisit if we need a fully offline dev loop.
 5. ~~Seed catalog with 20-30 real matcha entries~~ ✅ done — 24 entries live (13 ceremonial, 5 premium, 3 latte, 3 culinary)
-6. Configure CI (lint + test + build on PR)
-7. Link Vercel to GitHub repo
-8. Write `scripts/setup.sh` and README dev setup instructions
+6. ~~Configure CI (lint + test + build on PR)~~ ✅ done — `.github/workflows/ci.yml` runs eslint + tsc + next build on push/PR; `npm run ci` runs the same locally
+7. ~~Link Vercel to GitHub repo~~ ✅ done — deployed at https://whiskly-puce.vercel.app (auto-deploy on push to main, preview deploys per PR)
+8. ~~Write `scripts/setup.sh` and README dev setup instructions~~ ✅ done — idempotent setup script + README section covering prereqs, first-run, and provisioning
 
 ### Phase 3 — Sprint 1 (the real build)
 
