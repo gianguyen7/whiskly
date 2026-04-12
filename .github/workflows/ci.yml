@@ -1,7 +1,18 @@
-# CI Pipeline — runs on every push and PR to main
+# CI pipeline — runs on every push to main and every PR targeting main.
 #
-# TODO: Uncomment and configure steps once tech stack is chosen (see ADR-001).
-# This file is scaffolding to establish the CI structure early.
+# Jobs:
+#   1. lint     — ESLint + TypeScript type-check (fast; runs first)
+#   2. build    — `next build` with placeholder Supabase env vars
+#
+# A `test` job is intentionally omitted until the first test lands. Once
+# tests exist, add a job that runs `npm test` and gate `build` on it via
+# `needs: [lint, test]`.
+#
+# The build uses placeholder Supabase env vars because the Next.js App
+# Router server components read cookies via @supabase/ssr, which opts
+# every Supabase-reading route into dynamic rendering. No static page
+# actually hits the database at build time, so placeholders are safe
+# and keep CI credential-free.
 
 name: CI
 
@@ -11,45 +22,60 @@ on:
   pull_request:
     branches: [main]
 
-# Cancel in-progress runs for the same branch/PR
+# Cancel in-progress runs for the same ref when a newer commit arrives.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NODE_VERSION: "22"
+
 jobs:
   lint:
-    name: Lint
+    name: Lint & type-check
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      # TODO: Add linter step after tech stack decision
-      - run: echo "Lint step placeholder — configure after ADR-001"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    # needs: lint  # Uncomment to gate tests on lint passing
-    steps:
-      - uses: actions/checkout@v4
-      # TODO: Add test runner step after tech stack decision
-      - run: echo "Test step placeholder — configure after ADR-001"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: TypeScript type-check
+        run: npx tsc --noEmit
 
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: lint
+    timeout-minutes: 15
+    env:
+      # Placeholder values — CI does not hit a real Supabase project.
+      # All Supabase-reading routes are dynamic and skipped at build time.
+      NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder_anon_key_for_ci
     steps:
-      - uses: actions/checkout@v4
-      # TODO: Add build step after tech stack decision
-      - run: echo "Build step placeholder — configure after ADR-001"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  # Uncomment after deployment infra is set up
-  # deploy-staging:
-  #   name: Deploy to Staging
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: github.ref == 'refs/heads/main'
-  #   environment: staging
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - run: echo "Deploy to staging"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Next.js build
+        run: npm run build
