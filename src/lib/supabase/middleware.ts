@@ -58,7 +58,7 @@ export async function updateSession(request: NextRequest) {
 
   if (user && isAuthPage) {
     const url = request.nextUrl.clone();
-    url.pathname = "/catalog";
+    url.pathname = "/for-you";
     return NextResponse.redirect(url);
   }
 

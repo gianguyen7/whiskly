@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, PenLine, Search, User, type LucideIcon } from "lucide-react";
+import { BookOpen, PenLine, Search, Sparkles, User, type LucideIcon } from "lucide-react";
 
 interface NavItem {
   href: string;
@@ -11,10 +11,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { href: "/for-you", label: "For You", icon: Sparkles },
   { href: "/catalog", label: "Catalog", icon: Search },
   { href: "/log", label: "Log", icon: PenLine },
-  { href: "/profile", label: "Profile", icon: User },
   { href: "/discover", label: "Discover", icon: BookOpen },
+  { href: "/profile", label: "Profile", icon: User },
 ];
 
 /**

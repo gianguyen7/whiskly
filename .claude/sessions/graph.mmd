@@ -1,87 +1,113 @@
 graph LR
-  session_2026_04_11_2243["Phase 1 finish + Phase 2 close-out"]
-  project_whiskly[["Whiskly matcha PWA"]]
-  decision_design_system_v0_1("Ship design system v0.1")
-  decision_keep_gray_text("Keep Tailwind gray-* for text")
-  decision_warm_for_surfaces("Use warm-* for borders/surfaces")
-  decision_lucide_react("Adopt lucide-react for icons")
-  decision_dark_mode_deferred("Defer dark mode post-MVP")
-  decision_supabase_standard_layout("Move supabase to standard ./supabase/...")
-  decision_ci_no_test_job("CI omits test job until first test lands")
-  decision_ci_placeholder_env("CI build uses placeholder Supabase en...")
-  decision_vercel_web_dashboard("Link Vercel via web dashboard not CLI")
-  decision_keep_vercel_puce_subdomain("Accept whiskly-puce.vercel.app default")
-  decision_8_core_user_stories("Write 8 standalone story cards for cr...")
-  decision_roadmap_versioned("Versioned roadmap v0.1->v2.0 with Now...")
-  decision_email_autoconfirm_mvp("Disable Supabase email confirmation f...")
-  plan_sprint_1_us_201>"Sprint 1: wire US-201 signup"]
-  plan_next_middleware_to_proxy>"Migrate Next.js middleware->proxy"]
-  plan_ci_add_test_job>"Add CI test job when first test lands"]
-  file_docs_design_DESIGN_SYSTEM_md[/"design system doc"/]
-  file_docs_stories_[/"user story cards dir"/]
-  file_docs_product_ROADMAP_md[/"product roadmap"/]
-  file_supabase_config_toml[/"supabase CLI config"/]
-  file__github_workflows_ci_yml[/"CI workflow"/]
-  file_scripts_setup_sh[/"dev setup script"/]
-  file_README_md[/"README"/]
-  file_src_components_layout_nav_tsx[/"nav component"/]
-  file_src_app__main__catalog_catalog_client_tsx[/"catalog client"/]
-  file_src_app_globals_css[/"global styles"/]
-  file_memory_recent_memory_md[/"recent memory"/]
-  file_memory_project_memory_md[/"project memory"/]
-  concept_phase_1_complete{{"Phase 1 complete"}}
-  concept_phase_2_complete{{"Phase 2 complete"}}
-  concept_live_production_url{{"https://whiskly-puce.vercel.app"}}
-  session_2026_04_11_2243 -->|part of| project_whiskly
-  session_2026_04_11_2243 -->|led to| decision_design_system_v0_1
-  session_2026_04_11_2243 -->|led to| decision_keep_gray_text
-  session_2026_04_11_2243 -->|led to| decision_warm_for_surfaces
-  session_2026_04_11_2243 -->|led to| decision_lucide_react
-  session_2026_04_11_2243 -->|led to| decision_dark_mode_deferred
-  session_2026_04_11_2243 -->|led to| decision_supabase_standard_layout
-  session_2026_04_11_2243 -->|led to| decision_ci_no_test_job
-  session_2026_04_11_2243 -->|led to| decision_ci_placeholder_env
-  session_2026_04_11_2243 -->|led to| decision_vercel_web_dashboard
-  session_2026_04_11_2243 -->|led to| decision_keep_vercel_puce_subdomain
-  session_2026_04_11_2243 -->|led to| decision_8_core_user_stories
-  session_2026_04_11_2243 -->|led to| decision_roadmap_versioned
-  session_2026_04_11_2243 -->|led to| decision_email_autoconfirm_mvp
-  session_2026_04_11_2243 -->|led to| plan_sprint_1_us_201
-  session_2026_04_11_2243 -->|mentions| plan_next_middleware_to_proxy
-  session_2026_04_11_2243 -->|led to| plan_ci_add_test_job
-  session_2026_04_11_2243 -->|modified| file_docs_design_DESIGN_SYSTEM_md
-  session_2026_04_11_2243 -->|modified| file_docs_stories_
-  session_2026_04_11_2243 -->|modified| file_docs_product_ROADMAP_md
-  session_2026_04_11_2243 -->|modified| file_supabase_config_toml
-  session_2026_04_11_2243 -->|modified| file__github_workflows_ci_yml
-  session_2026_04_11_2243 -->|modified| file_scripts_setup_sh
-  session_2026_04_11_2243 -->|modified| file_README_md
-  session_2026_04_11_2243 -->|modified| file_src_components_layout_nav_tsx
-  session_2026_04_11_2243 -->|modified| file_src_app__main__catalog_catalog_client_tsx
-  session_2026_04_11_2243 -->|modified| file_src_app_globals_css
-  session_2026_04_11_2243 -->|modified| file_memory_recent_memory_md
-  session_2026_04_11_2243 -->|modified| file_memory_project_memory_md
-  plan_sprint_1_us_201 -->|depends on| decision_email_autoconfirm_mvp
-  plan_sprint_1_us_201 -->|depends on| decision_supabase_standard_layout
-  session_2026_04_11_2243 -->|led to| concept_phase_1_complete
-  session_2026_04_11_2243 -->|led to| concept_phase_2_complete
-  session_2026_04_11_2243 -->|led to| concept_live_production_url
-  decision_lucide_react -->|modified| file_src_components_layout_nav_tsx
-  decision_lucide_react -->|modified| file_src_app__main__catalog_catalog_client_tsx
-  decision_design_system_v0_1 -->|modified| file_docs_design_DESIGN_SYSTEM_md
-  decision_supabase_standard_layout -->|modified| file_supabase_config_toml
-  decision_ci_no_test_job -->|modified| file__github_workflows_ci_yml
-  decision_ci_placeholder_env -->|modified| file__github_workflows_ci_yml
-
-  classDef session fill:#d4e896,stroke:#53741f,color:#2d4014
-  classDef decision fill:#eaf4c8,stroke:#6a9526,color:#2d4014
-  classDef plan fill:#fef3c7,stroke:#d97706,color:#78350f
-  classDef file fill:#f5f3ef,stroke:#968d7e,color:#1a1a1a
-  classDef concept fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
-  classDef project fill:#fae8ff,stroke:#a21caf,color:#581c87
-  class session_2026_04_11_2243 session
-  class project_whiskly project
-  class decision_design_system_v0_1,decision_keep_gray_text,decision_warm_for_surfaces,decision_lucide_react,decision_dark_mode_deferred,decision_supabase_standard_layout,decision_ci_no_test_job,decision_ci_placeholder_env,decision_vercel_web_dashboard,decision_keep_vercel_puce_subdomain,decision_8_core_user_stories,decision_roadmap_versioned,decision_email_autoconfirm_mvp decision
-  class plan_sprint_1_us_201,plan_next_middleware_to_proxy,plan_ci_add_test_job plan
-  class file_docs_design_DESIGN_SYSTEM_md,file_docs_stories_,file_docs_product_ROADMAP_md,file_supabase_config_toml,file__github_workflows_ci_yml,file_scripts_setup_sh,file_README_md,file_src_components_layout_nav_tsx,file_src_app__main__catalog_catalog_client_tsx,file_src_app_globals_css,file_memory_recent_memory_md,file_memory_project_memory_md file
-  class concept_phase_1_complete,concept_phase_2_complete,concept_live_production_url concept
+    s:2026-04-11-2243[["Phase 1 finish + Phase 2 close-out"]]
+    proj:whiskly("Whiskly matcha PWA")
+    d:design-system-v0.1{"Ship design system v0.1"}
+    d:keep-gray-text{"Keep Tailwind gray-* for text"}
+    d:warm-for-surfaces{"Use warm-* for borders_surfaces"}
+    d:lucide-react{"Adopt lucide-react for icons"}
+    d:dark-mode-deferred{"Defer dark mode post-MVP"}
+    d:supabase-standard-layout{"Move supabase to standard ._supabase_ path"}
+    d:ci-no-test-job{"CI omits test job until first test lands"}
+    d:ci-placeholder-env{"CI build uses placeholder Supabase env vars"}
+    d:vercel-web-dashboard{"Link Vercel via web dashboard not CLI"}
+    d:keep-vercel-puce-subdomain{"Accept whiskly-puce.vercel.app default"}
+    d:8-core-user-stories{"Write 8 standalone story cards for critical path"}
+    d:roadmap-versioned{"Versioned roadmap v0.1->v2.0 with Now_Next_Later"}
+    d:email-autoconfirm-mvp{"Disable Supabase email confirmation for MVP"}
+    p:sprint-1-us-201["Sprint 1: wire US-201 signup"]
+    p:next-middleware-to-proxy["Migrate Next.js middleware->proxy"]
+    p:ci-add-test-job["Add CI test job when first test lands"]
+    f:docs/design/DESIGN-SYSTEM.md>"design system doc"]
+    f:docs/stories/>"user story cards dir"]
+    f:docs/product/ROADMAP.md>"product roadmap"]
+    f:supabase/config.toml>"supabase CLI config"]
+    f:.github/workflows/ci.yml>"CI workflow"]
+    f:scripts/setup.sh>"dev setup script"]
+    f:README.md>"README"]
+    f:src/components/layout/nav.tsx>"nav component"]
+    f:src/app/(main)/catalog/catalog-client.tsx>"catalog client"]
+    f:src/app/globals.css>"global styles"]
+    f:memory/recent-memory.md>"recent memory"]
+    f:memory/project-memory.md>"project memory"]
+    c:phase-1-complete("Phase 1 complete")
+    c:phase-2-complete("Phase 2 complete")
+    c:live-production-url("https:__whiskly-puce.vercel.app")
+    s:2026-04-12-1409[["UI redesign: landing, For You, catalog filters"]]
+    d:redesign-before-wire{"Redesign UI before Sprint 1 wiring"}
+    d:for-you-as-home{"For You page is post-login home"}
+    d:welcome-modal{"Welcome modal with matcha facts on login"}
+    d:catalog-filter-system{"Expandable catalog filters: notes, good-for, price"}
+    d:new-matcha-fields{"Add price_per_gram, good_for, milk_pairing to matcha"}
+    d:landing-page-redesign{"Single CTA landing with logo + Nunito wordmark"}
+    p:db-migration-new-fields["Migration: price_per_gram, good_for, milk_pairing"]
+    p:seed-new-fields["Seed new matcha fields for 24 entries"]
+    p:branded-email-templates["Design branded Supabase email templates"]
+    p:continue-ui-redesign["Redesign: detail, log, discover, profile pages"]
+    p:bump-next-16.2.3["Bump next to 16.2.3 DoS fix"]
+    f:src/app/page.tsx>"landing page"]
+    f:src/app/(main)/for-you/page.tsx>"For You page"]
+    f:src/components/ui/welcome-modal.tsx>"welcome modal component"]
+    f:src/components/ui/matcha-card.tsx>"matcha card component"]
+    f:src/models/matcha.ts>"matcha model"]
+    f:src/lib/supabase/middleware.ts>"auth middleware"]
+    c:feature-vision("Product vision: shareable wraps, filters, pairings")
+    s:2026-04-11-2243 -->|part_of| proj:whiskly
+    s:2026-04-11-2243 -->|led_to| d:design-system-v0.1
+    s:2026-04-11-2243 -->|led_to| d:keep-gray-text
+    s:2026-04-11-2243 -->|led_to| d:warm-for-surfaces
+    s:2026-04-11-2243 -->|led_to| d:lucide-react
+    s:2026-04-11-2243 -->|led_to| d:dark-mode-deferred
+    s:2026-04-11-2243 -->|led_to| d:supabase-standard-layout
+    s:2026-04-11-2243 -->|led_to| d:ci-no-test-job
+    s:2026-04-11-2243 -->|led_to| d:ci-placeholder-env
+    s:2026-04-11-2243 -->|led_to| d:vercel-web-dashboard
+    s:2026-04-11-2243 -->|led_to| d:keep-vercel-puce-subdomain
+    s:2026-04-11-2243 -->|led_to| d:8-core-user-stories
+    s:2026-04-11-2243 -->|led_to| d:roadmap-versioned
+    s:2026-04-11-2243 -->|led_to| d:email-autoconfirm-mvp
+    s:2026-04-11-2243 -->|led_to| p:sprint-1-us-201
+    s:2026-04-11-2243 -->|mentions| p:next-middleware-to-proxy
+    s:2026-04-11-2243 -->|led_to| p:ci-add-test-job
+    s:2026-04-11-2243 -->|modified| f:docs/design/DESIGN-SYSTEM.md
+    s:2026-04-11-2243 -->|modified| f:docs/stories/
+    s:2026-04-11-2243 -->|modified| f:docs/product/ROADMAP.md
+    s:2026-04-11-2243 -->|modified| f:supabase/config.toml
+    s:2026-04-11-2243 -->|modified| f:.github/workflows/ci.yml
+    s:2026-04-11-2243 -->|modified| f:scripts/setup.sh
+    s:2026-04-11-2243 -->|modified| f:README.md
+    s:2026-04-11-2243 -->|modified| f:src/components/layout/nav.tsx
+    s:2026-04-11-2243 -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
+    s:2026-04-11-2243 -->|modified| f:src/app/globals.css
+    s:2026-04-11-2243 -->|modified| f:memory/recent-memory.md
+    s:2026-04-11-2243 -->|modified| f:memory/project-memory.md
+    p:sprint-1-us-201 -->|depends_on| d:email-autoconfirm-mvp
+    p:sprint-1-us-201 -->|depends_on| d:supabase-standard-layout
+    s:2026-04-11-2243 -->|led_to| c:phase-1-complete
+    s:2026-04-11-2243 -->|led_to| c:phase-2-complete
+    s:2026-04-11-2243 -->|led_to| c:live-production-url
+    d:lucide-react -->|modified| f:src/components/layout/nav.tsx
+    d:lucide-react -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
+    d:design-system-v0.1 -->|modified| f:docs/design/DESIGN-SYSTEM.md
+    d:supabase-standard-layout -->|modified| f:supabase/config.toml
+    d:ci-no-test-job -->|modified| f:.github/workflows/ci.yml
+    d:ci-placeholder-env -->|modified| f:.github/workflows/ci.yml
+    s:2026-04-12-1409 -->|led_to| d:redesign-before-wire
+    s:2026-04-12-1409 -->|led_to| d:for-you-as-home
+    s:2026-04-12-1409 -->|led_to| d:welcome-modal
+    s:2026-04-12-1409 -->|led_to| d:catalog-filter-system
+    s:2026-04-12-1409 -->|led_to| d:new-matcha-fields
+    s:2026-04-12-1409 -->|led_to| d:landing-page-redesign
+    s:2026-04-12-1409 -->|modified| f:src/app/page.tsx
+    s:2026-04-12-1409 -->|modified| f:src/app/(main)/for-you/page.tsx
+    s:2026-04-12-1409 -->|modified| f:src/components/ui/welcome-modal.tsx
+    s:2026-04-12-1409 -->|modified| f:src/components/ui/matcha-card.tsx
+    s:2026-04-12-1409 -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
+    s:2026-04-12-1409 -->|modified| f:src/models/matcha.ts
+    s:2026-04-12-1409 -->|modified| f:src/components/layout/nav.tsx
+    s:2026-04-12-1409 -->|modified| f:src/lib/supabase/middleware.ts
+    s:2026-04-12-1409 -->|modified| f:src/app/globals.css
+    s:2026-04-12-1409 -->|part_of| proj:whiskly
+    s:2026-04-12-1409 -->|led_to| c:feature-vision
+    p:db-migration-new-fields -->|depends_on| d:new-matcha-fields
+    p:seed-new-fields -->|depends_on| p:db-migration-new-fields
+    p:continue-ui-redesign -->|depends_on| d:redesign-before-wire

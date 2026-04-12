@@ -71,3 +71,42 @@
 {"kind": "edge", "from": "decision:supabase-standard-layout", "to": "file:supabase/config.toml", "type": "modified", "date": "2026-04-11"}
 {"kind": "edge", "from": "decision:ci-no-test-job", "to": "file:.github/workflows/ci.yml", "type": "modified", "date": "2026-04-11"}
 {"kind": "edge", "from": "decision:ci-placeholder-env", "to": "file:.github/workflows/ci.yml", "type": "modified", "date": "2026-04-11"}
+{"kind":"node","id":"session:2026-04-12-1409","type":"session","label":"UI redesign: landing, For You, catalog filters","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"decision:redesign-before-wire","type":"decision","label":"Redesign UI before Sprint 1 wiring","date":"2026-04-12","meta":{"reason":"user preference to get visuals right first"}}
+{"kind":"node","id":"decision:for-you-as-home","type":"decision","label":"For You page is post-login home","date":"2026-04-12","meta":{"reason":"personalized landing over catalog"}}
+{"kind":"node","id":"decision:welcome-modal","type":"decision","label":"Welcome modal with matcha facts on login","date":"2026-04-12","meta":{"reason":"delight factor, surface fun knowledge"}}
+{"kind":"node","id":"decision:catalog-filter-system","type":"decision","label":"Expandable catalog filters: notes, good-for, price","date":"2026-04-12","meta":{"reason":"user wants advanced filtering beyond type"}}
+{"kind":"node","id":"decision:new-matcha-fields","type":"decision","label":"Add price_per_gram, good_for, milk_pairing to matcha","date":"2026-04-12","meta":{"reason":"core product features: pricing, pairings, use-case filtering"}}
+{"kind":"node","id":"decision:landing-page-redesign","type":"decision","label":"Single CTA landing with logo + Nunito wordmark","date":"2026-04-12","meta":{"reason":"clarity over two confusing buttons"}}
+{"kind":"node","id":"plan:db-migration-new-fields","type":"plan","label":"Migration: price_per_gram, good_for, milk_pairing","date":"2026-04-12","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:seed-new-fields","type":"plan","label":"Seed new matcha fields for 24 entries","date":"2026-04-12","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:branded-email-templates","type":"plan","label":"Design branded Supabase email templates","date":"2026-04-12","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:continue-ui-redesign","type":"plan","label":"Redesign: detail, log, discover, profile pages","date":"2026-04-12","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:bump-next-16.2.3","type":"plan","label":"Bump next to 16.2.3 (DoS fix)","date":"2026-04-12","meta":{"status":"todo"}}
+{"kind":"node","id":"file:src/app/page.tsx","type":"file","label":"landing page","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"file:src/app/(main)/for-you/page.tsx","type":"file","label":"For You page","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"file:src/components/ui/welcome-modal.tsx","type":"file","label":"welcome modal component","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"file:src/components/ui/matcha-card.tsx","type":"file","label":"matcha card component","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"file:src/models/matcha.ts","type":"file","label":"matcha model","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"file:src/lib/supabase/middleware.ts","type":"file","label":"auth middleware","date":"2026-04-12","meta":{}}
+{"kind":"node","id":"concept:feature-vision","type":"concept","label":"Product vision: shareable wraps, filters, pairings","date":"2026-04-12","meta":{}}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:redesign-before-wire","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:for-you-as-home","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:welcome-modal","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:catalog-filter-system","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:new-matcha-fields","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"decision:landing-page-redesign","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/app/page.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/app/(main)/for-you/page.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/components/ui/welcome-modal.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/components/ui/matcha-card.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/app/(main)/catalog/catalog-client.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/models/matcha.ts","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/components/layout/nav.tsx","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/lib/supabase/middleware.ts","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"file:src/app/globals.css","type":"modified","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"project:whiskly","type":"part_of","date":"2026-04-12"}
+{"kind":"edge","from":"session:2026-04-12-1409","to":"concept:feature-vision","type":"led_to","date":"2026-04-12"}
+{"kind":"edge","from":"plan:db-migration-new-fields","to":"decision:new-matcha-fields","type":"depends_on","date":"2026-04-12"}
+{"kind":"edge","from":"plan:seed-new-fields","to":"plan:db-migration-new-fields","type":"depends_on","date":"2026-04-12"}
+{"kind":"edge","from":"plan:continue-ui-redesign","to":"decision:redesign-before-wire","type":"depends_on","date":"2026-04-12"}

@@ -14,7 +14,9 @@ export default function SignupPage() {
     <main className="flex flex-col items-center justify-center min-h-screen p-6">
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center space-y-2">
-          <img src="/logo.svg" alt="" className="w-10 h-10 mx-auto" />
+          <Link href="/" className="inline-block">
+            <img src="/logo.svg" alt="Back to home" className="w-10 h-10 mx-auto" />
+          </Link>
           <h1 className="text-2xl font-bold text-matcha-700">whiskly</h1>
           <p className="text-sm text-gray-500">Start your matcha journey</p>
         </div>
