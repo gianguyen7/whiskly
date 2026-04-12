@@ -39,8 +39,8 @@ phase's exit criteria are met.
 - [x] PRD for MVP scope (docs/product/PRD-whiskly-mvp.md)
 - [x] User persona defined (Alex, 27, young professional)
 - [x] Success metrics defined (10+ users, 3+ logs, 20% rec conversion, 40% retention)
-- [ ] Core user stories written (5-10 for MVP)
-- [ ] Roadmap with Phase 2-4 sketched out
+- [x] Core user stories written (5-10 for MVP) — see `docs/stories/`
+- [x] Roadmap with Phase 2-4 sketched out — see `docs/product/ROADMAP.md`
 
 ### Exit Criteria
 - [ ] PRFAQ approved by stakeholders
