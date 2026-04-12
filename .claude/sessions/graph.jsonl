@@ -1,0 +1,73 @@
+{"kind": "node", "id": "session:2026-04-11-2243", "type": "session", "label": "Phase 1 finish + Phase 2 close-out", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "project:whiskly", "type": "project", "label": "Whiskly matcha PWA", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:design-system-v0.1", "type": "decision", "label": "Ship design system v0.1", "date": "2026-04-11", "meta": {"reason": "needed before Sprint 1 polish"}}
+{"kind": "node", "id": "decision:keep-gray-text", "type": "decision", "label": "Keep Tailwind gray-* for text", "date": "2026-04-11", "meta": {"reason": "warm ramp not extended past 500"}}
+{"kind": "node", "id": "decision:warm-for-surfaces", "type": "decision", "label": "Use warm-* for borders/surfaces", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:lucide-react", "type": "decision", "label": "Adopt lucide-react for icons", "date": "2026-04-11", "meta": {"reason": "kill inline SVG duplication"}}
+{"kind": "node", "id": "decision:dark-mode-deferred", "type": "decision", "label": "Defer dark mode post-MVP", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:supabase-standard-layout", "type": "decision", "label": "Move supabase to standard ./supabase/ path", "date": "2026-04-11", "meta": {"reason": "CLI works without config"}}
+{"kind": "node", "id": "decision:ci-no-test-job", "type": "decision", "label": "CI omits test job until first test lands", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:ci-placeholder-env", "type": "decision", "label": "CI build uses placeholder Supabase env vars", "date": "2026-04-11", "meta": {"reason": "all Supabase routes are dynamic"}}
+{"kind": "node", "id": "decision:vercel-web-dashboard", "type": "decision", "label": "Link Vercel via web dashboard not CLI", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:keep-vercel-puce-subdomain", "type": "decision", "label": "Accept whiskly-puce.vercel.app default", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:8-core-user-stories", "type": "decision", "label": "Write 8 standalone story cards for critical path", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:roadmap-versioned", "type": "decision", "label": "Versioned roadmap v0.1->v2.0 with Now/Next/Later", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "decision:email-autoconfirm-mvp", "type": "decision", "label": "Disable Supabase email confirmation for MVP", "date": "2026-04-11", "meta": {"reason": "matches US-201 AC"}}
+{"kind": "node", "id": "plan:sprint-1-us-201", "type": "plan", "label": "Sprint 1: wire US-201 signup", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "plan:next-middleware-to-proxy", "type": "plan", "label": "Migrate Next.js middleware->proxy", "date": "2026-04-11", "meta": {"reason": "Next.js 16 deprecation"}}
+{"kind": "node", "id": "plan:ci-add-test-job", "type": "plan", "label": "Add CI test job when first test lands", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:docs/design/DESIGN-SYSTEM.md", "type": "file", "label": "design system doc", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:docs/stories/", "type": "file", "label": "user story cards dir", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:docs/product/ROADMAP.md", "type": "file", "label": "product roadmap", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:supabase/config.toml", "type": "file", "label": "supabase CLI config", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:.github/workflows/ci.yml", "type": "file", "label": "CI workflow", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:scripts/setup.sh", "type": "file", "label": "dev setup script", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:README.md", "type": "file", "label": "README", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:src/components/layout/nav.tsx", "type": "file", "label": "nav component", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:src/app/(main)/catalog/catalog-client.tsx", "type": "file", "label": "catalog client", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:src/app/globals.css", "type": "file", "label": "global styles", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:memory/recent-memory.md", "type": "file", "label": "recent memory", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "file:memory/project-memory.md", "type": "file", "label": "project memory", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "concept:phase-1-complete", "type": "concept", "label": "Phase 1 complete", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "concept:phase-2-complete", "type": "concept", "label": "Phase 2 complete", "date": "2026-04-11", "meta": {}}
+{"kind": "node", "id": "concept:live-production-url", "type": "concept", "label": "https://whiskly-puce.vercel.app", "date": "2026-04-11", "meta": {}}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "project:whiskly", "type": "part_of", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:design-system-v0.1", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:keep-gray-text", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:warm-for-surfaces", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:lucide-react", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:dark-mode-deferred", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:supabase-standard-layout", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:ci-no-test-job", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:ci-placeholder-env", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:vercel-web-dashboard", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:keep-vercel-puce-subdomain", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:8-core-user-stories", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:roadmap-versioned", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "decision:email-autoconfirm-mvp", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "plan:sprint-1-us-201", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "plan:next-middleware-to-proxy", "type": "mentions", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "plan:ci-add-test-job", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:docs/design/DESIGN-SYSTEM.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:docs/stories/", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:docs/product/ROADMAP.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:supabase/config.toml", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:.github/workflows/ci.yml", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:scripts/setup.sh", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:README.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:src/components/layout/nav.tsx", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:src/app/(main)/catalog/catalog-client.tsx", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:src/app/globals.css", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:memory/recent-memory.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "file:memory/project-memory.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "plan:sprint-1-us-201", "to": "decision:email-autoconfirm-mvp", "type": "depends_on", "date": "2026-04-11"}
+{"kind": "edge", "from": "plan:sprint-1-us-201", "to": "decision:supabase-standard-layout", "type": "depends_on", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "concept:phase-1-complete", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "concept:phase-2-complete", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "session:2026-04-11-2243", "to": "concept:live-production-url", "type": "led_to", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:lucide-react", "to": "file:src/components/layout/nav.tsx", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:lucide-react", "to": "file:src/app/(main)/catalog/catalog-client.tsx", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:design-system-v0.1", "to": "file:docs/design/DESIGN-SYSTEM.md", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:supabase-standard-layout", "to": "file:supabase/config.toml", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:ci-no-test-job", "to": "file:.github/workflows/ci.yml", "type": "modified", "date": "2026-04-11"}
+{"kind": "edge", "from": "decision:ci-placeholder-env", "to": "file:.github/workflows/ci.yml", "type": "modified", "date": "2026-04-11"}
