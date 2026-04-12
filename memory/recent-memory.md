@@ -6,34 +6,32 @@
 
 ---
 
-## Last Updated: 2026-04-02
+## Last Updated: 2026-04-11
 
 ## Current Focus
 
-- Phase 2 (Technical Design) nearing completion — Next.js scaffold done
-- Next: create Supabase project, configure CI, dev env setup, write user stories
+- Phase 1 complete: all product-definition deliverables shipped
+- Phase 2 ~85% complete: Supabase fully provisioned; CI + Vercel + setup script remaining
+- Next: CI workflow, Vercel linking, dev setup script, then Sprint 1 build
 
 ## Recent Decisions (Last 48hr)
 
-- Next.js 16.2.2 scaffolded with App Router, TypeScript, Tailwind CSS
-- Using @ducanh2912/next-pwa for PWA support (webpack-based, works alongside Turbopack with `turbopack: {}` config)
-- Supabase SSR pattern: createBrowserClient (client), createServerClient (server + middleware)
-- Route groups: (auth) for login/signup, (main) for authenticated pages with bottom nav
-- Matcha-green color palette defined in globals.css via @theme inline (CSS custom properties)
-- Next.js middleware handles auth session refresh + redirects unauthenticated users from protected routes
-- Service stubs use server-side Supabase client (all data fetching is server-side)
-- Chose materialized user taste profiles over computed-on-read
-- Custom matcha entries go in same `matchas` table with `submitted_by` + `is_approved` flags
-- Articles indexed in DB (not just frontmatter) for taste-profile-based content recommendations
-- Multiple logs per matcha allowed
+- **Design system v0.1** shipped (`docs/design/DESIGN-SYSTEM.md`): color tokens, typography scale, spacing, components, motion, a11y
+- **Token policy:** keep Tailwind `gray-*` for text emphasis; use `warm-*` for surfaces, borders, dividers (OQ#1)
+- **Icon library:** migrated inline SVGs in `nav.tsx` and `catalog-client.tsx` to `lucide-react` v1.8.0 (OQ#2)
+- **Dark mode:** deferred to post-MVP; token scaffolding exists as commented-out `@media (prefers-color-scheme: dark)` block in `globals.css` (OQ#3)
+- **User stories:** 8 standalone story cards in `docs/stories/` covering the MVP critical path (US-201, US-202, US-301, US-302, US-401, US-402, US-501, US-602)
+- **Roadmap:** versioned v0.1 alpha → v1.0 MVP → v1.1 harden → v2.0 social-vs-expertise in `docs/product/ROADMAP.md`
+- **Supabase project layout:** moved `infra/supabase/` → `supabase/` (standard CLI convention); `infra/` directory removed; all doc references updated
+- **Supabase provisioning:** discovered the hosted project (`fdayixiwxwligrxutmro`) was already fully provisioned in a prior session — schema, RLS, triggers, `get_recommendations` RPC, and 24 seeded matcha entries all live. Marked migration 001 as applied via `supabase migration repair --status applied 001`.
 
 ## Open Threads
 
-- Phase 2 remaining: create Supabase project, configure CI, dev env setup
-- Phase 1 remaining: user stories (5-10 for MVP), roadmap
-- PRD open questions: Q4 (OAuth — Google is P2), Q5 (recommendation explanation UX)
-- html2canvas vulnerability warnings in npm audit (5 high severity — upstream dep issues)
-- Next.js 16 deprecates "middleware" file convention in favor of "proxy" — migration may be needed
+- **Phase 2 remaining:** CI workflow (lint + test + build on PR), Vercel ↔ GitHub link, `scripts/setup.sh`, README dev setup section
+- **Local dev without Docker:** Docker isn't installed on this machine, so `supabase start` (local stack) isn't available. Currently using the hosted project as the dev environment. Revisit if we need a fully offline loop.
+- **PRD open questions:** Q4 (OAuth — Google is P2), Q5 (recommendation explanation UX)
+- **html2canvas vulnerability warnings:** 5 high severity in `npm audit` (upstream dep issues, not ours to fix)
+- **Next.js 16 middleware → proxy migration:** may be needed before v1.0
 
 ## Blockers / Watch Items
 

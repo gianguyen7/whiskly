@@ -134,7 +134,7 @@ Verify that `supabase start` (local Docker), the Supabase CLI migration workflow
 - [ ] Given the migration, when rolling back, then it drops cleanly without orphaned objects
 
 **Technical Notes:**
-- Migration file: `infra/supabase/migrations/001_initial_schema.sql`
+- Migration file: `supabase/migrations/001_initial_schema.sql`
 - Schema SQL is fully specified in ADR-004 — transcribe and test
 - Include `handle_new_user()` trigger that auto-creates a `profiles` row on `auth.users` insert
 

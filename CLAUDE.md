@@ -102,7 +102,9 @@ whiskly/
 │   ├── long-term-memory.md      # Distilled facts, preferences, patterns
 │   ├── recent-memory.md         # Rolling 48hr context (loaded at startup)
 │   └── project-memory.md        # Active project state and architecture
-├── infra/                       # Infrastructure-as-code
+├── supabase/                    # Supabase migrations, seed, local config
+│   ├── migrations/              # Schema migrations (run via `supabase db push`)
+│   └── seed.sql                 # Catalog + article seed data
 └── .github/                     # CI/CD workflows, PR/issue templates
     ├── ISSUE_TEMPLATE/
     │   ├── bug_report.md

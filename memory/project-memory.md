@@ -74,5 +74,5 @@ Manual (Gia, 3-4 entries) → high confidence
 | `docs/adr/ADR-002-tech-stack.md` | Next.js + Supabase + Vercel decision |
 | `docs/adr/ADR-003-catalog-seeding-pipeline.md` | Scraping sources and pipeline design |
 | `docs/adr/ADR-004-database-schema.md` | Full schema with triggers, RLS, recommendations |
-| `infra/supabase/migrations/001_initial_schema.sql` | Runnable migration |
+| `supabase/migrations/001_initial_schema.sql` | Runnable migration |
 | `scripts/seed-catalog/README.md` | Pipeline instructions |

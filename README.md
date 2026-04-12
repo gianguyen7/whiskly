@@ -14,8 +14,8 @@ docs/
   product/        Execution plan, roadmap, PRDs
   runbooks/       Operational runbooks
   templates/      Reusable doc templates (PRD, PRFAQ, ADR, etc.)
-src/              Application source code (empty — pending tech stack decision)
-infra/            Infrastructure-as-code (empty — pending hosting decision)
+src/              Application source code (Next.js App Router)
+supabase/         Supabase migrations, seed data, local config
 scripts/          Build, deploy, and utility scripts
 tests/            Unit, integration, and E2E tests
 ```

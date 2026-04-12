@@ -379,7 +379,7 @@ CREATE POLICY articles_select ON articles FOR SELECT
 ## Follow-Up Actions
 
 - [ ] Create Supabase project and run this schema
-- [ ] Write migration file: `infra/supabase/migrations/001_initial_schema.sql`
+- [x] Write migration file: `supabase/migrations/001_initial_schema.sql`
 - [ ] Test trigger with: insert 3 logs, verify profile updates, verify recommendations
 - [ ] Seed catalog from `scripts/seed-catalog/catalog.json`
 - [ ] Test RLS policies with authenticated and anonymous users
