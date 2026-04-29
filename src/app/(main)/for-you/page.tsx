@@ -1,11 +1,4 @@
-import {
-  Sparkles,
-  Plus,
-  Search,
-  Share2,
-  Droplets,
-  Flame,
-} from "lucide-react";
+import { ChevronRight, Leaf } from "lucide-react";
 import Link from "next/link";
 import { WelcomeModal } from "@/components/ui/welcome-modal";
 
@@ -14,167 +7,222 @@ export default function ForYouPage() {
     <>
       <WelcomeModal />
 
-      <div className="pb-24">
-        {/* Hero greeting */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-matcha-600 via-matcha-500 to-matcha-400 px-5 pt-10 pb-8">
-          {/* Decorative blobs */}
-          <div className="absolute -top-8 -right-8 w-36 h-36 rounded-full bg-white/8" />
-          <div className="absolute bottom-4 -left-6 w-24 h-24 rounded-full bg-white/5" />
-
-          <p className="text-matcha-100 text-sm font-medium mb-1">
-            Good to see you
-          </p>
-          <h1 className="text-[28px] font-bold text-white leading-tight">
-            What are we<br />brewing today?
-          </h1>
-
-          {/* Quick actions */}
-          <div className="flex gap-2.5 mt-5">
-            <Link
-              href="/log"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 backdrop-blur-sm text-white text-sm font-semibold hover:bg-white/25 active:scale-[0.97] transition-all"
+      <div className="pb-28">
+        {/* Header */}
+        <div className="flex justify-between items-end px-6 pt-4">
+          <div>
+            <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-ink-mute">
+              Wed &middot; Apr 28
+            </p>
+            <h2
+              className="font-display text-[28px] leading-[1.1] text-ink mt-1"
+              style={{ fontWeight: 400 }}
             >
-              <Plus size={16} strokeWidth={2.5} />
-              Log a Matcha
-            </Link>
-            <Link
-              href="/catalog"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 backdrop-blur-sm text-white text-sm font-semibold hover:bg-white/25 active:scale-[0.97] transition-all"
-            >
-              <Search size={16} strokeWidth={2.5} />
-              Explore
-            </Link>
+              Good morning,{" "}
+              <span
+                className="italic"
+                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}
+              >
+                there
+              </span>
+            </h2>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-mochi flex items-center justify-center font-serif text-lg italic text-ink flex-shrink-0">
+            W
           </div>
         </div>
 
-        <div className="px-4 pt-5 space-y-5">
-          {/* Picked for you — horizontal scroll */}
-          <section>
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles size={16} className="text-matcha-600" />
-              <h2 className="text-base font-bold text-gray-900">
-                Picked for You
-              </h2>
+        {/* Hero ritual card */}
+        <div className="mx-6 mt-5 relative overflow-hidden">
+          <div className="bg-card rounded-[20px] border border-[rgba(27,29,24,0.12)] p-5 relative">
+            {/* Faint cup illustration */}
+            <div className="absolute -top-5 -right-5 opacity-[0.18] pointer-events-none">
+              <svg width="170" height="170" viewBox="0 0 120 120">
+                <ellipse cx="60" cy="90" rx="45" ry="6" fill="rgba(0,0,0,0.08)" />
+                <path d="M15 55 Q15 90,60 95 Q105 90,105 55 Z" fill="#F8F3E1" stroke="#2D4014" strokeWidth="1.5" />
+                <ellipse cx="60" cy="55" rx="45" ry="8" fill="#3F5A1A" />
+                <ellipse cx="60" cy="55" rx="45" ry="8" fill="none" stroke="#2D4014" strokeWidth="1.5" />
+              </svg>
             </div>
 
-            <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4">
-              {[
-                {
-                  name: "Okumidori",
-                  brand: "Ippodo",
-                  tag: "Ceremonial",
-                  note: "Rich umami, low bitterness",
-                },
-                {
-                  name: "Daily Matcha",
-                  brand: "Naoki",
-                  tag: "Premium",
-                  note: "Smooth, great for lattes",
-                },
-                {
-                  name: "Hisui",
-                  brand: "Marukyu Koyamaen",
-                  tag: "Ceremonial",
-                  note: "Sweet, creamy finish",
-                },
-              ].map((item) => (
-                <div
-                  key={item.name}
-                  className="flex-shrink-0 w-[156px] rounded-2xl border border-warm-200 bg-white overflow-hidden hover:shadow-md hover:border-matcha-300 transition-all"
-                >
-                  <div className="w-full h-24 bg-gradient-to-br from-matcha-50 to-matcha-100 flex items-center justify-center">
-                    <span className="text-3xl">🍵</span>
-                  </div>
-                  <div className="p-3 space-y-1.5">
-                    <span className="inline-block px-2 py-0.5 rounded-full bg-matcha-50 text-matcha-700 text-[10px] font-bold uppercase tracking-wider">
-                      {item.tag}
-                    </span>
-                    <p className="text-sm font-bold text-gray-900 leading-tight">
-                      {item.name}
-                    </p>
-                    <p className="text-[11px] text-gray-400 font-medium">
-                      {item.brand}
-                    </p>
-                    <p className="text-[11px] text-gray-500 leading-snug">
-                      {item.note}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+            <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-matcha-800">
+              Today&apos;s ritual
+            </p>
+            <h2
+              className="font-display text-[28px] leading-[1.1] text-ink mt-2.5 max-w-[220px]"
+              style={{ fontWeight: 400 }}
+            >
+              A quiet{" "}
+              <span className="italic" style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+                usucha
+              </span>{" "}
+              to start.
+            </h2>
+            <p className="font-sans text-[14px] text-ink-soft leading-relaxed mt-2 max-w-[220px]">
+              Oat milk on the side, 70&deg; water, 2 min before your phone.
+            </p>
 
-          {/* Milk pairing — bold CTA card */}
-          <section className="rounded-2xl overflow-hidden border border-warm-200 bg-white">
-            <div className="flex items-start gap-4 p-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                <Droplets size={20} className="text-blue-400" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-bold text-gray-900">
-                  Today&apos;s Pairing
-                </h3>
-                <p className="text-[13px] text-gray-500 mt-0.5 leading-snug">
-                  Oat milk + ceremonial grade at 65°C. Your logs say this is
-                  your sweet spot.
-                </p>
-              </div>
-            </div>
-            <div className="border-t border-warm-100 px-4 py-2.5">
+            <div className="flex gap-2 mt-3.5">
               <Link
-                href="/discover"
-                className="text-xs font-semibold text-matcha-600 hover:text-matcha-700"
+                href="/log/new"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-ink text-paper font-sans font-semibold text-xs"
               >
-                More pairing tips →
+                Log a sip
               </Link>
-            </div>
-          </section>
-
-          {/* Matcha tip — hot tip style */}
-          <section className="rounded-2xl overflow-hidden border border-amber-200 bg-amber-50/50">
-            <div className="flex items-start gap-4 p-4">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                <Flame size={20} className="text-amber-500" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-bold text-gray-900">
-                  Hot Tip
-                </h3>
-                <p className="text-[13px] text-gray-600 mt-0.5 leading-snug">
-                  Store matcha in the freezer, not the fridge. Seal it airtight
-                  — moisture is the real enemy, not temperature.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Matcha Wrap — shareable CTA */}
-          <section className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-matcha-700 via-matcha-600 to-matcha-500 p-5">
-            {/* Decorative */}
-            <div className="absolute top-3 right-3 w-20 h-20 rounded-full bg-white/5" />
-            <div className="absolute -bottom-4 -right-4 w-28 h-28 rounded-full bg-white/5" />
-
-            <div className="relative space-y-3">
-              <div className="flex items-center gap-2">
-                <Share2 size={16} className="text-matcha-200" />
-                <h3 className="text-sm font-bold text-matcha-100 uppercase tracking-wider">
-                  Matcha Wrap
-                </h3>
-              </div>
-              <p className="text-[22px] font-bold text-white leading-snug">
-                Share your<br />matcha journey
-              </p>
-              <p className="text-sm text-matcha-100/80 leading-relaxed">
-                Log more matchas to unlock your personalized wrap — your
-                favorites, taste profile, and stats in one shareable card.
-              </p>
-              <button
-                className="mt-1 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-matcha-700 text-sm font-bold hover:bg-matcha-50 active:scale-[0.97] transition-all"
-              >
-                Coming Soon
+              <button className="inline-flex items-center px-4 py-2 rounded-full bg-transparent border border-ink text-ink font-sans font-semibold text-xs">
+                Skip today
               </button>
             </div>
-          </section>
+          </div>
+        </div>
+
+        {/* Stats row */}
+        <div className="flex gap-2.5 mx-6 mt-4">
+          {[
+            { n: "14", l: "Day streak" },
+            { n: "47", l: "Sips logged" },
+            { n: "18", l: "Unique tins" },
+          ].map((s) => (
+            <div
+              key={s.l}
+              className="flex-1 bg-paper-deep rounded-2xl px-3.5 py-3"
+            >
+              <span
+                className="font-display text-[32px] italic text-ink"
+                style={{
+                  fontWeight: 300,
+                  lineHeight: 1,
+                  fontVariationSettings: "'opsz' 144, 'SOFT' 100",
+                }}
+              >
+                {s.n}
+              </span>
+              <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-ink-soft mt-1.5">
+                {s.l}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Picked for your palate */}
+        <div className="mt-6">
+          <div className="flex justify-between items-baseline px-6 mb-3">
+            <h3
+              className="font-display text-[20px] text-ink"
+              style={{ fontWeight: 500 }}
+            >
+              Picked for your palate
+            </h3>
+            <Link
+              href="/catalog"
+              className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-matcha-800"
+            >
+              See all
+            </Link>
+          </div>
+
+          <div className="flex gap-3 overflow-x-auto scrollbar-hide px-6 pb-1">
+            {[
+              { brand: "Ippodo", name: "Sayaka", notes: "Creamy \u00b7 Sweet", color: "#7FB22E" },
+              { brand: "Marukyu Koyamaen", name: "Wako", notes: "Umami \u00b7 Buttery", color: "#5F8E1F" },
+              { brand: "Nami Tea", name: "Kuradashi", notes: "Nutty \u00b7 Round", color: "#6B9A2E" },
+              { brand: "Rocky\u2019s Matcha", name: "Ceremonial", notes: "Vibrant \u00b7 Grassy", color: "#9BC740" },
+            ].map((m) => (
+              <div
+                key={m.name}
+                className="flex-shrink-0 w-[168px] bg-card rounded-[18px] border border-[rgba(27,29,24,0.12)] overflow-hidden"
+              >
+                <div
+                  className="h-24 flex items-center justify-center"
+                  style={{ background: m.color }}
+                >
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F8F3E1" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 7h14v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zm14 3h2a2 2 0 0 1 0 4h-2" />
+                  </svg>
+                </div>
+                <div className="p-3">
+                  <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-ink-mute">
+                    {m.brand}
+                  </p>
+                  <p
+                    className="font-serif italic text-[20px] text-ink mt-0.5"
+                    style={{
+                      fontWeight: 400,
+                      fontVariationSettings: "'opsz' 144, 'SOFT' 100",
+                    }}
+                  >
+                    {m.name}
+                  </p>
+                  <p className="font-sans text-[11px] text-ink-soft mt-1.5">
+                    {m.notes}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Today's pairing */}
+        <div className="mx-6 mt-6">
+          <h3
+            className="font-display text-[20px] text-ink mb-3"
+            style={{ fontWeight: 500 }}
+          >
+            Today&apos;s pairing
+          </h3>
+          <div className="bg-card rounded-[18px] border border-[rgba(27,29,24,0.12)] p-4">
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-matcha-50 flex items-center justify-center flex-shrink-0">
+                <Leaf size={22} className="text-matcha-800" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-sans text-[14px] font-semibold text-ink">
+                  Oat + ceremonial &middot; 65&deg;C
+                </p>
+                <p className="font-sans text-[12px] text-ink-soft mt-0.5">
+                  Your sweet spot from last week&apos;s logs.
+                </p>
+              </div>
+              <ChevronRight size={16} className="text-ink-mute flex-shrink-0" />
+            </div>
+          </div>
+        </div>
+
+        {/* Read while you sip */}
+        <div className="mx-6 mt-6">
+          <h3
+            className="font-display text-[20px] text-ink mb-3"
+            style={{ fontWeight: 500 }}
+          >
+            Read while you sip
+          </h3>
+          <div className="bg-ink rounded-[20px] p-5">
+            <p
+              className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase"
+              style={{ color: "rgba(239,234,216,0.6)" }}
+            >
+              Brewing &middot; 3 min read
+            </p>
+            <p
+              className="font-serif text-[22px] leading-[1.15] text-paper mt-2 max-w-[260px]"
+              style={{
+                fontWeight: 400,
+                fontVariationSettings: "'opsz' 144, 'SOFT' 100",
+              }}
+            >
+              Why <em className="italic">shade-grown</em> matters more than you
+              think.
+            </p>
+            <div className="flex justify-between items-center mt-4">
+              <p
+                className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase"
+                style={{ color: "rgba(239,234,216,0.5)" }}
+              >
+                By Rei Tanaka
+              </p>
+              <ChevronRight size={16} className="text-paper" />
+            </div>
+          </div>
         </div>
       </div>
     </>

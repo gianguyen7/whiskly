@@ -6,37 +6,34 @@
 
 ---
 
-## Last Updated: 2026-04-12
+## Last Updated: 2026-04-28
 
 ## Current Focus
 
-- **Phase 1 complete.** All product-definition deliverables shipped.
-- **Phase 2 complete.** Supabase provisioned, CI green, Vercel linked and deployed.
-- **Next:** UI redesign pass (before Sprint 1 wiring). Design system is ready in `docs/design/DESIGN-SYSTEM.md`.
+- **Cha-dō UI redesign — major pass complete.** Splash, auth pages, For You, catalog, detail, profile, nav, and welcome modal all rebuilt in the Cha-dō editorial direction.
+- **Remaining pages to redesign:** Journal/log, discover, recommendations, share card.
+- **After redesign:** Wire Sprint 1 features (US-201 → US-202 → US-301/302 → US-303).
 
 ## Recent Decisions (Last 48hr)
 
-- **Design system v0.1** shipped (`docs/design/DESIGN-SYSTEM.md`): color tokens, typography scale, spacing, components, motion, a11y
-- **Token policy:** keep Tailwind `gray-*` for text emphasis; use `warm-*` for surfaces, borders, dividers (OQ#1)
-- **Icon library:** migrated inline SVGs to `lucide-react` v1.8.0 (OQ#2)
-- **Dark mode:** deferred to post-MVP; token scaffolding exists commented-out in `globals.css` (OQ#3)
-- **User stories:** 8 standalone cards in `docs/stories/` covering the MVP critical path
-- **Roadmap:** versioned v0.1 → v2.0 in `docs/product/ROADMAP.md`
-- **Supabase layout:** moved `infra/supabase/` → `supabase/` (standard CLI convention)
-- **Supabase provisioning:** hosted project `fdayixiwxwligrxutmro` was already fully provisioned in a prior session. Schema, RLS, triggers, `get_recommendations()` RPC, and 24 seeded matcha entries all live. Migration history repaired via `supabase migration repair --status applied 001`.
-- **CI:** real pipeline now — `.github/workflows/ci.yml` runs eslint + `tsc --noEmit` + `next build` with placeholder Supabase env vars. `npm run ci` runs the same locally.
-- **Dev setup:** `scripts/setup.sh` is idempotent and gets a fresh clone to a lint-clean state in <10s. README has full prerequisites, first-run, and fresh-project provisioning sections.
-- **Vercel:** linked to `gianguyen7/whiskly` GitHub repo via web dashboard; auto-deploy on push to main; preview deploys per PR. Live at **https://whiskly-puce.vercel.app**. Supabase env vars are set in Vercel project settings (Prod + Preview + Dev).
+- **Cha-dō chosen as production design direction** — Fraunces (serif display) + DM Sans (body) + DM Mono (labels), cream paper (#EFEAD8), deep matcha accent (#3F5A1A), editorial zen voice.
+- **Replaced Geist + Nunito Sans fonts** with Fraunces + DM Sans + DM Mono across layout.tsx and globals.css.
+- **Floating pill nav bar** — rounded-full bg-card container with gradient fade, central green "+" circle for Log. Tabs: Today, Catalog, Log, Journal, Me.
+- **Dark splash page** — #2D4014 bg with Fraunces "whiskly." wordmark, decorative cup SVG, cream CTA.
+- **3-second auth timeout in middleware** — `Promise.race` with 3s ceiling on `getUser()` to prevent 25s hangs when Supabase is unreachable.
+- **Supabase was paused** — user confirmed it's back online now. Verify connectivity next session.
 
 ## Open Threads
 
-- ~~**Supabase email confirmation:**~~ **Resolved 2026-04-12.** Toggled off in dashboard. Auto-confirm is now active.
-- **UI redesign first, then wire.** User wants to redesign the UI before starting Sprint 1 feature wiring. Design system is in `docs/design/DESIGN-SYSTEM.md`.
-- **Sprint 1 wiring (after redesign):** critical path is US-201 → US-202 → US-301/US-302 → US-303. Backend is ready; only app wiring remains.
+- **Check Supabase project status** — was paused during this session. User says it's back online. Verify on next session start.
+- **Integrate illustrated matcha tin SVGs** — 5 silhouettes (cylinder, canister, jar, pouch, tinbox) ready in Downloads/components/matcha-tins.jsx. Need to port to React components.
+- **Remaining UI redesign pages:** journal/log, discover, recommendations, share card exist in mockups but not yet rebuilt.
+- **Profile "Sign out" button** — currently posts to `/api/auth/logout` which doesn't exist. Needs to use existing `LogoutButton` component or server action.
+- **DB migration needed:** add `price_per_gram`, `good_for`, `milk_pairing` columns + seed data.
+- **Sprint 1 wiring (after redesign):** critical path is US-201 → US-202 → US-301/US-302 → US-303.
 - **Next.js 16 deprecation:** `middleware` file → rename to `proxy` before v1.0.
-- **PRD open questions:** Q4 (OAuth — Google is P2), Q5 (recommendation explanation UX).
-- **npm audit — 6 high severity:** (1) `next@16.2.2` DoS via Server Components → fix: bump to 16.2.3. (2) `serialize-javascript` ≤7.0.4 RCE + CPU DoS → transitive via `@ducanh2912/next-pwa` → `workbox-build` → `@rollup/plugin-terser`; waiting on upstream fix. **Not** `html2canvas` as previously noted.
+- **npm audit — 6 high severity:** (1) `next@16.2.2` DoS → bump to 16.2.3. (2) `serialize-javascript` ≤7.0.4 → waiting on upstream `@ducanh2912/next-pwa` fix.
 
 ## Blockers / Watch Items
 
-- None currently.
+- Supabase connectivity — verify on next session.

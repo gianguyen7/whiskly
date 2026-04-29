@@ -110,3 +110,50 @@
 {"kind":"edge","from":"plan:db-migration-new-fields","to":"decision:new-matcha-fields","type":"depends_on","date":"2026-04-12"}
 {"kind":"edge","from":"plan:seed-new-fields","to":"plan:db-migration-new-fields","type":"depends_on","date":"2026-04-12"}
 {"kind":"edge","from":"plan:continue-ui-redesign","to":"decision:redesign-before-wire","type":"depends_on","date":"2026-04-12"}
+{"kind":"node","id":"session:2026-04-28-2314","type":"session","label":"Cha-d\u014d UI redesign: full app visual overhaul","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"decision:chado-design-direction","type":"decision","label":"Cha-d\u014d chosen as production design direction","date":"2026-04-28","meta":{"reason":"Editorial zen serif-led: Fraunces + DM Sans + DM Mono, cream paper, deep matcha accent"}}
+{"kind":"node","id":"decision:replace-fonts","type":"decision","label":"Replace Geist+Nunito with Fraunces+DM Sans+DM Mono","date":"2026-04-28","meta":{"reason":"Cha-d\u014d aesthetic requires serif display + clean body + mono labels"}}
+{"kind":"node","id":"decision:floating-pill-nav","type":"decision","label":"Floating pill nav bar with central Log button","date":"2026-04-28","meta":{"reason":"Cha-d\u014d design: rounded-full container, gradient fade, green + circle"}}
+{"kind":"node","id":"decision:auth-timeout-3s","type":"decision","label":"3-second auth timeout in middleware","date":"2026-04-28","meta":{"reason":"Supabase unreachable caused 25s hangs; Promise.race with 3s ceiling"}}
+{"kind":"node","id":"decision:dark-splash","type":"decision","label":"Dark matcha splash page (#2D4014)","date":"2026-04-28","meta":{"reason":"Cha-d\u014d design: large Fraunces wordmark on dark bg"}}
+{"kind":"node","id":"plan:check-supabase-status","type":"plan","label":"Check Supabase project status \u2014 was paused, now online","date":"2026-04-28","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:integrate-tin-svgs","type":"plan","label":"Integrate illustrated matcha tin SVGs into app","date":"2026-04-28","meta":{"status":"todo"}}
+{"kind":"node","id":"plan:redesign-remaining-pages","type":"plan","label":"Redesign journal, discover, recommendations, share card pages","date":"2026-04-28","meta":{"status":"todo"}}
+{"kind":"node","id":"file:src/app/layout.tsx","type":"file","label":"layout.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(auth)/login/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(auth)/signup/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(auth)/forgot-password/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(main)/catalog/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(main)/catalog/[id]/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(main)/profile/page.tsx","type":"file","label":"page.tsx","date":"2026-04-28","meta":{}}
+{"kind":"node","id":"file:src/app/(main)/layout.tsx","type":"file","label":"layout.tsx","date":"2026-04-28","meta":{}}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"decision:chado-design-direction","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"decision:replace-fonts","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"decision:floating-pill-nav","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"decision:auth-timeout-3s","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"decision:dark-splash","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/globals.css","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/layout.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/components/layout/nav.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(auth)/login/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(auth)/signup/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(auth)/forgot-password/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/for-you/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/catalog/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/catalog/catalog-client.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/components/ui/matcha-card.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/catalog/[id]/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/profile/page.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/components/ui/welcome-modal.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/lib/supabase/middleware.ts","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"file:src/app/(main)/layout.tsx","type":"modified","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"project:whiskly","type":"part_of","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"plan:check-supabase-status","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"plan:integrate-tin-svgs","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"session:2026-04-28-2314","to":"plan:redesign-remaining-pages","type":"led_to","date":"2026-04-28"}
+{"kind":"edge","from":"decision:chado-design-direction","to":"decision:design-system-v0.1","type":"supersedes","date":"2026-04-28"}
+{"kind":"edge","from":"decision:replace-fonts","to":"decision:keep-gray-text","type":"supersedes","date":"2026-04-28"}
+{"kind":"edge","from":"decision:floating-pill-nav","to":"decision:for-you-as-home","type":"supersedes","date":"2026-04-28"}
+{"kind":"edge","from":"plan:integrate-tin-svgs","to":"decision:chado-design-direction","type":"depends_on","date":"2026-04-28"}
+{"kind":"edge","from":"plan:redesign-remaining-pages","to":"decision:chado-design-direction","type":"depends_on","date":"2026-04-28"}

@@ -1,27 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
+import { Fraunces, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  axes: ["opsz", "SOFT"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
   subsets: ["latin"],
-});
-
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
-  subsets: ["latin"],
-  weight: ["600"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Whiskly — Matcha Discovery & Logging",
+  title: "Whiskly — A Matcha Journal",
   description:
-    "Discover, log, and explore matcha with personalized taste profiles and recommendations.",
+    "Quietly catalogue every cup. Discover, log, and explore matcha with personalized taste profiles.",
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#7fb22e",
+  themeColor: "#EFEAD8",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -52,9 +53,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+      <body className="min-h-full flex flex-col bg-paper text-ink font-sans">
         {children}
       </body>
     </html>

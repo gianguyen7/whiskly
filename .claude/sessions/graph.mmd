@@ -1,113 +1,166 @@
 graph LR
-    s:2026-04-11-2243[["Phase 1 finish + Phase 2 close-out"]]
-    proj:whiskly("Whiskly matcha PWA")
-    d:design-system-v0.1{"Ship design system v0.1"}
-    d:keep-gray-text{"Keep Tailwind gray-* for text"}
-    d:warm-for-surfaces{"Use warm-* for borders_surfaces"}
-    d:lucide-react{"Adopt lucide-react for icons"}
-    d:dark-mode-deferred{"Defer dark mode post-MVP"}
-    d:supabase-standard-layout{"Move supabase to standard ._supabase_ path"}
-    d:ci-no-test-job{"CI omits test job until first test lands"}
-    d:ci-placeholder-env{"CI build uses placeholder Supabase env vars"}
-    d:vercel-web-dashboard{"Link Vercel via web dashboard not CLI"}
-    d:keep-vercel-puce-subdomain{"Accept whiskly-puce.vercel.app default"}
-    d:8-core-user-stories{"Write 8 standalone story cards for critical path"}
-    d:roadmap-versioned{"Versioned roadmap v0.1->v2.0 with Now_Next_Later"}
-    d:email-autoconfirm-mvp{"Disable Supabase email confirmation for MVP"}
-    p:sprint-1-us-201["Sprint 1: wire US-201 signup"]
-    p:next-middleware-to-proxy["Migrate Next.js middleware->proxy"]
-    p:ci-add-test-job["Add CI test job when first test lands"]
-    f:docs/design/DESIGN-SYSTEM.md>"design system doc"]
-    f:docs/stories/>"user story cards dir"]
-    f:docs/product/ROADMAP.md>"product roadmap"]
-    f:supabase/config.toml>"supabase CLI config"]
-    f:.github/workflows/ci.yml>"CI workflow"]
-    f:scripts/setup.sh>"dev setup script"]
-    f:README.md>"README"]
-    f:src/components/layout/nav.tsx>"nav component"]
-    f:src/app/(main)/catalog/catalog-client.tsx>"catalog client"]
-    f:src/app/globals.css>"global styles"]
-    f:memory/recent-memory.md>"recent memory"]
-    f:memory/project-memory.md>"project memory"]
-    c:phase-1-complete("Phase 1 complete")
-    c:phase-2-complete("Phase 2 complete")
-    c:live-production-url("https:__whiskly-puce.vercel.app")
-    s:2026-04-12-1409[["UI redesign: landing, For You, catalog filters"]]
-    d:redesign-before-wire{"Redesign UI before Sprint 1 wiring"}
-    d:for-you-as-home{"For You page is post-login home"}
-    d:welcome-modal{"Welcome modal with matcha facts on login"}
-    d:catalog-filter-system{"Expandable catalog filters: notes, good-for, price"}
-    d:new-matcha-fields{"Add price_per_gram, good_for, milk_pairing to matcha"}
-    d:landing-page-redesign{"Single CTA landing with logo + Nunito wordmark"}
-    p:db-migration-new-fields["Migration: price_per_gram, good_for, milk_pairing"]
-    p:seed-new-fields["Seed new matcha fields for 24 entries"]
-    p:branded-email-templates["Design branded Supabase email templates"]
-    p:continue-ui-redesign["Redesign: detail, log, discover, profile pages"]
-    p:bump-next-16.2.3["Bump next to 16.2.3 DoS fix"]
-    f:src/app/page.tsx>"landing page"]
-    f:src/app/(main)/for-you/page.tsx>"For You page"]
-    f:src/components/ui/welcome-modal.tsx>"welcome modal component"]
-    f:src/components/ui/matcha-card.tsx>"matcha card component"]
-    f:src/models/matcha.ts>"matcha model"]
-    f:src/lib/supabase/middleware.ts>"auth middleware"]
-    c:feature-vision("Product vision: shareable wraps, filters, pairings")
-    s:2026-04-11-2243 -->|part_of| proj:whiskly
-    s:2026-04-11-2243 -->|led_to| d:design-system-v0.1
-    s:2026-04-11-2243 -->|led_to| d:keep-gray-text
-    s:2026-04-11-2243 -->|led_to| d:warm-for-surfaces
-    s:2026-04-11-2243 -->|led_to| d:lucide-react
-    s:2026-04-11-2243 -->|led_to| d:dark-mode-deferred
-    s:2026-04-11-2243 -->|led_to| d:supabase-standard-layout
-    s:2026-04-11-2243 -->|led_to| d:ci-no-test-job
-    s:2026-04-11-2243 -->|led_to| d:ci-placeholder-env
-    s:2026-04-11-2243 -->|led_to| d:vercel-web-dashboard
-    s:2026-04-11-2243 -->|led_to| d:keep-vercel-puce-subdomain
-    s:2026-04-11-2243 -->|led_to| d:8-core-user-stories
-    s:2026-04-11-2243 -->|led_to| d:roadmap-versioned
-    s:2026-04-11-2243 -->|led_to| d:email-autoconfirm-mvp
-    s:2026-04-11-2243 -->|led_to| p:sprint-1-us-201
-    s:2026-04-11-2243 -->|mentions| p:next-middleware-to-proxy
-    s:2026-04-11-2243 -->|led_to| p:ci-add-test-job
-    s:2026-04-11-2243 -->|modified| f:docs/design/DESIGN-SYSTEM.md
-    s:2026-04-11-2243 -->|modified| f:docs/stories/
-    s:2026-04-11-2243 -->|modified| f:docs/product/ROADMAP.md
-    s:2026-04-11-2243 -->|modified| f:supabase/config.toml
-    s:2026-04-11-2243 -->|modified| f:.github/workflows/ci.yml
-    s:2026-04-11-2243 -->|modified| f:scripts/setup.sh
-    s:2026-04-11-2243 -->|modified| f:README.md
-    s:2026-04-11-2243 -->|modified| f:src/components/layout/nav.tsx
-    s:2026-04-11-2243 -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
-    s:2026-04-11-2243 -->|modified| f:src/app/globals.css
-    s:2026-04-11-2243 -->|modified| f:memory/recent-memory.md
-    s:2026-04-11-2243 -->|modified| f:memory/project-memory.md
-    p:sprint-1-us-201 -->|depends_on| d:email-autoconfirm-mvp
-    p:sprint-1-us-201 -->|depends_on| d:supabase-standard-layout
-    s:2026-04-11-2243 -->|led_to| c:phase-1-complete
-    s:2026-04-11-2243 -->|led_to| c:phase-2-complete
-    s:2026-04-11-2243 -->|led_to| c:live-production-url
-    d:lucide-react -->|modified| f:src/components/layout/nav.tsx
-    d:lucide-react -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
-    d:design-system-v0.1 -->|modified| f:docs/design/DESIGN-SYSTEM.md
-    d:supabase-standard-layout -->|modified| f:supabase/config.toml
-    d:ci-no-test-job -->|modified| f:.github/workflows/ci.yml
-    d:ci-placeholder-env -->|modified| f:.github/workflows/ci.yml
-    s:2026-04-12-1409 -->|led_to| d:redesign-before-wire
-    s:2026-04-12-1409 -->|led_to| d:for-you-as-home
-    s:2026-04-12-1409 -->|led_to| d:welcome-modal
-    s:2026-04-12-1409 -->|led_to| d:catalog-filter-system
-    s:2026-04-12-1409 -->|led_to| d:new-matcha-fields
-    s:2026-04-12-1409 -->|led_to| d:landing-page-redesign
-    s:2026-04-12-1409 -->|modified| f:src/app/page.tsx
-    s:2026-04-12-1409 -->|modified| f:src/app/(main)/for-you/page.tsx
-    s:2026-04-12-1409 -->|modified| f:src/components/ui/welcome-modal.tsx
-    s:2026-04-12-1409 -->|modified| f:src/components/ui/matcha-card.tsx
-    s:2026-04-12-1409 -->|modified| f:src/app/(main)/catalog/catalog-client.tsx
-    s:2026-04-12-1409 -->|modified| f:src/models/matcha.ts
-    s:2026-04-12-1409 -->|modified| f:src/components/layout/nav.tsx
-    s:2026-04-12-1409 -->|modified| f:src/lib/supabase/middleware.ts
-    s:2026-04-12-1409 -->|modified| f:src/app/globals.css
-    s:2026-04-12-1409 -->|part_of| proj:whiskly
-    s:2026-04-12-1409 -->|led_to| c:feature-vision
-    p:db-migration-new-fields -->|depends_on| d:new-matcha-fields
-    p:seed-new-fields -->|depends_on| p:db-migration-new-fields
-    p:continue-ui-redesign -->|depends_on| d:redesign-before-wire
+  classDef session fill:#E8EFD2,stroke:#3F5A1A
+  classDef decision fill:#FBF7EA,stroke:#1B1D18
+  classDef plan fill:#CADB9E,stroke:#3F5A1A
+  classDef file fill:#E4DDC7,stroke:#8A8B80
+  classDef concept fill:#F3C6C0,stroke:#1B1D18
+  classDef project fill:#7FB22E,stroke:#2D4014,color:#fff
+  decision-ci-placeholder-env["CI build uses placeholder Supabase env v"]:::decision
+  plan-check-supabase-status["Check Supabase project status — was paus"]:::plan
+  file-src_components_ui_welcome-modal.tsx["welcome modal component"]:::file
+  file-docs_product_ROADMAP.md["product roadmap"]:::file
+  file-src_components_ui_matcha-card.tsx["matcha card component"]:::file
+  plan-db-migration-new-fields["Migration: price_per_gram, good_for, mil"]:::plan
+  file-src_app_main_profile_page.tsx["page.tsx"]:::file
+  decision-warm-for-surfaces["Use warm-* for borders/surfaces"]:::decision
+  file-README.md["README"]:::file
+  plan-integrate-tin-svgs["Integrate illustrated matcha tin SVGs in"]:::plan
+  decision-design-system-v0.1["Ship design system v0.1"]:::decision
+  project-whiskly["Whiskly matcha PWA"]:::project
+  concept-phase-1-complete["Phase 1 complete"]:::concept
+  file-src_models_matcha.ts["matcha model"]:::file
+  file-src_app_page.tsx["landing page"]:::file
+  decision-dark-mode-deferred["Defer dark mode post-MVP"]:::decision
+  decision-catalog-filter-system["Expandable catalog filters: notes, good-"]:::decision
+  file-src_components_layout_nav.tsx["nav component"]:::file
+  file-src_app_main_catalog_id_page.tsx["page.tsx"]:::file
+  file-src_app_main_layout.tsx["layout.tsx"]:::file
+  plan-seed-new-fields["Seed new matcha fields for 24 entries"]:::plan
+  decision-email-autoconfirm-mvp["Disable Supabase email confirmation for "]:::decision
+  decision-lucide-react["Adopt lucide-react for icons"]:::decision
+  file-supabase_config.toml["supabase CLI config"]:::file
+  plan-next-middleware-to-proxy["Migrate Next.js middleware->proxy"]:::plan
+  decision-dark-splash["Dark matcha splash page (#2D4014)"]:::decision
+  plan-branded-email-templates["Design branded Supabase email templates"]:::plan
+  plan-sprint-1-us-201["Sprint 1: wire US-201 signup"]:::plan
+  decision-landing-page-redesign["Single CTA landing with logo + Nunito wo"]:::decision
+  file-memory_recent-memory.md["recent memory"]:::file
+  file-src_lib_supabase_middleware.ts["auth middleware"]:::file
+  session-2026-04-28-2314["Cha-dō UI redesign: full app visual over"]:::session
+  file-src_app_globals.css["global styles"]:::file
+  file-src_app_main_catalog_page.tsx["page.tsx"]:::file
+  file-docs_design_DESIGN-SYSTEM.md["design system doc"]:::file
+  decision-chado-design-direction["Cha-dō chosen as production design direc"]:::decision
+  decision-vercel-web-dashboard["Link Vercel via web dashboard not CLI"]:::decision
+  decision-welcome-modal["Welcome modal with matcha facts on login"]:::decision
+  decision-8-core-user-stories["Write 8 standalone story cards for criti"]:::decision
+  decision-new-matcha-fields["Add price_per_gram, good_for, milk_pairi"]:::decision
+  plan-redesign-remaining-pages["Redesign journal, discover, recommendati"]:::plan
+  file-memory_project-memory.md["project memory"]:::file
+  file-src_app_auth_signup_page.tsx["page.tsx"]:::file
+  plan-continue-ui-redesign["Redesign: detail, log, discover, profile"]:::plan
+  file-src_app_auth_forgot-password_page.tsx["page.tsx"]:::file
+  plan-ci-add-test-job["Add CI test job when first test lands"]:::plan
+  decision-keep-vercel-puce-subdomain["Accept whiskly-puce.vercel.app default"]:::decision
+  concept-phase-2-complete["Phase 2 complete"]:::concept
+  file-src_app_main_for-you_page.tsx["For You page"]:::file
+  decision-auth-timeout-3s["3-second auth timeout in middleware"]:::decision
+  decision-for-you-as-home["For You page is post-login home"]:::decision
+  decision-ci-no-test-job["CI omits test job until first test lands"]:::decision
+  plan-bump-next-16.2.3["Bump next to 16.2.3 (DoS fix)"]:::plan
+  file-src_app_auth_login_page.tsx["page.tsx"]:::file
+  concept-live-production-url["https://whiskly-puce.vercel.app"]:::concept
+  session-2026-04-11-2243["Phase 1 finish + Phase 2 close-out"]:::session
+  decision-replace-fonts["Replace Geist+Nunito with Fraunces+DM Sa"]:::decision
+  file-.github_workflows_ci.yml["CI workflow"]:::file
+  concept-feature-vision["Product vision: shareable wraps, filters"]:::concept
+  decision-redesign-before-wire["Redesign UI before Sprint 1 wiring"]:::decision
+  file-src_app_layout.tsx["layout.tsx"]:::file
+  decision-floating-pill-nav["Floating pill nav bar with central Log b"]:::decision
+  decision-keep-gray-text["Keep Tailwind gray-* for text"]:::decision
+  file-src_app_main_catalog_catalog-client.tsx["catalog client"]:::file
+  file-scripts_setup.sh["dev setup script"]:::file
+  decision-supabase-standard-layout["Move supabase to standard ./supabase/ pa"]:::decision
+  decision-roadmap-versioned["Versioned roadmap v0.1->v2.0 with Now/Ne"]:::decision
+  file-docs_stories_["user story cards dir"]:::file
+  session-2026-04-12-1409["UI redesign: landing, For You, catalog f"]:::session
+  session-2026-04-11-2243 -->|part_of| project-whiskly
+  session-2026-04-11-2243 -->|led_to| decision-design-system-v0.1
+  session-2026-04-11-2243 -->|led_to| decision-keep-gray-text
+  session-2026-04-11-2243 -->|led_to| decision-warm-for-surfaces
+  session-2026-04-11-2243 -->|led_to| decision-lucide-react
+  session-2026-04-11-2243 -->|led_to| decision-dark-mode-deferred
+  session-2026-04-11-2243 -->|led_to| decision-supabase-standard-layout
+  session-2026-04-11-2243 -->|led_to| decision-ci-no-test-job
+  session-2026-04-11-2243 -->|led_to| decision-ci-placeholder-env
+  session-2026-04-11-2243 -->|led_to| decision-vercel-web-dashboard
+  session-2026-04-11-2243 -->|led_to| decision-keep-vercel-puce-subdomain
+  session-2026-04-11-2243 -->|led_to| decision-8-core-user-stories
+  session-2026-04-11-2243 -->|led_to| decision-roadmap-versioned
+  session-2026-04-11-2243 -->|led_to| decision-email-autoconfirm-mvp
+  session-2026-04-11-2243 -->|led_to| plan-sprint-1-us-201
+  session-2026-04-11-2243 -->|mentions| plan-next-middleware-to-proxy
+  session-2026-04-11-2243 -->|led_to| plan-ci-add-test-job
+  session-2026-04-11-2243 -->|modified| file-docs_design_DESIGN-SYSTEM.md
+  session-2026-04-11-2243 -->|modified| file-docs_stories_
+  session-2026-04-11-2243 -->|modified| file-docs_product_ROADMAP.md
+  session-2026-04-11-2243 -->|modified| file-supabase_config.toml
+  session-2026-04-11-2243 -->|modified| file-.github_workflows_ci.yml
+  session-2026-04-11-2243 -->|modified| file-scripts_setup.sh
+  session-2026-04-11-2243 -->|modified| file-README.md
+  session-2026-04-11-2243 -->|modified| file-src_components_layout_nav.tsx
+  session-2026-04-11-2243 -->|modified| file-src_app_main_catalog_catalog-client.tsx
+  session-2026-04-11-2243 -->|modified| file-src_app_globals.css
+  session-2026-04-11-2243 -->|modified| file-memory_recent-memory.md
+  session-2026-04-11-2243 -->|modified| file-memory_project-memory.md
+  plan-sprint-1-us-201 -->|depends_on| decision-email-autoconfirm-mvp
+  plan-sprint-1-us-201 -->|depends_on| decision-supabase-standard-layout
+  session-2026-04-11-2243 -->|led_to| concept-phase-1-complete
+  session-2026-04-11-2243 -->|led_to| concept-phase-2-complete
+  session-2026-04-11-2243 -->|led_to| concept-live-production-url
+  decision-lucide-react -->|modified| file-src_components_layout_nav.tsx
+  decision-lucide-react -->|modified| file-src_app_main_catalog_catalog-client.tsx
+  decision-design-system-v0.1 -->|modified| file-docs_design_DESIGN-SYSTEM.md
+  decision-supabase-standard-layout -->|modified| file-supabase_config.toml
+  decision-ci-no-test-job -->|modified| file-.github_workflows_ci.yml
+  decision-ci-placeholder-env -->|modified| file-.github_workflows_ci.yml
+  session-2026-04-12-1409 -->|led_to| decision-redesign-before-wire
+  session-2026-04-12-1409 -->|led_to| decision-for-you-as-home
+  session-2026-04-12-1409 -->|led_to| decision-welcome-modal
+  session-2026-04-12-1409 -->|led_to| decision-catalog-filter-system
+  session-2026-04-12-1409 -->|led_to| decision-new-matcha-fields
+  session-2026-04-12-1409 -->|led_to| decision-landing-page-redesign
+  session-2026-04-12-1409 -->|modified| file-src_app_page.tsx
+  session-2026-04-12-1409 -->|modified| file-src_app_main_for-you_page.tsx
+  session-2026-04-12-1409 -->|modified| file-src_components_ui_welcome-modal.tsx
+  session-2026-04-12-1409 -->|modified| file-src_components_ui_matcha-card.tsx
+  session-2026-04-12-1409 -->|modified| file-src_app_main_catalog_catalog-client.tsx
+  session-2026-04-12-1409 -->|modified| file-src_models_matcha.ts
+  session-2026-04-12-1409 -->|modified| file-src_components_layout_nav.tsx
+  session-2026-04-12-1409 -->|modified| file-src_lib_supabase_middleware.ts
+  session-2026-04-12-1409 -->|modified| file-src_app_globals.css
+  session-2026-04-12-1409 -->|part_of| project-whiskly
+  session-2026-04-12-1409 -->|led_to| concept-feature-vision
+  plan-db-migration-new-fields -->|depends_on| decision-new-matcha-fields
+  plan-seed-new-fields -->|depends_on| plan-db-migration-new-fields
+  plan-continue-ui-redesign -->|depends_on| decision-redesign-before-wire
+  session-2026-04-28-2314 -->|led_to| decision-chado-design-direction
+  session-2026-04-28-2314 -->|led_to| decision-replace-fonts
+  session-2026-04-28-2314 -->|led_to| decision-floating-pill-nav
+  session-2026-04-28-2314 -->|led_to| decision-auth-timeout-3s
+  session-2026-04-28-2314 -->|led_to| decision-dark-splash
+  session-2026-04-28-2314 -->|modified| file-src_app_globals.css
+  session-2026-04-28-2314 -->|modified| file-src_app_layout.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_components_layout_nav.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_auth_login_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_auth_signup_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_auth_forgot-password_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_main_for-you_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_main_catalog_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_main_catalog_catalog-client.tsx
+  session-2026-04-28-2314 -->|modified| file-src_components_ui_matcha-card.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_main_catalog_id_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_app_main_profile_page.tsx
+  session-2026-04-28-2314 -->|modified| file-src_components_ui_welcome-modal.tsx
+  session-2026-04-28-2314 -->|modified| file-src_lib_supabase_middleware.ts
+  session-2026-04-28-2314 -->|modified| file-src_app_main_layout.tsx
+  session-2026-04-28-2314 -->|part_of| project-whiskly
+  session-2026-04-28-2314 -->|led_to| plan-check-supabase-status
+  session-2026-04-28-2314 -->|led_to| plan-integrate-tin-svgs
+  session-2026-04-28-2314 -->|led_to| plan-redesign-remaining-pages
+  decision-chado-design-direction -->|supersedes| decision-design-system-v0.1
+  decision-replace-fonts -->|supersedes| decision-keep-gray-text
+  decision-floating-pill-nav -->|supersedes| decision-for-you-as-home
+  plan-integrate-tin-svgs -->|depends_on| decision-chado-design-direction
+  plan-redesign-remaining-pages -->|depends_on| decision-chado-design-direction

@@ -1,37 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf8;
-  --foreground: #1a1a1a;
-}
+  /* Cha-dō palette */
+  --background: #EFEAD8;
+  --foreground: #1B1D18;
 
-/*
- * Dark mode token prep — not activated.
- *
- * Components still hardcode bg-white, border-warm-*, etc., so flipping
- * prefers-color-scheme on now would break the UI. This rule is commented
- * out as a template for the future dark-mode pass. When we're ready,
- * uncomment and migrate component backgrounds to use `bg-background` /
- * `text-foreground` / semantic tokens. See DESIGN-SYSTEM.md §13.
- */
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #14170f;
-    --foreground: #f5f3ef;
-  }
+  --paper: #EFEAD8;
+  --paper-deep: #E4DDC7;
+  --card: #FBF7EA;
+  --ink: #1B1D18;
+  --ink-soft: #4A4C45;
+  --ink-mute: #8A8B80;
+  --line: rgba(27, 29, 24, 0.12);
+  --line-soft: rgba(27, 29, 24, 0.06);
+
+  --matcha-accent: #3F5A1A;
+  --mochi: #F3C6C0;
+  --yuzu: #E8C766;
 }
-*/
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
-  /* Matcha green palette (brand color: #7fb22e) */
-  --color-matcha-50: #f6fae8;
-  --color-matcha-100: #eaf4c8;
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-dm-mono);
+
+  /* Cha-dō semantic colors */
+  --color-paper: #EFEAD8;
+  --color-paper-deep: #E4DDC7;
+  --color-card: #FBF7EA;
+  --color-ink: #1B1D18;
+  --color-ink-soft: #4A4C45;
+  --color-ink-mute: #8A8B80;
+  --color-mochi: #F3C6C0;
+  --color-yuzu: #E8C766;
+
+  /* Matcha green palette */
+  --color-matcha-50: #E8EFD2;
+  --color-matcha-100: #CADB9E;
   --color-matcha-200: #d4e896;
   --color-matcha-300: #b5d45c;
   --color-matcha-400: #9ac63c;
@@ -83,4 +91,19 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* Cha-dō typography utilities */
+.font-display {
+  font-family: var(--font-fraunces);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100;
+}
+
+.text-label {
+  font-family: var(--font-dm-mono);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }

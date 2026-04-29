@@ -31,9 +31,19 @@ export async function updateSession(request: NextRequest) {
 
   // Refresh the auth token by calling getUser.
   // IMPORTANT: Do not remove this — it keeps the session alive.
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // Wrap in a timeout so dev doesn't hang when Supabase is unreachable.
+  let user = null;
+  try {
+    const result = await Promise.race([
+      supabase.auth.getUser(),
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("Supabase auth timeout")), 3000)
+      ),
+    ]);
+    user = result.data.user;
+  } catch {
+    // Supabase unreachable — treat as unauthenticated
+  }
 
   // Redirect unauthenticated users to login for protected routes
   const isProtectedRoute =
